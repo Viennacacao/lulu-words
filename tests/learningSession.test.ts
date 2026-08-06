@@ -28,6 +28,24 @@ const words: LearningWord[] = [
 ];
 
 describe("learningSessionReducer", () => {
+  it("loads another wordbook without losing global progress", () => {
+    const initial = createLearningSession(words);
+    const hydrated = learningSessionReducer(initial, {
+      type: "HYDRATE_PROGRESS",
+      mnemonicOverrides: { one: "saved" },
+      reviewedCount: 9,
+    });
+    const loaded = learningSessionReducer(hydrated, {
+      type: "LOAD_WORDS",
+      words: [words[1]],
+    });
+
+    expect(loaded.words).toEqual([words[1]]);
+    expect(loaded.currentIndex).toBe(0);
+    expect(loaded.reviewedCount).toBe(9);
+    expect(loaded.mnemonicOverrides.one).toBe("saved");
+  });
+
   it("hydrates saved progress without changing the current learning state", () => {
     const initial = createLearningSession(words);
     const hydrated = learningSessionReducer(initial, {

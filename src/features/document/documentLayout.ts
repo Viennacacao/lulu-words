@@ -73,15 +73,34 @@ function countDocumentCharacters(template: DocumentTemplate) {
 export class DocumentLayoutCache {
   private readonly layouts = new Map<string, DocumentLayoutResult>();
 
-  get(template: DocumentTemplate): DocumentLayoutResult {
-    const cacheKey = `${template.id}:${template.revision}`;
+  get(template: DocumentTemplate, fontSize = 17): DocumentLayoutResult {
+    const normalizedFontSize = Math.min(20, Math.max(15, Math.round(fontSize)));
+    const cacheKey = `${template.id}:${template.revision}:font-${normalizedFontSize}`;
     const cached = this.layouts.get(cacheKey);
     if (cached) return cached;
 
-    const continuationPages = paginateDocumentBlocks(template.continuation);
+    const ratio = 17 / normalizedFontSize;
+    const upperCapacity = Math.max(7, Math.floor(10 * ratio));
+    const lowerCapacity = Math.max(8, Math.floor(13 * ratio));
+    const continuationCapacity = Math.max(
+      20,
+      Math.floor(DOCUMENT_LAYOUT.continuationLineCapacity * ratio),
+    );
+    const [upper, upperOverflow] = takeBlocksWithinPage(
+      template.firstPage.upper,
+      upperCapacity,
+    );
+    const [lower, lowerOverflow] = takeBlocksWithinPage(
+      [...upperOverflow, ...template.firstPage.lower],
+      lowerCapacity,
+    );
+    const continuationPages = paginateDocumentBlocks(
+      [...lowerOverflow, ...template.continuation],
+      continuationCapacity,
+    );
     const layout: DocumentLayoutResult = {
       cacheKey,
-      firstPage: template.firstPage,
+      firstPage: { upper, lower },
       continuationPages,
       pageCount: 1 + continuationPages.length,
       wordCount: countDocumentCharacters(template),
@@ -93,6 +112,24 @@ export class DocumentLayoutCache {
   clear() {
     this.layouts.clear();
   }
+}
+
+function takeBlocksWithinPage(
+  blocks: DocumentBlock[],
+  lineCapacity: number,
+): [DocumentBlock[], DocumentBlock[]] {
+  const selected: DocumentBlock[] = [];
+  let usedLines = 0;
+  let index = 0;
+
+  while (index < blocks.length) {
+    const lines = estimateBlockLines(blocks[index]);
+    if (selected.length > 0 && usedLines + lines > lineCapacity) break;
+    selected.push(blocks[index]);
+    usedLines += lines;
+    index += 1;
+  }
+  return [selected, blocks.slice(index)];
 }
 
 export function clampDocumentZoom(zoom: number) {

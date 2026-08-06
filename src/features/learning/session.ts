@@ -23,6 +23,7 @@ export interface LearningSessionState {
 }
 
 export type LearningSessionAction =
+  | { type: "LOAD_WORDS"; words: LearningWord[] }
   | {
       type: "HYDRATE_PROGRESS";
       mnemonicOverrides: Record<string, string>;
@@ -89,6 +90,20 @@ export function learningSessionReducer(
   action: LearningSessionAction,
 ): LearningSessionState {
   switch (action.type) {
+    case "LOAD_WORDS": {
+      if (action.words.length === 0) return state;
+      const firstWord = action.words[0];
+      return {
+        ...state,
+        words: action.words,
+        currentIndex: 0,
+        phase: "recall",
+        mnemonicDraft:
+          state.mnemonicOverrides[firstWord.id] ?? firstWord.mnemonic,
+        lastRating: undefined,
+      };
+    }
+
     case "HYDRATE_PROGRESS": {
       const currentWord = getCurrentWord(state);
       return {

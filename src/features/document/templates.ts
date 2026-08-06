@@ -7,7 +7,7 @@ export interface DocumentBlock {
 }
 
 export interface DocumentTemplate {
-  id: "project-weekly" | "meeting-minutes" | "finance-report";
+  id: string;
   name: string;
   fileName: string;
   revision: number;

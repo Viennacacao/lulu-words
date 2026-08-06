@@ -48,8 +48,10 @@ describe("document layout", () => {
     const template = documentTemplates[0];
     const first = cache.get(template);
     const second = cache.get(template);
+    const largerFont = cache.get(template, 20);
 
     expect(second).toBe(first);
+    expect(largerFont.cacheKey).not.toBe(first.cacheKey);
     expect(first.pageCount).toBeGreaterThan(1);
     expect(clampDocumentZoom(0.2)).toBe(0.8);
     expect(clampDocumentZoom(1.06)).toBe(1.1);

@@ -1,5 +1,6 @@
 import type {
   HydratedProgress,
+  LearningStatistics,
   LearningRepository,
 } from "../../core/repository/LearningRepository";
 import type {
@@ -42,6 +43,27 @@ export class LocalLearningRepository implements LearningRepository {
     return {
       mnemonicOverrides: data.mnemonics,
       reviewedCount: data.logs.length,
+    };
+  }
+
+  async loadStatistics(now = new Date()): Promise<LearningStatistics> {
+    const data = this.read();
+    const ratings = { again: 0, hard: 0, good: 0 };
+    for (const log of data.logs) ratings[log.rating] += 1;
+    const startOfDay = new Date(now);
+    startOfDay.setHours(0, 0, 0, 0);
+
+    return {
+      reviewedCount: data.logs.length,
+      todayReviewedCount: data.logs.filter(
+        (log) => new Date(log.review.log.reviewedAt).getTime() >= startOfDay.getTime(),
+      ).length,
+      uniqueReviewedCount: new Set(data.logs.map((log) => log.wordId)).size,
+      dueCount: Object.values(data.cards).filter(
+        (card) => new Date(card.due).getTime() <= now.getTime(),
+      ).length,
+      mnemonicCount: Object.keys(data.mnemonics).length,
+      ratings,
     };
   }
 

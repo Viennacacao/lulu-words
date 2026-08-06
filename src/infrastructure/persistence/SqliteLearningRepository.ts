@@ -1,6 +1,7 @@
 import Database from "@tauri-apps/plugin-sql";
 import type {
   HydratedProgress,
+  LearningStatistics,
   LearningRepository,
 } from "../../core/repository/LearningRepository";
 import type {
@@ -15,6 +16,11 @@ interface MnemonicRow {
 }
 
 interface CountRow {
+  count: number;
+}
+
+interface RatingCountRow {
+  rating_name: Rating;
   count: number;
 }
 
@@ -37,10 +43,28 @@ export class SqliteLearningRepository implements LearningRepository {
   async initialize(words: LearningWord[]): Promise<void> {
     this.database = await Database.load("sqlite:lulu-words.db");
 
-    for (const word of words) {
+    const batchSize = 80;
+    for (let offset = 0; offset < words.length; offset += batchSize) {
+      const batch = words.slice(offset, offset + batchSize);
+      const placeholders = batch
+        .map((_, rowIndex) => {
+          const start = rowIndex * 7;
+          return `($${start + 1}, $${start + 2}, $${start + 3}, $${start + 4}, $${start + 5}, $${start + 6}, $${start + 7})`;
+        })
+        .join(", ");
+      const values = batch.flatMap((word) => [
+        word.id,
+        word.word,
+        word.phonetic,
+        word.meaning,
+        word.mnemonic,
+        word.phrases,
+        word.example,
+      ]);
+
       await this.database.execute(
         `INSERT INTO words (id, word, phonetic, meaning, default_mnemonic, phrases, example)
-         VALUES ($1, $2, $3, $4, $5, $6, $7)
+         VALUES ${placeholders}
          ON CONFLICT(id) DO UPDATE SET
            word = excluded.word,
            phonetic = excluded.phonetic,
@@ -48,15 +72,7 @@ export class SqliteLearningRepository implements LearningRepository {
            default_mnemonic = excluded.default_mnemonic,
            phrases = excluded.phrases,
            example = excluded.example`,
-        [
-          word.id,
-          word.word,
-          word.phonetic,
-          word.meaning,
-          word.mnemonic,
-          word.phrases,
-          word.example,
-        ],
+        values,
       );
     }
   }
@@ -75,6 +91,39 @@ export class SqliteLearningRepository implements LearningRepository {
         mnemonicRows.map((row) => [row.word_id, row.content]),
       ),
       reviewedCount: countRows[0]?.count ?? 0,
+    };
+  }
+
+  async loadStatistics(now = new Date()): Promise<LearningStatistics> {
+    const database = this.getDatabase();
+    const startOfDay = new Date(now);
+    startOfDay.setHours(0, 0, 0, 0);
+    const [reviewed, todayReviewed, uniqueReviewed, due, mnemonics, ratingRows] = await Promise.all([
+      database.select<CountRow[]>("SELECT COUNT(*) AS count FROM review_logs"),
+      database.select<CountRow[]>(
+        "SELECT COUNT(*) AS count FROM review_logs WHERE reviewed_at >= $1",
+        [startOfDay.toISOString()],
+      ),
+      database.select<CountRow[]>("SELECT COUNT(DISTINCT word_id) AS count FROM review_logs"),
+      database.select<CountRow[]>(
+        "SELECT COUNT(*) AS count FROM review_cards WHERE due <= $1",
+        [now.toISOString()],
+      ),
+      database.select<CountRow[]>("SELECT COUNT(*) AS count FROM mnemonics"),
+      database.select<RatingCountRow[]>(
+        "SELECT rating_name, COUNT(*) AS count FROM review_logs GROUP BY rating_name",
+      ),
+    ]);
+    const ratings = { again: 0, hard: 0, good: 0 };
+    for (const row of ratingRows) ratings[row.rating_name] = row.count;
+
+    return {
+      reviewedCount: reviewed[0]?.count ?? 0,
+      todayReviewedCount: todayReviewed[0]?.count ?? 0,
+      uniqueReviewedCount: uniqueReviewed[0]?.count ?? 0,
+      dueCount: due[0]?.count ?? 0,
+      mnemonicCount: mnemonics[0]?.count ?? 0,
+      ratings,
     };
   }
 

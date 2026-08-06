@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "counts": {
+    "cet4": 3846,
+    "cet6": 5406,
+    "ielts": 5038,
+    "toefl": 6970,
+    "pte": 569,
+    "toeic": 1018
+  }
+}

@@ -58,6 +58,14 @@ describe("LocalLearningRepository", () => {
     expect(progress.mnemonicOverrides.abandon).toBe("本地保存的助记");
     expect(progress.reviewedCount).toBe(1);
     expect(card?.reps).toBe(1);
+    expect(await secondRepository.loadStatistics(new Date("2030-01-01T00:00:00.000Z"))).toEqual({
+      reviewedCount: 1,
+      todayReviewedCount: 0,
+      uniqueReviewedCount: 1,
+      dueCount: 1,
+      mnemonicCount: 1,
+      ratings: { again: 0, hard: 0, good: 1 },
+    });
   });
 
   it("serializes rapid reviews so no log is lost", async () => {

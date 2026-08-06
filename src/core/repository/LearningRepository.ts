@@ -9,9 +9,19 @@ export interface HydratedProgress {
   reviewedCount: number;
 }
 
+export interface LearningStatistics {
+  reviewedCount: number;
+  todayReviewedCount: number;
+  uniqueReviewedCount: number;
+  dueCount: number;
+  mnemonicCount: number;
+  ratings: Record<Rating, number>;
+}
+
 export interface LearningRepository {
   initialize(words: LearningWord[]): Promise<void>;
   loadProgress(): Promise<HydratedProgress>;
+  loadStatistics(now?: Date): Promise<LearningStatistics>;
   getReviewCard(wordId: string): Promise<ReviewCardSnapshot | undefined>;
   saveReview(
     wordId: string,

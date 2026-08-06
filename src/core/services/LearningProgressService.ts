@@ -15,18 +15,25 @@ export class LearningProgressService {
     return this.repository.loadProgress();
   }
 
-  recordReview(wordId: string, rating: Rating, now = new Date()): void {
+  recordReview(wordId: string, rating: Rating, now = new Date()): Promise<void> {
     this.queue = this.queue.then(async () => {
       const previousCard = await this.repository.getReviewCard(wordId);
       const scheduled = this.scheduler.grade(previousCard, rating, now);
       await this.repository.saveReview(wordId, rating, scheduled);
     });
+    return this.queue;
   }
 
-  saveMnemonic(wordId: string, content: string): void {
+  saveMnemonic(wordId: string, content: string): Promise<void> {
     this.queue = this.queue.then(() =>
       this.repository.saveMnemonic(wordId, content),
     );
+    return this.queue;
+  }
+
+  async loadStatistics(now = new Date()) {
+    await this.flush();
+    return this.repository.loadStatistics(now);
   }
 
   async flush(): Promise<void> {

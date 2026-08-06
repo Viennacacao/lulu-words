@@ -9,6 +9,7 @@ interface FloatingBarProps {
   state: LearningSessionState;
   dispatch: React.Dispatch<LearningSessionAction>;
   onSpeak: () => void;
+  showKeyboardHints?: boolean;
 }
 
 interface Position {
@@ -16,7 +17,12 @@ interface Position {
   y: number;
 }
 
-export function FloatingBar({ state, dispatch, onSpeak }: FloatingBarProps) {
+export function FloatingBar({
+  state,
+  dispatch,
+  onSpeak,
+  showKeyboardHints = true,
+}: FloatingBarProps) {
   const [position, setPosition] = useState<Position>(() => ({
     x: Math.max(20, window.innerWidth / 2 - 310),
     y: (window.innerHeight <= 760 ? 120 : 160) + 12,
@@ -46,6 +52,8 @@ export function FloatingBar({ state, dispatch, onSpeak }: FloatingBarProps) {
 
   const grade = (rating: Rating) => dispatch({ type: "GRADE", rating });
   const canGrade = state.phase === "revealed" && !state.hidden;
+  const label = (text: string, shortcut: string) =>
+    showKeyboardHints ? `${text} ${shortcut}` : text;
 
   return (
     <aside
@@ -65,28 +73,28 @@ export function FloatingBar({ state, dispatch, onSpeak }: FloatingBarProps) {
       </button>
       {state.phase === "editingMnemonic" ? (
         <>
-          <button onClick={() => dispatch({ type: "CANCEL_MNEMONIC_EDIT" })}>取消 Esc</button>
+          <button onClick={() => dispatch({ type: "CANCEL_MNEMONIC_EDIT" })}>{label("取消", "Esc")}</button>
           <button className="primary-action" onClick={() => dispatch({ type: "SAVE_MNEMONIC" })}>
-            保存 ⌘↵
+            {label("保存", "⌘↵")}
           </button>
         </>
       ) : (
         <>
-          <button onClick={onSpeak} disabled={state.hidden}>发音 P</button>
+          <button onClick={onSpeak} disabled={state.hidden}>{label("发音", "P")}</button>
           <button onClick={() => dispatch({ type: "TOGGLE_ANSWER" })} disabled={state.hidden}>
-            {state.phase === "recall" ? "答案 Space" : "隐藏 Space"}
+            {state.phase === "recall" ? label("答案", "Space") : label("隐藏", "Space")}
           </button>
-          <button onClick={() => grade("again")} disabled={!canGrade}>忘记 1</button>
-          <button onClick={() => grade("hard")} disabled={!canGrade}>模糊 2</button>
-          <button onClick={() => grade("good")} disabled={!canGrade}>认识 3</button>
+          <button onClick={() => grade("again")} disabled={!canGrade}>{label("忘记", "1")}</button>
+          <button onClick={() => grade("hard")} disabled={!canGrade}>{label("模糊", "2")}</button>
+          <button onClick={() => grade("good")} disabled={!canGrade}>{label("认识", "3")}</button>
           <button
             onClick={() => dispatch({ type: "START_MNEMONIC_EDIT" })}
             disabled={!canGrade}
           >
-            助记 E
+            {label("助记", "E")}
           </button>
           <button onClick={() => dispatch({ type: "TOGGLE_HIDDEN" })}>
-            {state.hidden ? "恢复 H" : "隐藏 H"}
+            {state.hidden ? label("恢复", "H") : label("隐藏", "H")}
           </button>
         </>
       )}
