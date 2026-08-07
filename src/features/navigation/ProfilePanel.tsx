@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { AppPreferences } from "../../core/preferences/AppPreferences";
 
 interface ProfilePanelProps {
@@ -6,6 +7,7 @@ interface ProfilePanelProps {
 }
 
 export function ProfilePanel({ preferences, onChange }: ProfilePanelProps) {
+  const [showApiKey, setShowApiKey] = useState(false);
   const patch = (change: Partial<AppPreferences>) => onChange({ ...preferences, ...change });
 
   return (
@@ -48,6 +50,33 @@ export function ProfilePanel({ preferences, onChange }: ProfilePanelProps) {
           />
         </label>
       </div>
+
+      <article className="ai-settings-card">
+        <div className="ai-settings-heading">
+          <div><span className="feature-eyebrow">LOCAL AI</span><h2>DeepSeek 设置</h2></div>
+          <span className={preferences.deepseekApiKey.trim() ? "ai-ready" : "ai-missing"}>
+            {preferences.deepseekApiKey.trim() ? "已配置" : "未配置"}
+          </span>
+        </div>
+        <p>密钥仅保存在本机偏好中，请勿在公共电脑使用或截图分享。</p>
+        <label className="ai-setting-field">
+          <span>API Key</span>
+          <div className="api-key-field">
+            <input type={showApiKey ? "text" : "password"} value={preferences.deepseekApiKey}
+              placeholder="sk-..." autoComplete="off"
+              onChange={(event) => patch({ deepseekApiKey: event.target.value })} />
+            <button type="button" onClick={() => setShowApiKey((value) => !value)}>{showApiKey ? "隐藏" : "显示"}</button>
+          </div>
+        </label>
+        <label className="ai-setting-field"><span>API 地址</span>
+          <input type="url" value={preferences.deepseekBaseUrl}
+            onChange={(event) => patch({ deepseekBaseUrl: event.target.value })} />
+        </label>
+        <label className="ai-setting-field"><span>模型</span>
+          <input type="text" value={preferences.deepseekModel}
+            onChange={(event) => patch({ deepseekModel: event.target.value })} />
+        </label>
+      </article>
 
       <article className="shortcut-card">
         <h2>键盘操作</h2>

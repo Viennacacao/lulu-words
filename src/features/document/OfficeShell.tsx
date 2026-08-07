@@ -97,7 +97,7 @@ export function OfficeShell({
               value={isCustomText ? currentTemplateId : currentTemplateId}
               onChange={(event) => onTemplateChange(event.target.value)}
             >
-              {isCustomText && <option value={currentTemplateId}>当前 TXT 文本</option>}
+              {isCustomText && <option value={currentTemplateId}>当前导入文档</option>}
               {templates.map((template) => (
                 <option key={template.id} value={template.id}>{template.name}</option>
               ))}

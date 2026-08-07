@@ -1,4 +1,4 @@
-import { useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
+import { useRef, useState, type FormEvent, type PointerEvent as ReactPointerEvent } from "react";
 import type {
   LearningSessionAction,
   LearningSessionState,
@@ -10,6 +10,8 @@ interface FloatingBarProps {
   dispatch: React.Dispatch<LearningSessionAction>;
   onSpeak: () => void;
   showKeyboardHints?: boolean;
+  aiConfigured: boolean;
+  onAskAi: (prompt: string) => Promise<string>;
 }
 
 interface Position {
@@ -22,12 +24,19 @@ export function FloatingBar({
   dispatch,
   onSpeak,
   showKeyboardHints = true,
+  aiConfigured,
+  onAskAi,
 }: FloatingBarProps) {
   const [position, setPosition] = useState<Position>(() => ({
     x: Math.max(20, window.innerWidth / 2 - 310),
     y: (window.innerHeight <= 760 ? 120 : 160) + 12,
   }));
   const dragOffset = useRef<Position | null>(null);
+  const [aiPrompt, setAiPrompt] = useState("");
+  const [aiAnswer, setAiAnswer] = useState("");
+  const [aiError, setAiError] = useState("");
+  const [askingAi, setAskingAi] = useState(false);
+  const [showAiPanel, setShowAiPanel] = useState(false);
 
   const beginDrag = (event: ReactPointerEvent<HTMLButtonElement>) => {
     dragOffset.current = {
@@ -55,12 +64,31 @@ export function FloatingBar({
   const label = (text: string, shortcut: string) =>
     showKeyboardHints ? `${text} ${shortcut}` : text;
 
+  const submitAi = async (event: FormEvent) => {
+    event.preventDefault();
+    if (!aiPrompt.trim() || askingAi) return;
+    setShowAiPanel(true); setAskingAi(true); setAiError("");
+    try { setAiAnswer(await onAskAi(aiPrompt)); }
+    catch (cause) {
+      setAiAnswer("");
+      setAiError(cause instanceof Error ? cause.message : "AI 请求失败，请稍后重试");
+    } finally { setAskingAi(false); }
+  };
+
   return (
     <aside
       className="floating-bar"
       style={{ left: position.x, top: position.y }}
       aria-label="学习操作栏"
     >
+      {showAiPanel && (
+        <section className="ai-popover" aria-live="polite">
+          <header><b>AI 助手</b><button type="button" aria-label="关闭 AI 回答" onClick={() => setShowAiPanel(false)}>×</button></header>
+          <div className={aiError ? "ai-response is-error" : "ai-response"}>
+            {askingAi ? "正在思考…" : aiError || aiAnswer || "输入问题后，回答会显示在这里。"}
+          </div>
+        </section>
+      )}
       <button
         className="drag-handle"
         aria-label="拖动操作栏"
@@ -98,6 +126,12 @@ export function FloatingBar({
           </button>
         </>
       )}
+      <form className="floating-ai-form" onSubmit={submitAi}>
+        <input value={aiPrompt} onChange={(event) => setAiPrompt(event.target.value)}
+          onFocus={() => aiAnswer && setShowAiPanel(true)}
+          placeholder={aiConfigured ? "问 AI…" : "先在“我的”配置 AI"} aria-label="向 AI 提问" />
+        <button type="submit" disabled={!aiPrompt.trim() || askingAi}>发送</button>
+      </form>
     </aside>
   );
 }

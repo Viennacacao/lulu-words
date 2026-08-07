@@ -16,6 +16,7 @@ import {
 import type { LearningStatistics } from "./core/repository/LearningRepository";
 import { FsrsReviewScheduler } from "./core/scheduler/FsrsReviewScheduler";
 import { LearningProgressService } from "./core/services/LearningProgressService";
+import { askDeepSeek } from "./core/services/DeepSeekService";
 import { sampleWords } from "./data/sampleWords";
 import {
   getWordbookManifest,
@@ -184,6 +185,8 @@ function App() {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (activeView !== "study") return;
+      const target = event.target as HTMLElement | null;
+      if (target?.matches("input, textarea, select, [contenteditable='true']")) return;
       if (state.phase === "editingMnemonic") {
         if (event.key === "Escape") {
           event.preventDefault();
@@ -234,6 +237,13 @@ function App() {
     setActiveView("study");
   };
 
+  const selectImportedTemplate = (template: DocumentTemplate) => {
+    layoutCache.current.clear();
+    setCustomTextTemplate(template);
+    setSelectedTextName(template.name);
+    setActiveView("study");
+  };
+
   const selectDocumentTemplate = (nextTemplateId: string) => {
     if (!documentTemplates.some((template) => template.id === nextTemplateId)) return;
     setCustomTextTemplate(undefined);
@@ -254,6 +264,15 @@ function App() {
       documentZoom: clampDocumentZoom(zoom),
     });
   };
+
+  const askAi = useCallback((prompt: string) => {
+    const word = getCurrentWord(state);
+    return askDeepSeek({
+      apiKey: preferences.deepseekApiKey,
+      baseUrl: preferences.deepseekBaseUrl,
+      model: preferences.deepseekModel,
+    }, prompt, word);
+  }, [preferences.deepseekApiKey, preferences.deepseekBaseUrl, preferences.deepseekModel, state]);
 
   const lineHeight = preferences.fontSize * 2;
   const documentStyle = {
@@ -297,6 +316,8 @@ function App() {
             dispatch={handleAction}
             onSpeak={speak}
             showKeyboardHints={preferences.showKeyboardHints}
+            aiConfigured={Boolean(preferences.deepseekApiKey.trim())}
+            onAskAi={askAi}
           />
         </>
       )}
@@ -315,6 +336,7 @@ function App() {
           builtInTexts={builtInTexts}
           selectedName={selectedTextName}
           onSelect={selectText}
+          onSelectTemplate={selectImportedTemplate}
         />
       )}
       {activeView === "statistics" && (

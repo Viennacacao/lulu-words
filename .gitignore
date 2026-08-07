@@ -9,3 +9,6 @@ vite.config.d.ts
 .cargo/
 __pycache__/
 *.pyc
+.env
+.env.*
+!.env.example

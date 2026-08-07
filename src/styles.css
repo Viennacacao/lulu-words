@@ -448,6 +448,47 @@ input:focus-visible {
   background: var(--blue);
 }
 
+.floating-ai-form {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-left: 4px;
+  border-left: 1px solid #e2e5e9;
+}
+
+.floating-ai-form input {
+  width: 190px;
+  height: 34px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border: 1px solid #d9dde3;
+  border-radius: 6px;
+  outline: 0;
+  color: #30343b;
+  background: #fff;
+  font-size: 12px;
+}
+
+.floating-ai-form input:focus { border-color: #6e9eea; box-shadow: 0 0 0 2px rgb(50 111 208 / 12%); }
+.floating-ai-form button[type="submit"] { color: white; border-color: #315f9e; background: #315f9e; }
+
+.ai-popover {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 10px);
+  width: 390px;
+  overflow: hidden;
+  border: 1px solid #cdd2d9;
+  border-radius: 10px;
+  background: rgb(255 255 255 / 98%);
+  box-shadow: 0 12px 34px rgb(17 24 39 / 24%);
+}
+
+.ai-popover header { display: flex; align-items: center; justify-content: space-between; padding: 9px 12px; border-bottom: 1px solid #e7e9ed; color: #315f9e; }
+.ai-popover header button { width: 26px; height: 26px; padding: 0; border: 0; font-size: 18px; }
+.ai-response { max-height: 260px; overflow-y: auto; padding: 13px; color: #343a43; font-size: 13px; line-height: 1.7; white-space: pre-wrap; }
+.ai-response.is-error { color: #a33b35; }
+
 .session-progress {
   position: fixed;
   z-index: 21;
@@ -837,6 +878,18 @@ input:focus-visible {
   border-radius: 4px;
   background: white;
 }
+
+.ai-settings-card { margin-top: 20px; padding: 18px; border: 1px solid #dfe3e8; background: #fafbfc; }
+.ai-settings-heading { display: flex; align-items: center; justify-content: space-between; }
+.ai-settings-heading h2 { margin: 4px 0 0; font-size: 18px; }
+.ai-settings-card > p { margin: 8px 0 16px; color: #737d8b; font-size: 12px; }
+.ai-ready, .ai-missing { padding: 4px 8px; border-radius: 12px; font-size: 11px; }
+.ai-ready { color: #237a3a; background: #e7f6eb; }
+.ai-missing { color: #8b6230; background: #fff2d8; }
+.ai-setting-field { display: grid; grid-template-columns: 86px 1fr; align-items: center; gap: 12px; margin-top: 10px; color: #4b5563; font-size: 13px; }
+.ai-setting-field > input, .api-key-field input { width: 100%; height: 34px; box-sizing: border-box; padding: 0 9px; border: 1px solid #cbd1d9; border-radius: 4px; background: white; }
+.api-key-field { display: flex; gap: 6px; }
+.api-key-field button { flex: 0 0 54px; border: 1px solid #cbd1d9; border-radius: 4px; background: white; cursor: pointer; }
 
 kbd {
   padding: 2px 5px;

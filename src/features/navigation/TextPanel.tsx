@@ -1,31 +1,45 @@
 import { useRef, useState, type ChangeEvent } from "react";
-import type { BuiltInText } from "../document/textSources";
+import { importDocx } from "../document/docxImport";
+import { createImportedDocumentTemplate, type BuiltInText } from "../document/textSources";
+import type { DocumentTemplate } from "../document/templates";
 
 interface TextPanelProps {
   builtInTexts: BuiltInText[];
   selectedName: string;
   onSelect: (name: string, content: string, author?: string) => void;
+  onSelectTemplate: (template: DocumentTemplate) => void;
 }
 
-export function TextPanel({ builtInTexts, selectedName, onSelect }: TextPanelProps) {
+export function TextPanel({ builtInTexts, selectedName, onSelect, onSelectTemplate }: TextPanelProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [error, setError] = useState("");
+  const [importing, setImporting] = useState(false);
 
   const importText = async (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     event.target.value = "";
     if (!file) return;
-    if (file.size > 2 * 1024 * 1024) {
-      setError("第一版单个 TXT 文件限制为 2MB，请拆分后再导入。");
+    const isDocx = file.name.toLowerCase().endsWith(".docx");
+    const sizeLimit = isDocx ? 20 : 2;
+    if (file.size > sizeLimit * 1024 * 1024) {
+      setError(`单个 ${isDocx ? "DOCX" : "TXT"} 文件限制为 ${sizeLimit}MB。`);
       return;
     }
 
     try {
-      const content = await file.text();
+      setImporting(true);
+      if (isDocx) {
+        const { blocks } = await importDocx(await file.arrayBuffer());
+        onSelectTemplate(createImportedDocumentTemplate(file.name, blocks, "本地导入 · DOCX 只读文档"));
+      } else {
+        const content = await file.text();
+        onSelect(file.name, content, "本地导入 · TXT 只读文本");
+      }
       setError("");
-      onSelect(file.name, content, "本地导入 · 只读文本");
-    } catch {
-      setError("无法读取该 TXT 文件，请确认文件编码为 UTF-8。");
+    } catch (cause) {
+      setError(cause instanceof Error ? `导入失败：${cause.message}` : "无法读取该文件。");
+    } finally {
+      setImporting(false);
     }
   };
 
@@ -35,16 +49,16 @@ export function TextPanel({ builtInTexts, selectedName, onSelect }: TextPanelPro
         <div>
           <span className="feature-eyebrow">READ-ONLY TEXT</span>
           <h1 id="text-panel-title">选择文档背景</h1>
-          <p>小说或 TXT 只用于模拟文档排版，不提供正文编辑功能。</p>
+          <p>TXT 或 DOCX 只用于模拟文档排版，不提供正文编辑功能。</p>
         </div>
         <button className="primary-button" onClick={() => inputRef.current?.click()}>
-          导入 TXT
+          {importing ? "正在导入…" : "导入 TXT / DOCX"}
         </button>
         <input
           ref={inputRef}
           className="visually-hidden"
           type="file"
-          accept=".txt,text/plain"
+          accept=".txt,.docx,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
           onChange={importText}
         />
       </header>
@@ -75,8 +89,8 @@ export function TextPanel({ builtInTexts, selectedName, onSelect }: TextPanelPro
       </div>
 
       <div className="import-guidance">
-        <h2>本地 TXT 规则</h2>
-        <p>支持 UTF-8 纯文本，空行会识别为段落；超长段落会自动拆分，第一页始终绕开五行学习区。</p>
+        <h2>本地文档规则</h2>
+        <p>TXT 支持 UTF-8 纯文本；DOCX 会提取标题、段落、编号与表格文字。导入内容只读，第一页始终绕开五行学习区。</p>
       </div>
     </section>
   );

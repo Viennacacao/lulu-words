@@ -104,23 +104,33 @@ export function createTextDocumentTemplate(
   text: string,
   author = "本地 TXT 文本",
 ): DocumentTemplate {
-  const normalized = normalizeTextBlocks(text);
+  return createImportedDocumentTemplate(name, normalizeTextBlocks(text), author);
+}
+
+export function createImportedDocumentTemplate(
+  name: string,
+  blocks: DocumentBlock[],
+  author = "本地只读文档",
+): DocumentTemplate {
+  const normalized = blocks;
   const safeBlocks = normalized.length > 0
     ? normalized
     : [{ id: "text-empty", kind: "paragraph" as const, text: "该文本没有可显示的正文内容。" }];
 
-  const title: DocumentBlock = { id: "text-title", kind: "title", text: name };
+  const hasImportedTitle = safeBlocks[0]?.kind === "title";
+  const title: DocumentBlock = { id: "text-title", kind: "title", text: name.replace(/\.(txt|docx)$/i, "") };
   const meta: DocumentBlock = { id: "text-meta", kind: "meta", text: author };
-  const [upperBody, afterUpper] = takeWithinCapacity(safeBlocks, 5);
+  const documentBlocks = hasImportedTitle ? safeBlocks : [title, ...safeBlocks];
+  const [upperBody, afterUpper] = takeWithinCapacity(documentBlocks, 7);
   const [lower, continuation] = takeWithinCapacity(afterUpper, 11);
 
   return {
-    id: `text-${name}-${text.length}`,
+    id: `text-${name}-${safeBlocks.length}-${safeBlocks.reduce((sum, block) => sum + block.text.length, 0)}`,
     name,
-    fileName: name.endsWith(".txt") ? name : `${name}.txt`,
-    revision: text.length,
+    fileName: /\.(txt|docx)$/i.test(name) ? name : `${name}.txt`,
+    revision: safeBlocks.reduce((sum, block) => sum + block.text.length, 0),
     firstPage: {
-      upper: [title, meta, ...upperBody],
+      upper: upperBody.length > 0 ? [upperBody[0], meta, ...upperBody.slice(1)] : [meta],
       lower,
     },
     continuation,
