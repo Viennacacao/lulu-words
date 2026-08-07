@@ -8,13 +8,26 @@ import {
 interface LearningBlockProps {
   state: LearningSessionState;
   dispatch: React.Dispatch<LearningSessionAction>;
+  novelLines?: string[];
 }
 
 function ConcealedRow() {
   return <span aria-hidden="true">&nbsp;</span>;
 }
 
-export function LearningBlock({ state, dispatch }: LearningBlockProps) {
+export function LearningBlock({ state, dispatch, novelLines }: LearningBlockProps) {
+  if (novelLines) {
+    return (
+      <section className="learning-block learning-block--reader" aria-label="小说阅读区">
+        {Array.from({ length: 5 }, (_, index) => (
+          <div className="learning-row novel-reader-row" key={index}>
+            {novelLines[index] || <ConcealedRow />}
+          </div>
+        ))}
+      </section>
+    );
+  }
+
   const word = getCurrentWord(state);
   const answerVisible = state.phase !== "recall";
 
@@ -38,7 +51,7 @@ export function LearningBlock({ state, dispatch }: LearningBlockProps) {
         <span className="row-hint">P 发音</span>
       </div>
       <div className="learning-row">
-        {answerVisible ? word.meaning : <ConcealedRow />}
+        {answerVisible ? (word.meaning.trim() || "暂无释义") : <ConcealedRow />}
       </div>
       <div className="learning-row mnemonic-row">
         {state.phase === "editingMnemonic" ? (
@@ -52,16 +65,16 @@ export function LearningBlock({ state, dispatch }: LearningBlockProps) {
             }
           />
         ) : answerVisible ? (
-          <>助记：{getCurrentMnemonic(state)}</>
+          <>助记：{getCurrentMnemonic(state).trim() || "暂无助记"}</>
         ) : (
           <ConcealedRow />
         )}
       </div>
       <div className="learning-row">
-        {answerVisible ? word.phrases : <ConcealedRow />}
+        {answerVisible ? `短语：${word.phrases.trim() || "暂无短语"}` : <ConcealedRow />}
       </div>
       <div className="learning-row">
-        {answerVisible ? word.example : <ConcealedRow />}
+        {answerVisible ? `例句：${word.example.trim().replace(/\s+/g, " ") || "暂无例句"}` : <ConcealedRow />}
       </div>
     </section>
   );

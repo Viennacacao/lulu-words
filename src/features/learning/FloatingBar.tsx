@@ -12,6 +12,12 @@ interface FloatingBarProps {
   showKeyboardHints?: boolean;
   aiConfigured: boolean;
   onAskAi: (prompt: string) => Promise<string>;
+  reader?: {
+    progress: string;
+    onPrevious: () => void;
+    onNext: () => void;
+    onExit: () => void;
+  };
 }
 
 interface Position {
@@ -26,6 +32,7 @@ export function FloatingBar({
   showKeyboardHints = true,
   aiConfigured,
   onAskAi,
+  reader,
 }: FloatingBarProps) {
   const [position, setPosition] = useState<Position>(() => ({
     x: Math.max(20, window.innerWidth / 2 - 310),
@@ -99,7 +106,14 @@ export function FloatingBar({
       >
         ⋮⋮
       </button>
-      {state.phase === "editingMnemonic" ? (
+      {reader ? (
+        <>
+          <button onClick={reader.onPrevious}>{label("上一页", "←")}</button>
+          <span className="reader-progress">{reader.progress}</span>
+          <button className="primary-action" onClick={reader.onNext}>{label("下一页", "→")}</button>
+          <button onClick={reader.onExit}>返回背词</button>
+        </>
+      ) : state.phase === "editingMnemonic" ? (
         <>
           <button onClick={() => dispatch({ type: "CANCEL_MNEMONIC_EDIT" })}>{label("取消", "Esc")}</button>
           <button className="primary-action" onClick={() => dispatch({ type: "SAVE_MNEMONIC" })}>

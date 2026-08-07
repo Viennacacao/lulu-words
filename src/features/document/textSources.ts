@@ -121,7 +121,7 @@ export function createImportedDocumentTemplate(
   const title: DocumentBlock = { id: "text-title", kind: "title", text: name.replace(/\.(txt|docx)$/i, "") };
   const meta: DocumentBlock = { id: "text-meta", kind: "meta", text: author };
   const documentBlocks = hasImportedTitle ? safeBlocks : [title, ...safeBlocks];
-  const [upperBody, afterUpper] = takeWithinCapacity(documentBlocks, 7);
+  const [upperBody, afterUpper] = takeWithinCapacity(documentBlocks, 9);
   const [lower, continuation] = takeWithinCapacity(afterUpper, 11);
 
   return {

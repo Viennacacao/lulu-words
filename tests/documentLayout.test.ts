@@ -11,14 +11,14 @@ import {
 } from "../src/features/document/templates";
 
 describe("document layout", () => {
-  it("keeps the learning region at exactly five document lines", () => {
+  it("keeps exactly five learning lines without an extra lower spacer", () => {
     expect(DOCUMENT_LAYOUT.learningRows).toBe(5);
     expect(DOCUMENT_LAYOUT.lineHeight * DOCUMENT_LAYOUT.learningRows).toBe(170);
     expect(
       DOCUMENT_LAYOUT.lowerContentTop -
         (DOCUMENT_LAYOUT.learningTop +
           DOCUMENT_LAYOUT.lineHeight * DOCUMENT_LAYOUT.learningRows),
-    ).toBe(34);
+    ).toBe(0);
   });
 
   it("provides three distinct built-in read-only templates", () => {

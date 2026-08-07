@@ -94,10 +94,14 @@ export function getWordbookManifest(id: WordbookId) {
   return wordbookManifests.find((wordbook) => wordbook.id === id) ?? wordbookManifests[0];
 }
 
-const bundledWordbooks = import.meta.glob<string>("../assets/wordbooks/*", {
-  query: "?raw",
-  import: "default",
-});
+const bundledWordbooks: Record<string, () => Promise<string>> = {
+  "../assets/wordbooks/cet4.json": () => import("../assets/wordbooks/cet4.json?raw").then((module) => module.default),
+  "../assets/wordbooks/cet6.json": () => import("../assets/wordbooks/cet6.json?raw").then((module) => module.default),
+  "../assets/wordbooks/ielts.json": () => import("../assets/wordbooks/ielts.json?raw").then((module) => module.default),
+  "../assets/wordbooks/toefl.json": () => import("../assets/wordbooks/toefl.json?raw").then((module) => module.default),
+  "../assets/wordbooks/pte.json": () => import("../assets/wordbooks/pte.json?raw").then((module) => module.default),
+  "../assets/wordbooks/momo_toeic.jsonl": () => import("../assets/wordbooks/momo_toeic.jsonl?raw").then((module) => module.default),
+};
 
 function isLearningWord(value: unknown): value is LearningWord {
   if (!value || typeof value !== "object") return false;

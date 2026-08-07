@@ -6,12 +6,15 @@ import type { DocumentTemplate } from "../document/templates";
 interface TextPanelProps {
   builtInTexts: BuiltInText[];
   selectedName: string;
+  novelName?: string;
   onSelect: (name: string, content: string, author?: string) => void;
   onSelectTemplate: (template: DocumentTemplate) => void;
+  onSelectNovel: (name: string, content: string) => void;
 }
 
-export function TextPanel({ builtInTexts, selectedName, onSelect, onSelectTemplate }: TextPanelProps) {
-  const inputRef = useRef<HTMLInputElement>(null);
+export function TextPanel({ builtInTexts, selectedName, novelName, onSelect, onSelectTemplate, onSelectNovel }: TextPanelProps) {
+  const backgroundInputRef = useRef<HTMLInputElement>(null);
+  const novelInputRef = useRef<HTMLInputElement>(null);
   const [error, setError] = useState("");
   const [importing, setImporting] = useState(false);
 
@@ -43,24 +46,54 @@ export function TextPanel({ builtInTexts, selectedName, onSelect, onSelectTempla
     }
   };
 
+  const importNovel = async (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    event.target.value = "";
+    if (!file) return;
+    if (!file.name.toLowerCase().endsWith(".txt")) {
+      setError("小说阅读模式目前只支持 UTF-8 TXT 文件。");
+      return;
+    }
+    if (file.size > 20 * 1024 * 1024) {
+      setError("单个小说 TXT 文件限制为 20MB。");
+      return;
+    }
+    try {
+      setImporting(true);
+      onSelectNovel(file.name, await file.text());
+      setError("");
+    } catch (cause) {
+      setError(cause instanceof Error ? `小说导入失败：${cause.message}` : "无法读取小说 TXT。");
+    } finally {
+      setImporting(false);
+    }
+  };
+
   return (
     <section className="feature-panel" aria-labelledby="text-panel-title">
       <header className="feature-panel-header">
         <div>
           <span className="feature-eyebrow">READ-ONLY TEXT</span>
-          <h1 id="text-panel-title">选择文档背景</h1>
-          <p>TXT 或 DOCX 只用于模拟文档排版，不提供正文编辑功能。</p>
+          <h1 id="text-panel-title">文档与小说</h1>
+          <p>背景文档维持办公伪装；小说 TXT 则进入五行沉浸阅读模式。</p>
         </div>
-        <button className="primary-button" onClick={() => inputRef.current?.click()}>
-          {importing ? "正在导入…" : "导入 TXT / DOCX"}
-        </button>
+        <div className="import-actions">
+          <button className="secondary-button" onClick={() => backgroundInputRef.current?.click()}>
+            导入背景文档
+          </button>
+          <button className="primary-button" onClick={() => novelInputRef.current?.click()}>
+            {importing ? "正在导入…" : "导入小说 TXT"}
+          </button>
+        </div>
         <input
-          ref={inputRef}
+          ref={backgroundInputRef}
           className="visually-hidden"
           type="file"
           accept=".txt,.docx,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
           onChange={importText}
         />
+        <input ref={novelInputRef} className="visually-hidden" type="file"
+          accept=".txt,text/plain" onChange={importNovel} />
       </header>
 
       {error && <div className="panel-error" role="alert">{error}</div>}
@@ -90,7 +123,8 @@ export function TextPanel({ builtInTexts, selectedName, onSelect, onSelectTempla
 
       <div className="import-guidance">
         <h2>本地文档规则</h2>
-        <p>TXT 支持 UTF-8 纯文本；DOCX 会提取标题、段落、编号与表格文字。导入内容只读，第一页始终绕开五行学习区。</p>
+        <p>背景支持 TXT / DOCX，只读且自动绕开学习区。小说支持最大 20MB 的 UTF-8 TXT，导入后每页显示五行，可用左右方向键翻页。</p>
+        {novelName && <strong>当前小说：{novelName}</strong>}
       </div>
     </section>
   );

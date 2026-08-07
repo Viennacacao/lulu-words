@@ -51,6 +51,7 @@ import { ProfilePanel } from "./features/navigation/ProfilePanel";
 import { StatisticsPanel } from "./features/navigation/StatisticsPanel";
 import { TextPanel } from "./features/navigation/TextPanel";
 import { WordbookPanel } from "./features/navigation/WordbookPanel";
+import { createNovelReaderDocument, type NovelReaderDocument } from "./features/reader/novelReader";
 import { createLearningRepository } from "./infrastructure/persistence/createLearningRepository";
 
 const emptyStatistics: LearningStatistics = {
@@ -69,6 +70,8 @@ function App() {
   const [templateId, setTemplateId] = useState("project-weekly");
   const [customTextTemplate, setCustomTextTemplate] = useState<DocumentTemplate>();
   const [selectedTextName, setSelectedTextName] = useState("");
+  const [novelDocument, setNovelDocument] = useState<NovelReaderDocument>();
+  const [novelPageIndex, setNovelPageIndex] = useState(0);
   const [loadingWordbookId, setLoadingWordbookId] = useState<WordbookId>();
   const [wordbookError, setWordbookError] = useState("");
   const [statistics, setStatistics] = useState(emptyStatistics);
@@ -182,11 +185,31 @@ function App() {
     [progressService, refreshStatistics, state],
   );
 
+  const moveNovelPage = useCallback((offset: number) => {
+    setNovelPageIndex((current) => {
+      if (!novelDocument) return 0;
+      return Math.min(novelDocument.pages.length - 1, Math.max(0, current + offset));
+    });
+  }, [novelDocument]);
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (activeView !== "study") return;
       const target = event.target as HTMLElement | null;
       if (target?.matches("input, textarea, select, [contenteditable='true']")) return;
+      if (novelDocument) {
+        if (event.key === "ArrowRight" || event.key === " ") {
+          event.preventDefault();
+          moveNovelPage(1);
+        } else if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          moveNovelPage(-1);
+        } else if (event.key === "Escape") {
+          setNovelDocument(undefined);
+          setNovelPageIndex(0);
+        }
+        return;
+      }
       if (state.phase === "editingMnemonic") {
         if (event.key === "Escape") {
           event.preventDefault();
@@ -222,7 +245,7 @@ function App() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [activeView, handleAction, speak, state.phase]);
+  }, [activeView, handleAction, moveNovelPage, novelDocument, speak, state.phase]);
 
   const selectWordbook = (wordbookId: WordbookId) => {
     updatePreferences({ ...preferences, selectedWordbookId: wordbookId });
@@ -241,6 +264,13 @@ function App() {
     layoutCache.current.clear();
     setCustomTextTemplate(template);
     setSelectedTextName(template.name);
+    setActiveView("study");
+  };
+
+  const selectNovel = (name: string, content: string) => {
+    const document = createNovelReaderDocument(name, content);
+    setNovelDocument(document);
+    setNovelPageIndex(0);
     setActiveView("study");
   };
 
@@ -271,8 +301,11 @@ function App() {
       apiKey: preferences.deepseekApiKey,
       baseUrl: preferences.deepseekBaseUrl,
       model: preferences.deepseekModel,
-    }, prompt, word);
-  }, [preferences.deepseekApiKey, preferences.deepseekBaseUrl, preferences.deepseekModel, state]);
+    }, prompt, novelDocument ? {
+      word: `小说《${novelDocument.name}》阅读片段`,
+      example: novelDocument.pages[novelPageIndex]?.join("\n"),
+    } : word);
+  }, [novelDocument, novelPageIndex, preferences.deepseekApiKey, preferences.deepseekBaseUrl, preferences.deepseekModel, state]);
 
   const lineHeight = preferences.fontSize * 2;
   const documentStyle = {
@@ -280,7 +313,7 @@ function App() {
     "--document-font-size": `${preferences.fontSize}px`,
     "--document-line-height": `${lineHeight}px`,
     "--learning-row-height": `${lineHeight}px`,
-    "--document-lower-top": `${386 + lineHeight * 6}px`,
+    "--document-lower-top": `${386 + lineHeight * 5}px`,
   } as CSSProperties;
 
   return (
@@ -303,11 +336,13 @@ function App() {
           <div className="document-zoom-layer" style={documentStyle}>
             <DocumentPage
               layout={documentLayout}
-              learningBlock={<LearningBlock state={state} dispatch={handleAction} />}
+              learningBlock={<LearningBlock state={state} dispatch={handleAction} novelLines={novelDocument?.pages[novelPageIndex]} />}
             />
           </div>
           <div className="session-progress" aria-live="polite">
-            {loadingWordbookId === currentWordbook.id
+            {novelDocument
+              ? `${novelDocument.name} · 阅读 ${novelPageIndex + 1}/${novelDocument.pages.length}`
+              : loadingWordbookId === currentWordbook.id
               ? `${currentWordbook.shortName} · 正在载入词库…`
               : `${currentWordbook.shortName} · 今日复习 ${statistics.todayReviewedCount} · 当前 ${state.currentIndex + 1}/${state.words.length}`}
           </div>
@@ -318,6 +353,12 @@ function App() {
             showKeyboardHints={preferences.showKeyboardHints}
             aiConfigured={Boolean(preferences.deepseekApiKey.trim())}
             onAskAi={askAi}
+            reader={novelDocument ? {
+              progress: `${novelPageIndex + 1}/${novelDocument.pages.length}`,
+              onPrevious: () => moveNovelPage(-1),
+              onNext: () => moveNovelPage(1),
+              onExit: () => { setNovelDocument(undefined); setNovelPageIndex(0); },
+            } : undefined}
           />
         </>
       )}
@@ -335,8 +376,10 @@ function App() {
         <TextPanel
           builtInTexts={builtInTexts}
           selectedName={selectedTextName}
+          novelName={novelDocument?.name}
           onSelect={selectText}
           onSelectTemplate={selectImportedTemplate}
+          onSelectNovel={selectNovel}
         />
       )}
       {activeView === "statistics" && (
