@@ -1,13 +1,24 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
-import { wordbookManifests } from "../src/data/wordbooks";
+import { parseWordbook, wordbookManifests } from "../src/data/wordbooks";
 import type { LearningWord } from "../src/features/learning/session";
 
 const load = (file: string) =>
-  JSON.parse(
-    readFileSync(resolve("public/wordbooks", file), "utf-8"),
-  ) as LearningWord[];
+  parseWordbook(
+    readFileSync(resolve("src/assets/wordbooks", file), "utf-8"),
+    file,
+  );
+
+const sampleWord: LearningWord = {
+  id: "word:sample",
+  word: "sample",
+  phonetic: "/ˈsæmpəl/",
+  meaning: "样本",
+  mnemonic: "",
+  phrases: "sample data",
+  example: "This is a sample.",
+};
 
 describe("bundled wordbooks", () => {
   it("contains six validated, non-empty offline wordbooks", () => {
@@ -19,7 +30,7 @@ describe("bundled wordbooks", () => {
 
       expect(words).toHaveLength(manifest.wordCount);
       expect(ids.size).toBe(words.length);
-      expect(words.length).toBeGreaterThan(500);
+      expect(words.length).toBeGreaterThan(300);
       expect(
         words.every(
           (word) =>
@@ -31,6 +42,29 @@ describe("bundled wordbooks", () => {
         ),
       ).toBe(true);
     }
+  });
+
+  it("parses both JSON arrays and JSONL files", () => {
+    expect(parseWordbook(JSON.stringify([sampleWord]))).toEqual([sampleWord]);
+    expect(
+      parseWordbook(`\n${JSON.stringify(sampleWord)}\n\n${JSON.stringify({
+        ...sampleWord,
+        id: "word:second",
+        word: "second",
+      })}\n`),
+    ).toHaveLength(2);
+  });
+
+  it("reports the original line number for invalid JSONL", () => {
+    expect(() =>
+      parseWordbook(`${JSON.stringify(sampleWord)}\n\n{bad json}`, "测试词库"),
+    ).toThrow("词库格式错误：测试词库 第 3 行不是有效的 JSON");
+  });
+
+  it("rejects entries with incomplete learning fields", () => {
+    expect(() =>
+      parseWordbook(JSON.stringify([{ id: "word:broken" }]), "测试词库"),
+    ).toThrow("词库格式错误：测试词库 第 1 条单词字段不完整");
   });
 
   it("uses stable word ids so progress is shared across wordbooks", () => {

@@ -11,7 +11,7 @@ export interface WordbookManifest {
   file: string;
   sourceName: string;
   sourceUrl: string;
-  license: "MIT";
+  license: "MIT" | "自有词库";
   official: boolean;
 }
 
@@ -80,12 +80,12 @@ export const wordbookManifests: WordbookManifest[] = [
     id: "toeic",
     name: "托业",
     shortName: "TOEIC",
-    description: "办公、商务、出行等托业高频场景词汇",
-    wordCount: 1018,
-    file: "toeic.json",
-    sourceName: "ringooai/open-vocabularies + ECDICT",
-    sourceUrl: "https://github.com/ringooai/open-vocabularies",
-    license: "MIT",
+    description: "个人整理的托业核心词汇",
+    wordCount: 366,
+    file: "momo_toeic.jsonl",
+    sourceName: "个人词库",
+    sourceUrl: "",
+    license: "自有词库",
     official: false,
   },
 ];
@@ -93,6 +93,11 @@ export const wordbookManifests: WordbookManifest[] = [
 export function getWordbookManifest(id: WordbookId) {
   return wordbookManifests.find((wordbook) => wordbook.id === id) ?? wordbookManifests[0];
 }
+
+const bundledWordbooks = import.meta.glob<string>("../assets/wordbooks/*", {
+  query: "?raw",
+  import: "default",
+});
 
 function isLearningWord(value: unknown): value is LearningWord {
   if (!value || typeof value !== "object") return false;
@@ -108,14 +113,53 @@ function isLearningWord(value: unknown): value is LearningWord {
   );
 }
 
+function validateWords(entries: unknown[], name: string): LearningWord[] {
+  if (entries.length === 0) throw new Error(`词库为空：${name}`);
+
+  return entries.map((entry, index) => {
+    if (!isLearningWord(entry)) {
+      throw new Error(`词库格式错误：${name} 第 ${index + 1} 条单词字段不完整`);
+    }
+    return entry;
+  });
+}
+
+export function parseWordbook(text: string, name = "词库"): LearningWord[] {
+  const trimmed = text.trim();
+  if (!trimmed) throw new Error(`词库为空：${name}`);
+
+  if (trimmed.startsWith("[")) {
+    let data: unknown;
+    try {
+      data = JSON.parse(trimmed);
+    } catch {
+      throw new Error(`词库格式错误：${name} 不是有效的 JSON 数组`);
+    }
+
+    if (!Array.isArray(data)) {
+      throw new Error(`词库格式错误：${name} 顶层必须是 JSON 数组`);
+    }
+    return validateWords(data, name);
+  }
+
+  const entries: unknown[] = [];
+  for (const [index, line] of text.split(/\r?\n/).entries()) {
+    if (!line.trim()) continue;
+    try {
+      entries.push(JSON.parse(line));
+    } catch {
+      throw new Error(`词库格式错误：${name} 第 ${index + 1} 行不是有效的 JSON`);
+    }
+  }
+
+  return validateWords(entries, name);
+}
+
 export async function loadWordbook(id: WordbookId): Promise<LearningWord[]> {
   const manifest = getWordbookManifest(id);
-  const response = await fetch(`/wordbooks/${manifest.file}`);
-  if (!response.ok) throw new Error(`无法读取词库：${manifest.name}`);
+  const modulePath = `../assets/wordbooks/${manifest.file}`;
+  const loadBundledText = bundledWordbooks[modulePath];
+  if (!loadBundledText) throw new Error(`无法读取内置词库：${manifest.name}`);
 
-  const data: unknown = await response.json();
-  if (!Array.isArray(data)) throw new Error(`词库格式错误：${manifest.name}`);
-  const words = data.filter(isLearningWord);
-  if (words.length === 0) throw new Error(`词库为空：${manifest.name}`);
-  return words;
+  return parseWordbook(await loadBundledText(), manifest.name);
 }

@@ -66,7 +66,7 @@ python3 scripts/build_wordbooks.py \
   --ecdict /path/to/ecdict.csv \
   --awl /path/to/words.json \
   --toeic /path/to/toeic_zh-hant.csv \
-  --output public/wordbooks
+  --output src/assets/wordbooks
 ```
 
 完整计划见 [`docs/DEVELOPMENT_PLAN.md`](docs/DEVELOPMENT_PLAN.md)。

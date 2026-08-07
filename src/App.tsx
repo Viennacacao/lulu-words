@@ -111,13 +111,27 @@ function App() {
     setWordbookError("");
 
     loadWordbook(wordbookId)
-      .then(async (words) => {
-        const progress = await progressService.initialize(words);
+      .then((words) => {
         if (cancelled) return;
+
+        // Reading the bundled file is enough to start studying. Persisting a
+        // large wordbook to SQLite can take longer on first launch, so keep it
+        // off the critical path for switching books.
         dispatch({ type: "LOAD_WORDS", words });
-        dispatch({ type: "HYDRATE_PROGRESS", ...progress });
         setLoadingWordbookId(undefined);
-        refreshStatistics();
+
+        void progressService
+          .initialize(words)
+          .then((progress) => {
+            if (cancelled) return;
+            dispatch({ type: "HYDRATE_PROGRESS", ...progress });
+            refreshStatistics();
+          })
+          .catch((error: unknown) => {
+            if (cancelled) return;
+            console.error("Failed to initialize learning progress", error);
+            setWordbookError("词库已载入，但学习进度初始化失败");
+          });
       })
       .catch((error: unknown) => {
         if (cancelled) return;
@@ -209,6 +223,7 @@ function App() {
 
   const selectWordbook = (wordbookId: WordbookId) => {
     updatePreferences({ ...preferences, selectedWordbookId: wordbookId });
+    setActiveView("study");
   };
 
   const selectText = (name: string, content: string, author?: string) => {
@@ -273,7 +288,9 @@ function App() {
             />
           </div>
           <div className="session-progress" aria-live="polite">
-            {currentWordbook.shortName} · 今日复习 {statistics.todayReviewedCount} · 当前 {state.currentIndex + 1}/{state.words.length}
+            {loadingWordbookId === currentWordbook.id
+              ? `${currentWordbook.shortName} · 正在载入词库…`
+              : `${currentWordbook.shortName} · 今日复习 ${statistics.todayReviewedCount} · 当前 ${state.currentIndex + 1}/${state.words.length}`}
           </div>
           <FloatingBar
             state={state}
