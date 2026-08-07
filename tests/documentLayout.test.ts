@@ -11,14 +11,14 @@ import {
 } from "../src/features/document/templates";
 
 describe("document layout", () => {
-  it("keeps exactly five learning lines without an extra lower spacer", () => {
-    expect(DOCUMENT_LAYOUT.learningRows).toBe(5);
-    expect(DOCUMENT_LAYOUT.lineHeight * DOCUMENT_LAYOUT.learningRows).toBe(170);
+  it("keeps six learning lines with a 1.2-line lower separation", () => {
+    expect(DOCUMENT_LAYOUT.learningRows).toBe(6);
+    expect(DOCUMENT_LAYOUT.lineHeight * DOCUMENT_LAYOUT.learningRows).toBe(204);
     expect(
       DOCUMENT_LAYOUT.lowerContentTop -
         (DOCUMENT_LAYOUT.learningTop +
           DOCUMENT_LAYOUT.lineHeight * DOCUMENT_LAYOUT.learningRows),
-    ).toBe(0);
+    ).toBeCloseTo(DOCUMENT_LAYOUT.lineHeight * 1.2, 0);
   });
 
   it("provides three distinct built-in read-only templates", () => {
@@ -57,5 +57,29 @@ describe("document layout", () => {
     expect(clampDocumentZoom(1.06)).toBe(1.1);
     expect(clampDocumentZoom(2)).toBe(1.2);
     expect(cache.get(template).pageCount).toBe(first.pageCount);
+    expect(first.camouflageLines).toHaveLength(6);
+    expect(first.camouflageLines.join("").length).toBeGreaterThan(20);
+  });
+
+  it("reserves real document text for camouflage without duplication or loss", () => {
+    const text = "用户导入文档内容".repeat(180);
+    const layout = new DocumentLayoutCache().get({
+      id: "imported",
+      name: "用户文档",
+      fileName: "用户文档.docx",
+      revision: 1,
+      firstPage: {
+        upper: [{ id: "content", kind: "paragraph", text }],
+        lower: [],
+      },
+      continuation: [],
+    });
+    const reconstructed = [
+      ...layout.firstPage.upper.map((block) => block.text),
+      ...layout.camouflageLines,
+      ...layout.firstPage.lower.map((block) => block.text),
+      ...layout.continuationPages.flat().map((block) => block.text),
+    ].join("");
+    expect(reconstructed).toBe(text);
   });
 });

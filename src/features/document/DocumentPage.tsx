@@ -25,15 +25,17 @@ export function DocumentPage({ learningBlock, layout }: DocumentPageProps) {
       <article className="document-page" aria-label="只读模拟文档第一页">
         <div className="page-corner top-left" />
         <div className="page-corner top-right" />
-        <section className="document-copy document-copy--top">
-          <DocumentContent blocks={layout.firstPage.upper} />
-        </section>
+        <div className="first-page-flow">
+          <section className="document-copy document-copy--top">
+            <DocumentContent blocks={layout.firstPage.upper} />
+          </section>
 
-        <div className="learning-slot">{learningBlock}</div>
+          <div className="learning-slot">{learningBlock}</div>
 
-        <section className="document-copy document-copy--bottom">
-          <DocumentContent blocks={layout.firstPage.lower} />
-        </section>
+          <section className="document-copy document-copy--bottom">
+            <DocumentContent blocks={layout.firstPage.lower} />
+          </section>
+        </div>
         <div className="page-number">— 1 —</div>
       </article>
 

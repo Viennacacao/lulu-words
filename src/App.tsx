@@ -51,7 +51,13 @@ import { ProfilePanel } from "./features/navigation/ProfilePanel";
 import { StatisticsPanel } from "./features/navigation/StatisticsPanel";
 import { TextPanel } from "./features/navigation/TextPanel";
 import { WordbookPanel } from "./features/navigation/WordbookPanel";
-import { createNovelReaderDocument, type NovelReaderDocument } from "./features/reader/novelReader";
+import {
+  createNovelFingerprint,
+  createNovelReaderDocument,
+  findNovelPageIndex,
+  NovelProgressStore,
+  type NovelReadingProgress,
+} from "./features/reader/novelReader";
 import { createLearningRepository } from "./infrastructure/persistence/createLearningRepository";
 
 const emptyStatistics: LearningStatistics = {
@@ -63,6 +69,12 @@ const emptyStatistics: LearningStatistics = {
   ratings: { again: 0, hard: 0, good: 0 },
 };
 
+interface NovelSource {
+  name: string;
+  text: string;
+  fingerprint: string;
+}
+
 function App() {
   const preferencesStore = useMemo(() => new AppPreferencesStore(), []);
   const [preferences, setPreferences] = useState(() => preferencesStore.load());
@@ -70,14 +82,32 @@ function App() {
   const [templateId, setTemplateId] = useState("project-weekly");
   const [customTextTemplate, setCustomTextTemplate] = useState<DocumentTemplate>();
   const [selectedTextName, setSelectedTextName] = useState("");
-  const [novelDocument, setNovelDocument] = useState<NovelReaderDocument>();
-  const [novelPageIndex, setNovelPageIndex] = useState(0);
+  const [novelSource, setNovelSource] = useState<NovelSource>();
+  const [studyMode, setStudyMode] = useState<"words" | "novel">("words");
+  const [novelOffset, setNovelOffset] = useState(0);
+  const [readerHidden, setReaderHidden] = useState(false);
+  const [resumeProgress, setResumeProgress] = useState<NovelReadingProgress>();
   const [loadingWordbookId, setLoadingWordbookId] = useState<WordbookId>();
   const [wordbookError, setWordbookError] = useState("");
   const [statistics, setStatistics] = useState(emptyStatistics);
   const layoutCache = useRef(new DocumentLayoutCache());
   const documentTemplate = customTextTemplate ?? getDocumentTemplate(templateId);
   const documentLayout = layoutCache.current.get(documentTemplate, preferences.fontSize);
+  const novelProgressStore = useMemo(() => new NovelProgressStore(), []);
+  const novelDocument = useMemo(() => novelSource ? createNovelReaderDocument(
+    novelSource.name,
+    novelSource.text,
+    {
+      fingerprint: novelSource.fingerprint,
+      lineWidthEm: 610 / (preferences.fontSize * 1.04),
+      linesPerPage: 6,
+    },
+  ) : undefined, [novelSource, preferences.fontSize]);
+  const novelPageIndex = novelDocument
+    ? findNovelPageIndex(novelDocument.pages, novelOffset)
+    : 0;
+  const novelPage = novelDocument?.pages[novelPageIndex];
+  const readerActive = studyMode === "novel" && Boolean(novelDocument);
   const currentWordbook = getWordbookManifest(preferences.selectedWordbookId);
   const [state, dispatch] = useReducer(
     learningSessionReducer,
@@ -186,27 +216,48 @@ function App() {
   );
 
   const moveNovelPage = useCallback((offset: number) => {
-    setNovelPageIndex((current) => {
-      if (!novelDocument) return 0;
-      return Math.min(novelDocument.pages.length - 1, Math.max(0, current + offset));
-    });
+    if (!novelDocument) return;
+    const target = Math.min(
+      novelDocument.pages.length - 1,
+      Math.max(0, novelPageIndex + offset),
+    );
+    setNovelOffset(novelDocument.pages[target].startOffset);
+  }, [novelDocument, novelPageIndex]);
+
+  const jumpToNovelPage = useCallback((page: number) => {
+    if (!novelDocument) return;
+    const target = Math.min(novelDocument.pages.length, Math.max(1, page)) - 1;
+    setNovelOffset(novelDocument.pages[target].startOffset);
   }, [novelDocument]);
+
+  useEffect(() => {
+    if (!novelDocument || !novelSource || resumeProgress) return;
+    novelProgressStore.save({
+      fingerprint: novelSource.fingerprint,
+      name: novelDocument.name,
+      offset: novelOffset,
+      lastPage: novelPageIndex + 1,
+      totalPages: novelDocument.pages.length,
+      updatedAt: new Date().toISOString(),
+    });
+  }, [novelDocument, novelOffset, novelPageIndex, novelProgressStore, novelSource, resumeProgress]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (activeView !== "study") return;
       const target = event.target as HTMLElement | null;
       if (target?.matches("input, textarea, select, [contenteditable='true']")) return;
-      if (novelDocument) {
+      if (readerActive && novelDocument) {
         if (event.key === "ArrowRight" || event.key === " ") {
           event.preventDefault();
           moveNovelPage(1);
         } else if (event.key === "ArrowLeft") {
           event.preventDefault();
           moveNovelPage(-1);
+        } else if (event.key.toLowerCase() === "h") {
+          setReaderHidden((hidden) => !hidden);
         } else if (event.key === "Escape") {
-          setNovelDocument(undefined);
-          setNovelPageIndex(0);
+          setStudyMode("words");
         }
         return;
       }
@@ -245,7 +296,7 @@ function App() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [activeView, handleAction, moveNovelPage, novelDocument, speak, state.phase]);
+  }, [activeView, handleAction, moveNovelPage, novelDocument, readerActive, speak, state.phase]);
 
   const selectWordbook = (wordbookId: WordbookId) => {
     updatePreferences({ ...preferences, selectedWordbookId: wordbookId });
@@ -267,10 +318,14 @@ function App() {
     setActiveView("study");
   };
 
-  const selectNovel = (name: string, content: string) => {
-    const document = createNovelReaderDocument(name, content);
-    setNovelDocument(document);
-    setNovelPageIndex(0);
+  const selectNovel = (name: string, content: string, file: { size: number; lastModified: number }) => {
+    const fingerprint = createNovelFingerprint(name, file.size, file.lastModified);
+    const savedProgress = novelProgressStore.load(fingerprint);
+    setNovelSource({ name, text: content, fingerprint });
+    setNovelOffset(0);
+    setReaderHidden(false);
+    setResumeProgress(savedProgress?.offset ? savedProgress : undefined);
+    setStudyMode("novel");
     setActiveView("study");
   };
 
@@ -301,11 +356,11 @@ function App() {
       apiKey: preferences.deepseekApiKey,
       baseUrl: preferences.deepseekBaseUrl,
       model: preferences.deepseekModel,
-    }, prompt, novelDocument ? {
+    }, prompt, readerActive && novelDocument ? {
       word: `小说《${novelDocument.name}》阅读片段`,
-      example: novelDocument.pages[novelPageIndex]?.join("\n"),
+      example: novelPage?.lines.map((line) => line.text).join("\n"),
     } : word);
-  }, [novelDocument, novelPageIndex, preferences.deepseekApiKey, preferences.deepseekBaseUrl, preferences.deepseekModel, state]);
+  }, [novelDocument, novelPage, preferences.deepseekApiKey, preferences.deepseekBaseUrl, preferences.deepseekModel, readerActive, state]);
 
   const lineHeight = preferences.fontSize * 2;
   const documentStyle = {
@@ -313,7 +368,6 @@ function App() {
     "--document-font-size": `${preferences.fontSize}px`,
     "--document-line-height": `${lineHeight}px`,
     "--learning-row-height": `${lineHeight}px`,
-    "--document-lower-top": `${386 + lineHeight * 5}px`,
   } as CSSProperties;
 
   return (
@@ -336,12 +390,18 @@ function App() {
           <div className="document-zoom-layer" style={documentStyle}>
             <DocumentPage
               layout={documentLayout}
-              learningBlock={<LearningBlock state={state} dispatch={handleAction} novelLines={novelDocument?.pages[novelPageIndex]} />}
+              learningBlock={<LearningBlock
+                state={state}
+                dispatch={handleAction}
+                camouflageLines={documentLayout.camouflageLines}
+                novelLines={readerActive ? novelPage?.lines : undefined}
+                readerHidden={readerHidden}
+              />}
             />
           </div>
           <div className="session-progress" aria-live="polite">
-            {novelDocument
-              ? `${novelDocument.name} · 阅读 ${novelPageIndex + 1}/${novelDocument.pages.length}`
+            {readerActive && novelDocument
+              ? `${novelDocument.name} · 阅读 ${novelPageIndex + 1}/${novelDocument.pages.length} · ${Math.round(((novelPageIndex + 1) / novelDocument.pages.length) * 100)}%`
               : loadingWordbookId === currentWordbook.id
               ? `${currentWordbook.shortName} · 正在载入词库…`
               : `${currentWordbook.shortName} · 今日复习 ${statistics.todayReviewedCount} · 当前 ${state.currentIndex + 1}/${state.words.length}`}
@@ -353,13 +413,34 @@ function App() {
             showKeyboardHints={preferences.showKeyboardHints}
             aiConfigured={Boolean(preferences.deepseekApiKey.trim())}
             onAskAi={askAi}
-            reader={novelDocument ? {
-              progress: `${novelPageIndex + 1}/${novelDocument.pages.length}`,
+            onOpenReader={novelDocument ? () => setStudyMode("novel") : undefined}
+            reader={readerActive && novelDocument ? {
+              page: novelPageIndex + 1,
+              totalPages: novelDocument.pages.length,
+              hidden: readerHidden,
               onPrevious: () => moveNovelPage(-1),
               onNext: () => moveNovelPage(1),
-              onExit: () => { setNovelDocument(undefined); setNovelPageIndex(0); },
+              onJump: jumpToNovelPage,
+              onToggleHidden: () => setReaderHidden((hidden) => !hidden),
+              onSwitchToWords: () => setStudyMode("words"),
             } : undefined}
           />
+          {resumeProgress && novelDocument && (
+            <aside className="resume-reading-prompt" role="status">
+              <div>
+                <b>发现上次阅读进度</b>
+                <span>上次读到第 {resumeProgress.lastPage} 页，约 {Math.round((resumeProgress.lastPage / Math.max(1, resumeProgress.totalPages)) * 100)}%</span>
+              </div>
+              <button className="primary-button" onClick={() => {
+                setNovelOffset(resumeProgress.offset);
+                setResumeProgress(undefined);
+              }}>继续阅读</button>
+              <button className="secondary-button" onClick={() => {
+                setNovelOffset(0);
+                setResumeProgress(undefined);
+              }}>从头开始</button>
+            </aside>
+          )}
         </>
       )}
 
@@ -376,7 +457,7 @@ function App() {
         <TextPanel
           builtInTexts={builtInTexts}
           selectedName={selectedTextName}
-          novelName={novelDocument?.name}
+          novelName={novelSource?.name.replace(/\.txt$/i, "")}
           onSelect={selectText}
           onSelectTemplate={selectImportedTemplate}
           onSelectNovel={selectNovel}

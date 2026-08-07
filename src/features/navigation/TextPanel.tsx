@@ -9,7 +9,7 @@ interface TextPanelProps {
   novelName?: string;
   onSelect: (name: string, content: string, author?: string) => void;
   onSelectTemplate: (template: DocumentTemplate) => void;
-  onSelectNovel: (name: string, content: string) => void;
+  onSelectNovel: (name: string, content: string, file: { size: number; lastModified: number }) => void;
 }
 
 export function TextPanel({ builtInTexts, selectedName, novelName, onSelect, onSelectTemplate, onSelectNovel }: TextPanelProps) {
@@ -60,7 +60,7 @@ export function TextPanel({ builtInTexts, selectedName, novelName, onSelect, onS
     }
     try {
       setImporting(true);
-      onSelectNovel(file.name, await file.text());
+      onSelectNovel(file.name, await file.text(), { size: file.size, lastModified: file.lastModified });
       setError("");
     } catch (cause) {
       setError(cause instanceof Error ? `小说导入失败：${cause.message}` : "无法读取小说 TXT。");
@@ -75,7 +75,7 @@ export function TextPanel({ builtInTexts, selectedName, novelName, onSelect, onS
         <div>
           <span className="feature-eyebrow">READ-ONLY TEXT</span>
           <h1 id="text-panel-title">文档与小说</h1>
-          <p>背景文档维持办公伪装；小说 TXT 则进入五行沉浸阅读模式。</p>
+          <p>背景文档维持办公伪装；小说 TXT 则进入六行沉浸阅读模式。</p>
         </div>
         <div className="import-actions">
           <button className="secondary-button" onClick={() => backgroundInputRef.current?.click()}>
@@ -123,7 +123,7 @@ export function TextPanel({ builtInTexts, selectedName, novelName, onSelect, onS
 
       <div className="import-guidance">
         <h2>本地文档规则</h2>
-        <p>背景支持 TXT / DOCX，只读且自动绕开学习区。小说支持最大 20MB 的 UTF-8 TXT，导入后每页显示五行，可用左右方向键翻页。</p>
+        <p>背景支持 TXT / DOCX，只读且自动绕开学习区。小说支持最大 20MB 的 UTF-8 TXT，每页六行，并支持隐藏、页码跳转和阅读进度恢复。</p>
         {novelName && <strong>当前小说：{novelName}</strong>}
       </div>
     </section>

@@ -4,24 +4,54 @@ import {
   type LearningSessionAction,
   type LearningSessionState,
 } from "./session";
+import type { NovelReaderLine } from "../reader/novelReader";
 
 interface LearningBlockProps {
   state: LearningSessionState;
   dispatch: React.Dispatch<LearningSessionAction>;
-  novelLines?: string[];
+  novelLines?: NovelReaderLine[];
+  camouflageLines: string[];
+  readerHidden?: boolean;
 }
 
 function ConcealedRow() {
   return <span aria-hidden="true">&nbsp;</span>;
 }
 
-export function LearningBlock({ state, dispatch, novelLines }: LearningBlockProps) {
+function CamouflageBlock({ lines, label }: { lines: string[]; label: string }) {
+  return (
+    <section className="learning-block learning-block--hidden" aria-label={label}>
+      {Array.from({ length: 6 }, (_, index) => (
+        <div key={index}>{lines[index] || <ConcealedRow />}</div>
+      ))}
+    </section>
+  );
+}
+
+export function splitBilingualExample(example: string) {
+  const explicitLines = example.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+  if (explicitLines.length > 1) {
+    return { example: explicitLines[0], translation: explicitLines.slice(1).join(" ") };
+  }
+  const value = explicitLines[0] ?? "";
+  const chineseStart = value.search(/[\u3400-\u9fff]/);
+  if (chineseStart > 3) {
+    return { example: value.slice(0, chineseStart).trim(), translation: value.slice(chineseStart).trim() };
+  }
+  return { example: value, translation: "" };
+}
+
+export function LearningBlock({ state, dispatch, novelLines, camouflageLines, readerHidden = false }: LearningBlockProps) {
+  if (novelLines && readerHidden) {
+    return <CamouflageBlock lines={camouflageLines} label="小说阅读区已隐藏" />;
+  }
+
   if (novelLines) {
     return (
       <section className="learning-block learning-block--reader" aria-label="小说阅读区">
-        {Array.from({ length: 5 }, (_, index) => (
-          <div className="learning-row novel-reader-row" key={index}>
-            {novelLines[index] || <ConcealedRow />}
+        {Array.from({ length: 6 }, (_, index) => (
+          <div className={`learning-row novel-reader-row${novelLines[index]?.firstInParagraph ? " is-paragraph-start" : ""}${novelLines[index]?.heading ? " is-heading" : ""}`} key={index}>
+            {novelLines[index]?.text || <ConcealedRow />}
           </div>
         ))}
       </section>
@@ -30,17 +60,10 @@ export function LearningBlock({ state, dispatch, novelLines }: LearningBlockProp
 
   const word = getCurrentWord(state);
   const answerVisible = state.phase !== "recall";
+  const bilingualExample = splitBilingualExample(word.example);
 
   if (state.hidden) {
-    return (
-      <section className="learning-block learning-block--hidden" aria-label="学习区已隐藏">
-        <div>经研究讨论，现将下一阶段重点工作安排如下。</div>
-        <div>各部门应结合实际情况，进一步细化工作任务。</div>
-        <div>相关事项按照既定时间节点有序推进。</div>
-        <div>执行过程中发现的问题应及时沟通反馈。</div>
-        <div>以上内容请各责任单位认真落实。</div>
-      </section>
-    );
+    return <CamouflageBlock lines={camouflageLines} label="学习区已隐藏" />;
   }
 
   return (
@@ -74,7 +97,10 @@ export function LearningBlock({ state, dispatch, novelLines }: LearningBlockProp
         {answerVisible ? `短语：${word.phrases.trim() || "暂无短语"}` : <ConcealedRow />}
       </div>
       <div className="learning-row">
-        {answerVisible ? `例句：${word.example.trim().replace(/\s+/g, " ") || "暂无例句"}` : <ConcealedRow />}
+        {answerVisible ? `例句：${bilingualExample.example || "暂无例句"}` : <ConcealedRow />}
+      </div>
+      <div className="learning-row">
+        {answerVisible ? `译文：${bilingualExample.translation || "暂无译文"}` : <ConcealedRow />}
       </div>
     </section>
   );

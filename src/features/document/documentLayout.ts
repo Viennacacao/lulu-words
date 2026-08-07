@@ -5,9 +5,10 @@ export const DOCUMENT_LAYOUT = Object.freeze({
   pageHeight: 1123,
   pageMarginX: 92,
   lineHeight: 34,
-  learningRows: 5,
+  learningRows: 6,
   learningTop: 386,
-  lowerContentTop: 556,
+  learningGapLines: 1.2,
+  lowerContentTop: 631,
   continuationLineCapacity: 27,
 });
 
@@ -16,6 +17,7 @@ const PARAGRAPH_CHARACTERS_PER_LINE = 31;
 export interface DocumentLayoutResult {
   cacheKey: string;
   firstPage: DocumentTemplate["firstPage"];
+  camouflageLines: string[];
   continuationPages: DocumentBlock[][];
   pageCount: number;
   wordCount: number;
@@ -80,27 +82,54 @@ export class DocumentLayoutCache {
     if (cached) return cached;
 
     const ratio = 17 / normalizedFontSize;
-    const upperCapacity = Math.max(7, Math.floor(10 * ratio));
-    const lowerCapacity = Math.max(8, Math.floor(13 * ratio));
+    const lineHeight = normalizedFontSize * 2;
+    const learningGap = lineHeight * DOCUMENT_LAYOUT.learningGapLines;
+    const upperCapacity = Math.max(
+      5,
+      Math.floor((DOCUMENT_LAYOUT.learningTop - learningGap - 65) / lineHeight),
+    );
+    const lowerTop = DOCUMENT_LAYOUT.learningTop +
+      DOCUMENT_LAYOUT.learningRows * lineHeight + learningGap;
+    const lowerCapacity = Math.max(
+      7,
+      Math.floor((DOCUMENT_LAYOUT.pageHeight - 72 - lowerTop) / lineHeight),
+    );
     const continuationCapacity = Math.max(
       20,
       Math.floor(DOCUMENT_LAYOUT.continuationLineCapacity * ratio),
     );
-    const [upper, upperOverflow] = takeBlocksWithinPage(
-      template.firstPage.upper,
+    const charactersPerLine = Math.max(
+      24,
+      Math.floor(PARAGRAPH_CHARACTERS_PER_LINE * ratio),
+    );
+    const allBlocks = [
+      ...template.firstPage.upper,
+      ...template.firstPage.lower,
+      ...template.continuation,
+    ];
+    const [upper, afterUpper] = takeBlocksWithinPage(
+      allBlocks,
       upperCapacity,
+      charactersPerLine,
+    );
+    const [camouflageLines, afterCamouflage] = takeCamouflageLines(
+      afterUpper,
+      DOCUMENT_LAYOUT.learningRows,
+      charactersPerLine,
     );
     const [lower, lowerOverflow] = takeBlocksWithinPage(
-      [...upperOverflow, ...template.firstPage.lower],
+      afterCamouflage,
       lowerCapacity,
+      charactersPerLine,
     );
     const continuationPages = paginateDocumentBlocks(
-      [...lowerOverflow, ...template.continuation],
+      lowerOverflow,
       continuationCapacity,
     );
     const layout: DocumentLayoutResult = {
       cacheKey,
       firstPage: { upper, lower },
+      camouflageLines,
       continuationPages,
       pageCount: 1 + continuationPages.length,
       wordCount: countDocumentCharacters(template),
@@ -114,9 +143,47 @@ export class DocumentLayoutCache {
   }
 }
 
+function takeCamouflageLines(
+  blocks: DocumentBlock[],
+  lineCount: number,
+  charactersPerLine: number,
+): [string[], DocumentBlock[]] {
+  const lines: string[] = [];
+  const remaining = [...blocks];
+
+  while (remaining.length > 0 && lines.length < lineCount) {
+    const block = remaining.shift()!;
+    const text = block.text.trim();
+    if (!text) continue;
+
+    if (block.kind === "title" || block.kind === "heading") {
+      lines.push(text);
+      continue;
+    }
+
+    let consumed = 0;
+    while (consumed < text.length && lines.length < lineCount) {
+      const end = Math.min(text.length, consumed + charactersPerLine);
+      lines.push(text.slice(consumed, end));
+      consumed = end;
+    }
+    if (consumed < text.length) {
+      remaining.unshift({
+        ...block,
+        id: `${block.id}-after-camouflage`,
+        text: text.slice(consumed),
+      });
+    }
+  }
+
+  while (lines.length < lineCount) lines.push("");
+  return [lines, remaining];
+}
+
 function takeBlocksWithinPage(
   blocks: DocumentBlock[],
   lineCapacity: number,
+  charactersPerLine = PARAGRAPH_CHARACTERS_PER_LINE,
 ): [DocumentBlock[], DocumentBlock[]] {
   const selected: DocumentBlock[] = [];
   let usedLines = 0;
@@ -124,7 +191,27 @@ function takeBlocksWithinPage(
 
   while (index < blocks.length) {
     const lines = estimateBlockLines(blocks[index]);
-    if (selected.length > 0 && usedLines + lines > lineCapacity) break;
+    if (usedLines + lines > lineCapacity) {
+      const remainingLines = lineCapacity - usedLines;
+      const block = blocks[index];
+      if (
+        remainingLines > 0 &&
+        block.kind !== "title" &&
+        block.kind !== "heading"
+      ) {
+        const splitAt = Math.min(block.text.length, remainingLines * charactersPerLine);
+        const leadingText = block.text.slice(0, splitAt).trim();
+        const trailingText = block.text.slice(splitAt).trim();
+        if (leadingText) {
+          selected.push({ ...block, id: `${block.id}-before-slot`, text: leadingText });
+        }
+        const remaining = trailingText
+          ? [{ ...block, id: `${block.id}-after-slot`, text: trailingText }, ...blocks.slice(index + 1)]
+          : blocks.slice(index + 1);
+        return [selected, remaining];
+      }
+      if (selected.length > 0) break;
+    }
     selected.push(blocks[index]);
     usedLines += lines;
     index += 1;

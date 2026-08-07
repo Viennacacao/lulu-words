@@ -1,4 +1,4 @@
-import { useRef, useState, type FormEvent, type PointerEvent as ReactPointerEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent, type PointerEvent as ReactPointerEvent } from "react";
 import type {
   LearningSessionAction,
   LearningSessionState,
@@ -12,11 +12,16 @@ interface FloatingBarProps {
   showKeyboardHints?: boolean;
   aiConfigured: boolean;
   onAskAi: (prompt: string) => Promise<string>;
+  onOpenReader?: () => void;
   reader?: {
-    progress: string;
+    page: number;
+    totalPages: number;
+    hidden: boolean;
     onPrevious: () => void;
     onNext: () => void;
-    onExit: () => void;
+    onJump: (page: number) => void;
+    onToggleHidden: () => void;
+    onSwitchToWords: () => void;
   };
 }
 
@@ -32,6 +37,7 @@ export function FloatingBar({
   showKeyboardHints = true,
   aiConfigured,
   onAskAi,
+  onOpenReader,
   reader,
 }: FloatingBarProps) {
   const [position, setPosition] = useState<Position>(() => ({
@@ -44,6 +50,11 @@ export function FloatingBar({
   const [aiError, setAiError] = useState("");
   const [askingAi, setAskingAi] = useState(false);
   const [showAiPanel, setShowAiPanel] = useState(false);
+  const [readerPageInput, setReaderPageInput] = useState("1");
+
+  useEffect(() => {
+    if (reader) setReaderPageInput(String(reader.page));
+  }, [reader?.page]);
 
   const beginDrag = (event: ReactPointerEvent<HTMLButtonElement>) => {
     dragOffset.current = {
@@ -82,6 +93,20 @@ export function FloatingBar({
     } finally { setAskingAi(false); }
   };
 
+  const jumpToReaderPage = () => {
+    if (!reader) return;
+    if (!readerPageInput.trim()) {
+      setReaderPageInput(String(reader.page));
+      return;
+    }
+    const page = Number(readerPageInput);
+    if (Number.isFinite(page)) {
+      const normalized = Math.min(reader.totalPages, Math.max(1, Math.round(page)));
+      setReaderPageInput(String(normalized));
+      reader.onJump(normalized);
+    }
+  };
+
   return (
     <aside
       className="floating-bar"
@@ -108,10 +133,17 @@ export function FloatingBar({
       </button>
       {reader ? (
         <>
+          <button onClick={reader.onToggleHidden}>{reader.hidden ? label("恢复", "H") : label("隐藏", "H")}</button>
+          <button onClick={reader.onSwitchToWords}>背词</button>
           <button onClick={reader.onPrevious}>{label("上一页", "←")}</button>
-          <span className="reader-progress">{reader.progress}</span>
+          <span className="reader-page-jump">
+            <input aria-label="小说页码" inputMode="numeric" value={readerPageInput}
+              onChange={(event) => setReaderPageInput(event.target.value.replace(/\D/g, ""))}
+              onBlur={jumpToReaderPage}
+              onKeyDown={(event) => { if (event.key === "Enter") jumpToReaderPage(); }} />
+            <span>/ {reader.totalPages}</span>
+          </span>
           <button className="primary-action" onClick={reader.onNext}>{label("下一页", "→")}</button>
-          <button onClick={reader.onExit}>返回背词</button>
         </>
       ) : state.phase === "editingMnemonic" ? (
         <>
@@ -138,6 +170,7 @@ export function FloatingBar({
           <button onClick={() => dispatch({ type: "TOGGLE_HIDDEN" })}>
             {state.hidden ? label("恢复", "H") : label("隐藏", "H")}
           </button>
+          {onOpenReader && <button onClick={onOpenReader}>小说</button>}
         </>
       )}
       <form className="floating-ai-form" onSubmit={submitAi}>
