@@ -1,96 +1,142 @@
 # 文档背词
 
-一个以只读办公文档为视觉环境、在第一页中部提供固定六行学习区的本地背单词应用。
+文档背词是一款为 macOS 设计的本地英语学习工具。它将单词学习和小说阅读融入一张只读办公文档页面，帮助你在工作间隙中低调、连续地学习。
 
-当前已完成核心学习交互、文档融合视觉、Tauri 桌面壳、SQLite 本地存储、FSRS 复习调度、六套离线词书、TXT/DOCX 只读导入、DeepSeek 学习助手、真实学习统计与字号排版。
+应用不编辑 Word 文档，也不会修改导入的原文件。所有学习进度、助记、小说和设置都保存在当前电脑。
 
-## 已实现功能
+## 安装
 
-- `学习`：六行学习区、快捷键评分、发音、助记和使用当前背景原文的快速隐藏。
-- `选词`：CET-4、CET-6、IELTS、TOEFL、PTE 学术核心、TOEIC 六套离线词书。
-- `文本`：两份公版英文节选和本地 UTF-8 TXT / DOCX 导入，只读分页且绕开学习区。
-- `统计`：累计复习、今日目标、独立单词、到期卡片、评分分布和助记数量。
-- `我的`：每日目标、发音速度、快捷键提示和 DeepSeek 配置等纯本地设置。
-- `AI 助手`：浮动栏直接输入问题，回答向上展开，并自动带入当前单词、释义、短语和例句上下文。
-- `小说阅读`：导入最大 20MB 的 UTF-8 TXT，将小说正文按每页六行显示；支持隐藏、页码跳转、进度恢复及背词/小说双向切换。
-- 文档工具栏：15–20px 真实字号调整；正文与学习区同步重排。页面缩放独立于字号。
+1. 下载适用于 Apple Silicon Mac 的 DMG 安装包。
+2. 打开 DMG，将“文档背词”拖入“应用程序”。
+3. 从“应用程序”启动。
 
-内置词书均为非官方学习清单，来源和许可见 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)。
+如果 macOS 提示应用来源未知，请在 Finder 中右键点击应用，选择“打开”，并在系统对话框中再次确认。
 
-## 环境要求
+## 界面与使用
 
-- Node.js 20 或更高版本。
-- npm。
-- 桌面端开发需要 Rust stable；macOS 还需要 Xcode Command Line Tools。
+顶部保留了熟悉的文档工具栏视觉。其中“学习”、“选词”、“文本”、“统计”和“我的”是应用的功能入口。
 
-## 浏览器预览
+### 背单词
+
+文档第一页中部是固定六行学习区：
+
+1. 单词、音标和发音。
+2. 中文释义。
+3. 助记，可自行编辑并保存。
+4. 常用短语。
+5. 英文例句。
+6. 例句翻译。
+
+点击“选词”可切换 CET-4、CET-6、IELTS、TOEFL、PTE 和 TOEIC 词书。每本词书切换后会立即载入对应内容，学习记录按单词共享，不会因切换词书丢失。
+
+学习操作集中在可拖动的浮动栏中。字号调整会同时作用于文档正文和学习区，文档缩放则只改变页面的整体显示比例。
+
+### 背景文档
+
+进入“文本”，点击“导入背景文档”，可选择 TXT 或 DOCX。应用会提取文字并将其排入只读页面，中间自动为六行学习区留出位置。
+
+- 背景 TXT：最大 2 MB，建议使用 UTF-8 编码。
+- DOCX：最大 20 MB，支持标题、段落、编号和表格文字提取。
+
+DOCX 导入用于生成适合阅读的模拟页面，不会复制 Word 中的图片、批注、页眉页脚或精确版式。
+
+### 小说阅读
+
+“文本”页同时包含本地小说书架。点击“导入小说 TXT”后，小说会复制到应用的本地数据目录，下次启动无需重新选择原文件。
+
+书架会显示每本小说的文件大小、阅读百分比和上次页码。你可以在多本小说之间切换，继续上次位置，或从头开始。调整字号导致重新分页时，应用仍会尽量回到同一段文字。
+
+从书架删除小说只会删除 App 中保存的副本，不会删除或修改用户原始 TXT。单本小说上限为 20 MB，建议使用 UTF-8 编码。
+
+### AI 助手
+
+浮动栏右侧的输入框可向 DeepSeek 提问。AI 会根据当前单词、例句或小说片段给出回答。
+
+使用前进入“我的”，在 DeepSeek 设置中填写：
+
+- API Key。
+- API 地址，默认为 `https://api.deepseek.com`。
+- 希望使用的模型名称。
+
+API Key 仅保存在当前电脑的应用偏好中。公开发布的安装包不应内置任何个人 API Key。
+
+## 快捷键
+
+### 单词模式
+
+| 按键 | 操作 |
+| --- | --- |
+| <kbd>Space</kbd> | 显示或隐藏答案 |
+| <kbd>1</kbd> | 忘记 |
+| <kbd>2</kbd> | 模糊 |
+| <kbd>3</kbd> | 认识 |
+| <kbd>P</kbd> | 播放单词发音 |
+| <kbd>E</kbd> | 编辑助记 |
+| <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>Enter</kbd> | 保存助记 |
+| <kbd>H</kbd> | 隐藏或恢复学习区 |
+| <kbd>←</kbd>/<kbd>→</kbd> | 上一个或下一个单词 |
+
+### 小说模式
+
+| 按键 | 操作 |
+| --- | --- |
+| <kbd>←</kbd>/<kbd>→</kbd> | 上一页或下一页 |
+| <kbd>Space</kbd> | 下一页 |
+| <kbd>H</kbd> | 隐藏或恢复小说文字 |
+| <kbd>Esc</kbd> | 返回背单词 |
+
+浮动栏也可直接输入页码跳转。
+
+## 本地数据与隐私
+
+文档背词是本地优先应用：
+
+- 学习进度、复习日志和助记保存在本地 SQLite 数据库。
+- 小说副本保存在 `~/Library/Application Support/com.luluwords.desktop/novels`。
+- 字号、词书、AI 配置等偏好保存在当前 Mac。
+- 只有在你主动使用 AI 提问时，问题和当前学习上下文才会发送至所配置的 DeepSeek 接口。
+- 导入的背景文档只用于当前应用会话，不会覆盖原文件。
+
+## 开发与构建
+
+需要 Node.js 20 或更高版本、npm、Rust stable 和 Xcode Command Line Tools。
+
+浏览器界面预览：
 
 ```bash
 npm install
 npm run dev
 ```
 
-浏览器预览使用 `localStorage` 作为本地存储，适合快速调试界面和学习流程。
-
-## 桌面端运行
+浏览器预览不能持久化小说书架文件。调试完整桌面功能请运行：
 
 ```bash
-npm install
 npm run desktop:dev
 ```
 
-桌面端使用应用数据目录中的 `lulu-words.db`，通过 SQLite 保存卡片状态、复习日志和助记。
+生成 macOS 应用和 DMG：
 
-## 导入 TXT / DOCX
+```bash
+npm run desktop:build
+```
 
-进入顶部 `文本`，点击 `导入背景文档`。背景 TXT 限制为 2MB，DOCX 限制为 20MB。DOCX 会提取标题、正文、编号与表格文字，并重新排入应用的只读文档页面；它不会复刻 Word 的图片、批注、页眉页脚和精确版式，也不提供文档编辑功能。
-
-同一页面的 `导入小说 TXT` 是独立的阅读入口：它不会替换背景文档，而是把中间六行学习区切换成小说正文。按 <kbd>←</kbd>/<kbd>→</kbd> 翻页，<kbd>Space</kbd> 下一页，<kbd>H</kbd> 隐藏/恢复，<kbd>Esc</kbd> 返回背词；浮动栏也可输入页码跳转。返回背词不会卸载小说，点击浮动栏 `小说` 可继续阅读。
-
-应用按文件名、大小和修改时间记录最近阅读的文字位置。重新打开应用后需要再次选择原小说文件，识别为同一本书时会提示继续上次进度或从头开始。进度保存的是文字位置，因此调整字号并重新分页后仍会回到相同段落。
-
-## DeepSeek AI 配置
-
-推荐打开顶部 `我的`，在 `DeepSeek 设置` 中填写 API Key、API 地址和模型。设置保存在当前电脑的本地偏好中。回到 `学习` 后，在浮动操作栏右侧输入问题并按回车或点击 `发送`。
-
-个人本地开发也可以复制环境配置：
+本地开发者可以复制 `.env.example` 配置默认 DeepSeek 参数：
 
 ```bash
 cp .env.example .env
 ```
 
-然后在 `.env` 中填写 `VITE_DEEPSEEK_API_KEY`，重新运行或构建应用。`.env` 已被 Git 忽略。注意：Vite 环境变量会在构建时写入前端资源，因此含真实 Key 的安装包只能自用，不能上传 GitHub Release 或发给他人。对外发布时请保持 `.env` 中的 Key 为空，让每位用户在 `我的` 中自行填写。
+Vite 会将 `VITE_` 开头的变量写入构建产物。因此对外发布前必须保持 `VITE_DEEPSEEK_API_KEY` 为空，由用户在“我的”中自行填写。`.env` 已被 Git 忽略。
 
-默认接口为 `https://api.deepseek.com`，应用通过桌面端后端请求 `/chat/completions`，默认模型可在 `我的` 中修改。
-
-仅构建本地调试可执行文件、不生成安装包：
-
-```bash
-npm run desktop:build -- --debug --no-bundle
-```
-
-## 验证
+项目检查命令：
 
 ```bash
 npm run typecheck
-npm run test
+npm test
 npm run build
-cd src-tauri && cargo check --locked
-npm audit --audit-level=high
+cargo check --manifest-path src-tauri/Cargo.toml
 ```
 
-当前测试还会校验六套词书的数量、字段完整性、重复 ID 和跨词书进度共享。
+## 词书与许可
 
-## 重新生成词书
-
-词书生成脚本不会把 65MB 的 ECDICT 源文件提交到仓库，只输出约 3.9MB 的应用数据。准备好三个已授权源文件后运行：
-
-```bash
-python3 scripts/build_wordbooks.py \
-  --ecdict /path/to/ecdict.csv \
-  --awl /path/to/words.json \
-  --toeic /path/to/toeic_zh-hant.csv \
-  --output src/assets/wordbooks
-```
-
-完整计划见 [`docs/DEVELOPMENT_PLAN.md`](docs/DEVELOPMENT_PLAN.md)。
+内置词书为非官方学习清单。数据来源、授权和第三方说明请查看 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)。

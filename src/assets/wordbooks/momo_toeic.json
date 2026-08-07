@@ -1,0 +1,3296 @@
+[
+  {
+    "id": "word:a-dozen-of",
+    "word": "a dozen of",
+    "phonetic": "[ə ˈdʌz(ə)n əv]",
+    "meaning": "短语 一打；十二个",
+    "mnemonic": "【词根词缀】dozen ← 古英语 dozein < 古法语 dozeine < 拉丁 duodecim(十二)。词根 duo(二)+ decem(十)。【同根】dozen n.一打；dual adj.双重的；duet n.二重唱",
+    "phrases": "a dozen of eggs 一打鸡蛋；half a dozen 半打；dozens of 几十个；许多",
+    "example": "She buys a dozen of eggs in the market.\n她在市场上买了一打鸡蛋。"
+  },
+  {
+    "id": "word:a-good-deal-of",
+    "word": "a good deal of",
+    "phonetic": "[ə ɡʊd diːl əv]",
+    "meaning": "短语 很多的；大量的",
+    "mnemonic": "【扩展】deal 原意为'交易、分量'。a good deal of='好一笔量'→大量。【同根】deal n./v.交易；dealer n.商人；dealership n.经销",
+    "phrases": "a good deal of money 大量金钱；a good deal of time 大量时间；do a good deal of 大肆做…",
+    "example": "He has got a good deal of money.\n他拥有大量金钱。"
+  },
+  {
+    "id": "word:a-great-deal-of",
+    "word": "a great deal of",
+    "phonetic": "[ə ɡreɪt diːl əv]",
+    "meaning": "短语 许多的；大量的",
+    "mnemonic": "【扩展】great deal of='巨大量'=许多。【同根】great adj.巨大→greatly adv.大大地；greatness n.伟大",
+    "phrases": "a great deal of experience 大量经验；a great deal of work 大量工作；spend a great deal of time 大量花费",
+    "example": "There's a great deal of variability between individuals.\n人和人之间有很大不同。"
+  },
+  {
+    "id": "word:a-handful-of",
+    "word": "a handful of",
+    "phonetic": "[ə ˈhændfʊl əv]",
+    "meaning": "短语 一把；一握；少数的；少量的",
+    "mnemonic": "【词根词缀】handful ← hand 手 + -ful(满…的)+ of。'一手抓得下'=少量。【同根】hand n.手；handy adj.方便的；handful n.少数、一把",
+    "phrases": "a handful of rice 一把米；only a handful of 仅少数；pick up a handful of 抓起一把",
+    "example": "She grabbed a handful of sand.\n她抓起一把沙子。"
+  },
+  {
+    "id": "word:a-list-of",
+    "word": "a list of",
+    "phonetic": "[ə lɪst əv]",
+    "meaning": "短语 一列；一栏",
+    "mnemonic": "【词根词缀】list ← 古英语 list(条状物)< 意大利语 lista < 拉丁 lira(犁沟)。【同根】list n.列表；enlist v.入伍、登记；listless adj.无精打采的",
+    "phrases": "a list of items 一系列项目；make a list of 列一张…单子；on the list of 在…名单上",
+    "example": "A list of the names is enclosed herewith.\n随信附上名单。"
+  },
+  {
+    "id": "word:a-minimum-of",
+    "word": "a minimum of",
+    "phonetic": "[ə ˈmɪnɪməm əv]",
+    "meaning": "短语 至少；最少",
+    "mnemonic": "【词根词缀】minimum ← mini-(小、最少)+ -mum 名缀 < 拉丁 minimus(最小级)。【同根】minimum n.最少；minimize v.最小化；minister n.大臣、部长",
+    "phrases": "a minimum of three days 最少三天；maintain a minimum of 保持至少；reduce to a minimum of 减至最少",
+    "example": "This game requires a minimum of three players.\n这个游戏至少需要三个人才可以玩。"
+  },
+  {
+    "id": "word:a-multitude-of",
+    "word": "a multitude of",
+    "phonetic": "[ə ˈmʌltɪtuːd əv]",
+    "meaning": "短语 大量",
+    "mnemonic": "【扩展】multitude ← multi-(多)+ -tude 名缀 < 拉丁 multus(多)。【同根】multitude n.大量；multiply v.乘、增加；multimedia n.多媒体；multitask v.多任务处理",
+    "phrases": "a multitude of people 许多人；a multitude of choices 大量选择；a multitude of stars 满天的星星",
+    "example": "I had never seen such a multitude of stars before.\n我以前从未见过这么多的星星。"
+  },
+  {
+    "id": "word:a-packet-of",
+    "word": "a packet of",
+    "phonetic": "[ə ˈpækɪt əv]",
+    "meaning": "短语 一包；一盒；一捆；一袋",
+    "mnemonic": "【词根词缀】packet ← pack 包 + -et(小后缀)。'小包裹'。【同根】pack n./v.打包；package n.包裹；packing n.包装",
+    "phrases": "a packet of cigarettes 一包香烟；a packet of tea 一包茶；a packet of biscuits 一包饼干",
+    "example": "a packet of tea\n一包茶"
+  },
+  {
+    "id": "word:abandon",
+    "word": "abandon",
+    "phonetic": "[əˈbændən]",
+    "meaning": "动 抛弃；放弃；中止",
+    "mnemonic": "【扩展】abandon ← ab-(远离)+ -bandon(古法语 bandon=权威、控制)。'失去控制'=抛弃、放弃。【同根】abandon v.放弃；abandonment n.放弃、遗弃；abandoned adj.被遗弃的、放纵的",
+    "phrases": "abandon hope 放弃希望；abandon oneself to 沉溺于；with abandon 放纵地",
+    "example": "abandon oneself to sth.\n陷入；沉湎于"
+  },
+  {
+    "id": "word:abate",
+    "word": "abate",
+    "phonetic": "[əˈbeɪt]",
+    "meaning": "动 减轻；减少；消除",
+    "mnemonic": "【谐音】abate = 阿贝特 → 阿姨贝贝耳朵背(谐音 a-bate ≈ '耳背特')，所以听不清→声音减弱。【词源】ab-(离开)+-ate 动后 < 古法语 abatre(打倒)。【同根】abate v.减弱；abatement n.减弱；unabated adj.不减弱的",
+    "phrases": "abate taxes 减税；abate pollution 减少污染；abate one's enthusiasm 减弱热情",
+    "example": "Steps are to be taken to abate pollution.\n应该采取措施减少污染。"
+  },
+  {
+    "id": "word:abide-by",
+    "word": "abide by",
+    "phonetic": "[əˈbaɪd baɪ]",
+    "meaning": "短语 遵守；信守",
+    "mnemonic": "【联想】abide by：'人靠边站则不逾矩'→信守、遵守。【词源】abide(等待)由古英语 abidan。by 为介词。【同根】abide v.停留；abiding adj.持久的",
+    "phrases": "abide by the rules 遵守规则；abide by the law 遵守法律；abide by one's promise 信守承诺",
+    "example": "I abide by what I said.\n我遵守我所说的。"
+  },
+  {
+    "id": "word:able",
+    "word": "able",
+    "phonetic": "[ˈeɪb(ə)l]",
+    "meaning": "形 能…的；有能力的；能干的",
+    "mnemonic": "【描述】Able = '能' 的最直接表达：有能力、有才能的。【词源】able ← 古法语 abile < 拉丁 habilis(能胜任的)。【同根】able adj.能；unable adj.不能；ability n.能力；ably adv.能干地",
+    "phrases": "be able to do 能做…；able and willing 乐意做…；ability and skill 能力与技巧",
+    "example": "The little girl is able to read books.\n这个小女孩能看书了。"
+  },
+  {
+    "id": "word:abnormal",
+    "word": "abnormal",
+    "phonetic": "[æbˈnɔːrm(ə)l]",
+    "meaning": "形 不正常的",
+    "mnemonic": "【词根词缀】abnormal ← ab-(反、偏离)+ normal(正常的)。'反常的'=不正常的。【同根】normal adj.正常；abnormal adj.异常；abnormality n.异常",
+    "phrases": "abnormal behavior 异常行为；abnormal weather 反常天气；abnormal condition 异常状况",
+    "example": "abnormal behavior\n异常行为"
+  },
+  {
+    "id": "word:aboard",
+    "word": "aboard",
+    "phonetic": "[əˈbɔːrd]",
+    "meaning": "副 在(船、车、飞机)上;介 在(船、车、飞机)上",
+    "mnemonic": "【串记】aboard 在船/车上 ≈ abroad 在国外；二者通过 a-+b(oard/road) 联想。board 木板→上船/车。【同根】board n.板 v.上船；abroad adv.国外；broadboard n.跳板",
+    "phrases": "go aboard 上车/船；on board 在船/车上；aboard the plane 登上飞机",
+    "example": "We went aboard the plane.\n我们上了飞机。"
+  },
+  {
+    "id": "word:abolish",
+    "word": "abolish",
+    "phonetic": "[əˈbɑːlɪʃ]",
+    "meaning": "动 取消;废除;废止",
+    "mnemonic": "【谐音】abolish=阿波罗历(史)→阿波罗的(一)段暴力(的)历史被废止。【词源】abolish ← 古法语 abolir < 拉丁 abolere(毁坏、废除)。【同根】abolish v.废止；abolishment n.废除；abolition n.废除",
+    "phrases": "abolish slavery 废除奴隶制；abolish obsolete laws 废除过时的法律",
+    "example": "The new law will abolish the old system.\n新法令将废止旧的系统。"
+  },
+  {
+    "id": "word:abroad",
+    "word": "abroad",
+    "phonetic": "[əˈbrɔːd]",
+    "meaning": "副 在国外;出国",
+    "mnemonic": "【串记】abroad 在国外 ↔ aboard 在船/车上；broad 宽广。'a+ broad'——走过宽广之路去国外。【同根】abroad adv.国外；broad adj.宽；broadcast v.广播",
+    "phrases": "live abroad 在国外居住；go abroad 出国；return from abroad 从国外归来",
+    "example": "He lived abroad for many years.\n他在国外居住了许多年。"
+  },
+  {
+    "id": "word:abruptly",
+    "word": "abruptly",
+    "phonetic": "[əˈbrʌptli]",
+    "meaning": "副 突然地;唐突地",
+    "mnemonic": "【词根词缀】abruptly ← ab-(离开)+ rupt(断裂)+ -ly(副)。'突然断开'=突然地。rupt=break, '断裂'。【同根】abrupt adj.突然；rupture n.破裂；disrupt v.瓦解；erupt v.喷发",
+    "phrases": "end abruptly 突然结束；change abruptly 突变；stop abruptly 突然停下",
+    "example": "The temperature dropped abruptly.\n气温骤然下降。"
+  },
+  {
+    "id": "word:absolutely",
+    "word": "absolutely",
+    "phonetic": "[ˌæbsəˈluːtli]",
+    "meaning": "副 绝对地;完全地",
+    "mnemonic": "【谐音】absolutely = 阿伯扫路特里 → 一位老人(伯)扫路特别干净——他对自己绝对干净。【词源】absolute(绝对的)+ -ly(副)。【同根】absolute adj.绝对；absolution n.赦免；absolve v.赦免",
+    "phrases": "absolutely true 绝对正确；absolutely not 绝不；absolutely essential 绝对必要",
+    "example": "She trusted him absolutely.\n她绝对信任他。"
+  },
+  {
+    "id": "word:absolve",
+    "word": "absolve",
+    "phonetic": "[əbˈzɑːlv]",
+    "meaning": "动 赦免;免罪;免除;解除",
+    "mnemonic": "【词根词缀】absolve ← ab-(反、否定)+ solve(解决,来自拉丁 solvere)。'不用解决'=赦免。【同根】absolve v.赦免；absolution n.赦免；absorbent adj.吸收的；dissolve v.溶解",
+    "phrases": "absolve someone from blame 免除某人的责任；absolve from debt 免债",
+    "example": "to absolve someone from responsibility\n免除某人的责任"
+  },
+  {
+    "id": "word:abstain",
+    "word": "abstain",
+    "phonetic": "[əbˈsteɪn]",
+    "meaning": "动 戒除;弃权;自我克制",
+    "mnemonic": "【词根词缀】abstain ← ab-(离开、否定)+ stain(玷污、污点)。'不玷污'=戒除。【同根】abstain v.戒除；abstention n.弃权、戒除；abstinence n.禁绝",
+    "phrases": "abstain from alcohol 戒酒；abstain from smoking 戒烟；abstain from voting 投票弃权",
+    "example": "He swore to abstain from smoking.\n他发誓要戒烟。"
+  },
+  {
+    "id": "word:abstract",
+    "word": "abstract",
+    "phonetic": "[ˈæbstrækt]",
+    "meaning": "形 抽象的;非具体的;深奥的;动 提取;抽取;作…的摘要;名 摘要;概要;抽象艺术品",
+    "mnemonic": "【描述】abstract='爱不是拖可待'——爱是抽象、深奥的。【词源】abstract ← abs-(远离)+ tract(抽、引)。'抽离'=抽象。【同根】abstract n.摘要；abstraction n.抽象；abstracted adj.心不在焉的",
+    "phrases": "in the abstract 抽象地；abstract idea 抽象概念；abstract science 抽象科学",
+    "example": "Workers abstract metal from ore.\n工人从矿砂中提炼金属。"
+  },
+  {
+    "id": "word:absurd",
+    "word": "absurd",
+    "phonetic": "[əbˈsɜːrd]",
+    "meaning": "形 荒谬的;荒唐可笑的;名 荒唐的事物",
+    "mnemonic": "【词根词缀】absurd ← ab-(偏离)+ surd(联想到 sure 确定的)。'偏离确定'=荒谬。【同根】absurd adj.荒谬；absurdity n.荒谬；absurdly adv.荒唐地",
+    "phrases": "absurd behavior 荒唐行为；absurd claim 荒唐的主张；absurd joke 荒唐的笑话",
+    "example": "Don't be absurd!\n别犯傻了!"
+  },
+  {
+    "id": "word:abundant",
+    "word": "abundant",
+    "phonetic": "[əˈbʌndənt]",
+    "meaning": "形 丰富的;充裕的",
+    "mnemonic": "【谐音】abundant = 阿，邦邓等他，我们有丰富的 时间。【词源】ab-(加强)+ und(波浪)+ -ant 形缀 < 拉丁 abundantia(丰富、满溢)← ab undare(满溢)。【同根】abundant adj.丰富；abundance n.丰盛；undulate v.波动",
+    "phrases": "abundant supply 充足的供应；abundant harvest 丰收；abundant natural resources 丰富的自然资源",
+    "example": "abundant supply\n充足的供应"
+  },
+  {
+    "id": "word:accelerate",
+    "word": "accelerate",
+    "phonetic": "[əkˈseləreɪt]",
+    "meaning": "动 加速;加快",
+    "mnemonic": "【词根词缀】accelerate ← ac-(加强)+ celer(速度)+ -ate < 拉丁 accelerare。'一再加快速度'=加速。【同根】accelerate v.加速；acceleration n.加速；accelerator n.加速器",
+    "phrases": "accelerate the pace 加快步调；accelerate the growth 加速增长；accelerate the process 加速进程",
+    "example": "accelerate the pace\n加快步调"
+  },
+  {
+    "id": "word:accept",
+    "word": "accept",
+    "phonetic": "[əkˈsept]",
+    "meaning": "动 接受;认可;同意",
+    "mnemonic": "【谐音】accept = 阿克塞柏特 → (我)接受柏特(伯特)，即你可以塞葡萄牙的人 = 接受。【词源】accept ← ac-(向、往)+ cept(拿、抓)< 拉丁 accipere。'拿起'=接受。【同根】accept v.接受；acceptance n.接受；acceptable adj.可接受",
+    "phrases": "accept a gift 接受礼物；accept an offer 接受报价；accept responsibility 承担责任",
+    "example": "Please accept my apology.\n请接受我的道歉。"
+  },
+  {
+    "id": "word:acceptable",
+    "word": "acceptable",
+    "phonetic": "[əkˈseptəb(ə)l]",
+    "meaning": "形 可接受的",
+    "mnemonic": "【词根词缀】acceptable ← accept(接受)+ -able(可…的)。'可接受的'=合意的。【同根】acceptable adj.可接受；accept v.接受；unacceptable adj.不可接受",
+    "phrases": "acceptable risk 可接受的风险；acceptable behavior 可接受的行为",
+    "example": "acceptable risk\n可接受的风险"
+  },
+  {
+    "id": "word:acceptance",
+    "word": "acceptance",
+    "phonetic": "[əkˈseptəns]",
+    "meaning": "名 接受;认可",
+    "mnemonic": "【词根词缀】acceptance ← accept(接受)+ -ance(名词后缀)。【同根】acceptance n.接受；accept v.接受；accepting adj.接受(形容词性)",
+    "phrases": "letter of acceptance 接受函；acceptance speech 演讲；acceptance test 验收测试",
+    "example": "His acceptance of bribes led to his arrest.\n他接受贿赂,终被逮捕。"
+  },
+  {
+    "id": "word:access",
+    "word": "access",
+    "phonetic": "[ˈækses]",
+    "meaning": "名 进入;通道;接触的机会或权利;动 接近;使用;获取",
+    "mnemonic": "【扩展】access = assess(评估)+c(顺序)。'评估后通过'=通道、进入。【词源】access ← ac-(向、往)+ cess(走) < 拉丁 accedere(走到、接近)。【同根】access n.进入；accessible adj.可接近；accession n.到达",
+    "phrases": "have access to 可以使用；give access to 允许访问；access the Internet 访问互联网",
+    "example": "Many people access the Internet through mobile.\n许多人通过手机访问互联网。"
+  },
+  {
+    "id": "word:accessible",
+    "word": "accessible",
+    "phonetic": "[əkˈsesəb(ə)l]",
+    "meaning": "形 易接近的;可进入的;可使用的;可理解的",
+    "mnemonic": "【词根词缀】accessible ← ac-(向)+ cess(走)+ -ible(可…的)。'能走向'=易接近的。【同根】accessible adj.可接近；access n.进入；accessibility n.可达性",
+    "phrases": "accessible to the public 公众可访问；make accessible 使可达；accessible location 容易到达的地点",
+    "example": "The phone is accessible.\n这部电话可以使用。"
+  },
+  {
+    "id": "word:acclaim",
+    "word": "acclaim",
+    "phonetic": "[əˈkleɪm]",
+    "meaning": "名 赞扬;欢呼",
+    "mnemonic": "【词根词缀】acclaim ← ac-(加强)+ claim(喊叫、声言)。'大声喊叫'=欢呼。【同根】acclaim v.欢呼；exclaim v.呼喊；proclaim v.宣告；reclaim v.要求归还",
+    "phrases": "with great acclaim 大受欢呼；critical acclaim 评论界喝彩；public acclaim 公众称赞",
+    "example": "The novel received great acclaim.\n这本小说备受赞扬。"
+  },
+  {
+    "id": "word:accommodate",
+    "word": "accommodate",
+    "phonetic": "[əkˈkɑːmədeɪt]",
+    "meaning": "动 容纳;为…提供住宿;适应",
+    "mnemonic": "【词根词缀】accommodate ← ac-(加强)+ com-(共同)+ mod(尺度、方式)+ -ate。'用共同尺度'=容纳、提供住宿。【同根】accommodate v.容纳；accommodation n.住处；commodious adj.宽敞的",
+    "phrases": "accommodate guests 容纳客人；accommodate one's needs 适应…的需求",
+    "example": "I can accommodate you with a double room.\n我可以为您提供一间双人房。"
+  },
+  {
+    "id": "word:accommodation",
+    "word": "accommodation",
+    "phonetic": "[əkəˈmə(ʊ)deɪʃ(ə)n]",
+    "meaning": "名 住处;工作场所;膳宿;适应;(交通工具内的)空间",
+    "mnemonic": "【词根词缀】accommodation ← accommodate(容纳)+ -ion(名缀)。'容纳之物'=住处。【同根】accommodation n.住处；accommodate v.提供住宿",
+    "phrases": "find accommodation 找住处；accommodation expenses 住宿费；hotel accommodation 酒店住宿",
+    "example": "new office accommodation\n新办公用房"
+  },
+  {
+    "id": "word:accompany",
+    "word": "accompany",
+    "phonetic": "[əˈkʌmpəni]",
+    "meaning": "动 陪伴;伴随;为…伴奏",
+    "mnemonic": "【词根词缀】accompany ← ac-(加强)+ company(陪伴、公司)。'加强陪伴'=伴随。【同根】accompany v.陪伴；companion n.同伴；accompanied adj.由…陪伴的",
+    "phrases": "accompany by 由…陪同；accompany with 伴着(音乐)；accompany one's friend 陪伴朋友",
+    "example": "She asked me to accompany her to the airport.\n她要求我陪她到机场去。"
+  },
+  {
+    "id": "word:accomplish",
+    "word": "accomplish",
+    "phonetic": "[əˈkʌmplɪʃ]",
+    "meaning": "动 完成;实现",
+    "mnemonic": "【辨析】accomplish vs complete vs finish vs achieve：accomplish 强调经过努力达到目的；complete 强调完整、补足；finish 着重圆满结束；achieve 强调达到目标。【词源】accomplish ← a-(加强)+ com-(完全)+ pli(填)+ -ish < 古法语 acomplir。【同根】accomplish v.完成；accomplishment n.成就",
+    "phrases": "accomplish a goal 实现目标；accomplish a task 完成任务",
+    "example": "She seems to accomplish nothing.\n她似乎一事无成。"
+  },
+  {
+    "id": "word:accomplishment",
+    "word": "accomplishment",
+    "phonetic": "[əˈkʌmplɪʃmənt]",
+    "meaning": "名 成就;完成",
+    "mnemonic": "【词根词缀】accomplishment ← accomplish(完成)+ -ment(名缀)。'完成的证明'=成就。【同根】accomplishment n.成就；accomplish v.实现；accomplished adj.完成的、熟练的",
+    "phrases": "a sense of accomplishment 成就感；great accomplishments 巨大的成就",
+    "example": "This is no small accomplishment.\n这是非同小小的成绩。"
+  },
+  {
+    "id": "word:according-to",
+    "word": "according to",
+    "phonetic": "[əˈkɔːrdɪŋ tuː]",
+    "meaning": "短语 按照;依照",
+    "mnemonic": "【词根词缀】according to ← according(根据)+ to。according ← accord(使一致)+ -ing。【同根】accord v.一致；accordingly adv.相应地",
+    "phrases": "according to rule 按规则；according to schedule 按计划；according to law 依法",
+    "example": "Everything went off according to plan.\n一切都按计划进行。"
+  },
+  {
+    "id": "word:accordingly",
+    "word": "accordingly",
+    "phonetic": "[əˈkɔːrdɪŋli]",
+    "meaning": "副 因此;相应地",
+    "mnemonic": "【词根词缀】accordingly ← according(依照)+ -ly(副)。'依照着'=因此、相应地。【同根】accordingly adv.因此；accord n.协议；accordance n.一致",
+    "phrases": "act accordingly 相应地行动；plan accordingly 做相应计划",
+    "example": "He told me the situation and I must act accordingly.\n他把情况告诉我了,我得采取相应的行动。"
+  },
+  {
+    "id": "word:account",
+    "word": "account",
+    "phonetic": "[əˈkaʊnt]",
+    "meaning": "名 账户;叙述;账目;动 说明;占…",
+    "mnemonic": "【词源】ac-(加强)+ count(计算、计数)。'加强计算'=账目、考虑。【同根】account n.账户；accountant n.会计；accountability n.责任",
+    "phrases": "account for 说明；占有比例；take into account 考虑；by all accounts 据大家所说",
+    "example": "Can you account for the failure of this project?\n你能解释这个项目失败的原因吗?"
+  },
+  {
+    "id": "word:account-balance",
+    "word": "account balance",
+    "phonetic": "[əˈkaʊnt ˈbæləns]",
+    "meaning": "短语 账户余额",
+    "mnemonic": "【词源】account balance = account(账户)+ balance(余额、收支平衡)。'账户收支的差额'=余额。【同根】balance n.平衡；account n.账户",
+    "phrases": "account balance sheet 账户余额表；check account balance 核对账户余额",
+    "example": "The account balance gets larger.\n账户余额变得更大。"
+  },
+  {
+    "id": "word:account-number",
+    "word": "account number",
+    "phonetic": "[əˈkaʊnt ˈnʌmbə(r)]",
+    "meaning": "短语 账号;账户号码",
+    "mnemonic": "【词源】account number = account(账户)+ number(号码)。'账号'=账户号码。【同根】account n.账户；number n.号码",
+    "phrases": "bank account number 银行账号；account number list 账号清单",
+    "example": "This is your check account number.\n这是您的支票账户号码。"
+  },
+  {
+    "id": "word:account-to",
+    "word": "account to",
+    "phonetic": "[əˈkaʊnt tu]",
+    "meaning": "短语 向(某人)报账;向(某人)解释",
+    "mnemonic": "【词源】account to < account(报告)+ to。'向…报告、向…解释'=报账。【同根】account to 向…解释；on account of 由于",
+    "phrases": "account to one's superior 向上级报告；account to treasurer 向财务报账",
+    "example": "You must account to father what you have done.\n你必须把你的所作所为对父亲解释清楚。"
+  },
+  {
+    "id": "word:accountant",
+    "word": "accountant",
+    "phonetic": "[əˈkaʊntənt]",
+    "meaning": "名 会计;会计师",
+    "mnemonic": "【词根词缀】accountant ← account(账目)+ -ant(做…的人)。'做账的人'=会计师。【同根】accountant n.会计；accounting n.会计学；accountable adj.有责任的",
+    "phrases": "chief accountant 总会计师；senior accountant 高级会计；certified accountant 注册会计师",
+    "example": "senior accountant\n高级会计"
+  },
+  {
+    "id": "word:accrue",
+    "word": "accrue",
+    "phonetic": "[əˈkruː]",
+    "meaning": "动 自然增加;积累",
+    "mnemonic": "【词根词缀】accrue ← ac-(向、表示趋势)+ cru(增长、增加)。'持续增加'=自然增长。【同根】accrue v.积累；accrual n.自然增加；crucial adj.关键的",
+    "phrases": "interest accrue 利息累计；accrue to 归于",
+    "example": "Knowledge will accrue from reading.\n读书能增加知识。"
+  },
+  {
+    "id": "word:accumulate",
+    "word": "accumulate",
+    "phonetic": "[əˈkjuːmjʊleɪt]",
+    "meaning": "动 积累",
+    "mnemonic": "【词根词缀】accumulate ← ac-(加强)+ cumul(堆)+ -ate < 拉丁 accumulare。'堆积'=积聚。【同根】accumulate v.累积；accumulation n.积累；cumulative adj.累积的",
+    "phrases": "accumulate wealth 积累财富；accumulate knowledge 积累知识",
+    "example": "By investing wisely I accumulate a fortune.\n由于投资精明,我积累了一笔财富。"
+  },
+  {
+    "id": "word:accurate",
+    "word": "accurate",
+    "phonetic": "[ˈækjərət]",
+    "meaning": "形 精确的;无误的",
+    "mnemonic": "【谐音】accurate = IQ right —— 智商正确，计算才会精确。【词源】accurate ← ac-(加强)+ cur(小心、留意)+ -ate < 拉丁 accuratus(小心准备的)。【同根】accurate adj.精确；inaccurate adj.不精确；accuracy n.精确",
+    "phrases": "accurate data 准确数据；accurate measurement 精确测量",
+    "example": "It may not even be 100 percent accurate.\n它甚至可能不是百分之百准确的。"
+  },
+  {
+    "id": "word:accuse",
+    "word": "accuse",
+    "phonetic": "[əˈkjuːz]",
+    "meaning": "动 控告;指责",
+    "mnemonic": "【谐音】accuse = 阿 Q 死 → 阿 Q 为什么死？因为他被人指控而死。【词源】accuse ← ac-(朝、向)+ caus(原因、理由)。'指出原因'=控告。【同根】accuse v.指控；accusation n.起诉；excuse v.原谅",
+    "phrases": "accuse someone of robbery 指控某人抢劫；accuse falsely 诬告",
+    "example": "They accuse the thief of stealing.\n他们指控小偷偷东西。"
+  },
+  {
+    "id": "word:accuse-of",
+    "word": "accuse ... of ...",
+    "phonetic": "[əˈkjuːz əv]",
+    "meaning": "短语 控告;谴责",
+    "mnemonic": "【词根词缀】accuse of ← accuse(指控)+ of(关于)。'指控…某事'。【同根】accuse v.指控；accusation n.起诉",
+    "phrases": "accuse someone of murder 控告某人谋杀；accuse of cheating 控告作弊",
+    "example": "They accuse him of murder.\n他们控告他谋杀罪。"
+  },
+  {
+    "id": "word:accustom",
+    "word": "accustom",
+    "phonetic": "[əˈkʌstəm]",
+    "meaning": "动 使习惯于;习惯于",
+    "mnemonic": "【词根词缀】accustom ← ac-(加强)+ custom(习惯)。'加强习惯'=使习惯于。【同根】accustom v.使习惯；accustomed adj.习惯的；custom n.风俗",
+    "phrases": "accustom oneself to 使自己习惯；become accustomed to 变得习惯",
+    "example": "They had to accustom themselves to the hot weather.\n他们不得不使自己习惯于炎热的天气。"
+  },
+  {
+    "id": "word:accustomed",
+    "word": "accustomed",
+    "phonetic": "[əˈkʌstəmd]",
+    "meaning": "形 习惯的;惯常的(强调\"accustom\"的过去式和过去分词)",
+    "mnemonic": "【词根词缀】accustomed ← accustom(使习惯)+ -ed(被…的)。'被习惯了的'=惯常的。【同根】accustomed adj.惯常的；accustom v.使习惯；custom n.风俗",
+    "phrases": "be accustomed to 习惯于；become accustomed to 变得习惯",
+    "example": "be accustomed to hard work\n习惯于艰苦工作"
+  },
+  {
+    "id": "word:ache",
+    "word": "ache",
+    "phonetic": "[eɪk]",
+    "meaning": "名 疼痛;隐隐;动 疼痛;隐隐作痛",
+    "mnemonic": "【谐音】ache = 一个(a)车(che 拼音)撞了我，我痛(ache)啊。【词源】ache ← 古英语 ace(疼痛)。【同根】ache n./v.疼痛；headache n.头痛；stomachache n.胃痛；heartache n.心痛",
+    "phrases": "ache for 渴望；have a stomach ache 胃痛；heartache 内心痛苦",
+    "example": "have a stomach ache\n胃疼"
+  },
+  {
+    "id": "word:achieve",
+    "word": "achieve",
+    "phonetic": "[əˈtʃiːv]",
+    "meaning": "动 完成;实现;达到",
+    "mnemonic": "【谐音】achieve = 啊一辆福(achieve ≈ '一辆福')，希望完成、实现、达到 福气!【词源】achieve ← ac-(向、到)+ chief(头、首)+ 古法语 achever(到头、到终点)。【同根】achieve v.达到；achievement n.成就；achievable adj.可达成的",
+    "phrases": "achieve success 取得成功；achieve one's goal 实现目标；achieve a breakthrough 取得突破",
+    "example": "Work hard and you will achieve your goal.\n努力干,你就会实现目标。"
+  },
+  {
+    "id": "word:achievement",
+    "word": "achievement",
+    "phonetic": "[əˈtʃiːvmənt]",
+    "meaning": "名 成就;功绩",
+    "mnemonic": "【词根词缀】achievement ← achieve(达到、完成)+ -ment(名缀)。'完成之事'=成就、功绩。【同根】achievement n.成就；achieve v.达到；achievable adj.可达成的",
+    "phrases": "a great achievement 一项伟大成就；achievements in science 科学成就",
+    "example": "That task is an impossible achievement.\n那项任务不可能完成。"
+  },
+  {
+    "id": "word:acknowledge",
+    "word": "acknowledge",
+    "phonetic": "[əkˈnɑːlɪdʒ]",
+    "meaning": "动 承认;认可;告知收到;答谢",
+    "mnemonic": "【词根词缀】acknowledge ← ac-(加强)+ knowledge(知道、认识)。'很明确的知道'=承认、认可。【同根】acknowledge v.承认；acknowledgment n.承认；acknowledgeable adj.可承认的",
+    "phrases": "acknowledge one's error 承认错误；acknowledge receipt of 确认收到；be widely acknowledged 受到广泛认可",
+    "example": "acknowledge failures\n承认失败"
+  },
+  {
+    "id": "word:acquaint",
+    "word": "acquaint",
+    "phonetic": "[əˈkweɪnt]",
+    "meaning": "动 使熟悉;使相识",
+    "mnemonic": "【词根词缀】acquaint ← ac-(使)+ quaint(知道、熟悉)< 古法语 acointier。'使熟悉'=使认识。【同根】acquaint v.使熟悉；acquaintance n.熟人；acquainted adj.熟悉的",
+    "phrases": "acquaint oneself with 使自己熟悉；get acquainted with 与…相识；be acquainted with 认识",
+    "example": "It takes time to acquaint yourself with a new job.\n你要熟悉新的工作是要需要时间的。"
+  },
+  {
+    "id": "word:acquaintance",
+    "word": "acquaintance",
+    "phonetic": "[əˈkweɪntəns]",
+    "meaning": "名 认识的人;相识",
+    "mnemonic": "【词根词缀】acquaintance ← acquaint(使认识)+ -ance(名缀)。'认识过程'=相识、熟人。【同根】acquaintance n.熟人；acquaint v.使熟悉；acquainted adj.熟悉的",
+    "phrases": "make someone's acquaintance 结识某人；a casual acquaintance 点头之交；a nodding acquaintance 点头之交",
+    "example": "I'm delighted to make your acquaintance.\n我很高兴能认识你。"
+  },
+  {
+    "id": "word:acquire",
+    "word": "acquire",
+    "phonetic": "[əˈkwaɪər]",
+    "meaning": "动 获得;得到;学会",
+    "mnemonic": "【联想】quire = 要求(问)→得到 ac + quire = 求之 → 获得。【词源】acquire ← ac-(向、往)+ quir(寻求、询问)< 拉丁 acquirere(获得)。【同根】acquire v.获得；acquisition n.获得；acquired adj.习得的、后天的",
+    "phrases": "acquire knowledge 获得知识；acquire a habit 养成习惯；acquire proficiency 达到熟练",
+    "example": "to acquire proficiency in math\n在数学上达到熟练水平"
+  },
+  {
+    "id": "word:acquisition",
+    "word": "acquisition",
+    "phonetic": "[ˌækwɪˈzɪʃn]",
+    "meaning": "名 获得;得到的东西;收购",
+    "mnemonic": "【词根词缀】acquisition ← acquire(获得)+ -sition < 拉丁 acquisitio(获得)。'获得物'=收购、获得。【同根】acquisition n.获得；acquire v.获得；acquisitive adj.贪得的",
+    "phrases": "company acquisition 公司收购；merger and acquisition 并购；acquisition of wealth 获得财富",
+    "example": "The acquisition of wealth is his only purpose.\n他唯一的目的足得到财富。"
+  },
+  {
+    "id": "word:acquit",
+    "word": "acquit",
+    "phonetic": "[əˈkwɪt]",
+    "meaning": "动 宣布无罪;表现",
+    "mnemonic": "【词源】acquit ← ac-(可以)+ quit(离开、放弃)。'可以离开'=宣布无罪、释放。【同根】acquit v.宣布无罪；acquittal n.无罪释放；acquittance n.清账证明",
+    "phrases": "acquit someone of a charge 宣告某人无罪；acquit oneself well 表现良好",
+    "example": "They tried to bribe the judge to acquit them.\n他们试图贿赂法官判他们无罪。"
+  },
+  {
+    "id": "word:activate",
+    "word": "activate",
+    "phonetic": "[ˈæktɪveɪt]",
+    "meaning": "动 激活;使活动;使活化",
+    "mnemonic": "【词根词缀】activate ← active(活动的)+ -ate(动后)。'使活动'=激活。【同根】activate v.激活；activation n.激活；active adj.活跃的；activity n.活动",
+    "phrases": "activate an account 激活账户；activate a mechanism 启动装置；activate enzymes 激活酶",
+    "example": "Curiosity activates creative minds.\n好奇心激发创新思维。"
+  },
+  {
+    "id": "word:actually",
+    "word": "actually",
+    "phonetic": "[ˈæktʃuəli]",
+    "meaning": "副 事实上;实际上;竟然",
+    "mnemonic": "【词根词缀】actually ← actual(实际的、真实的)+ -ly(副)。'真实的'=事实上、竟然。【同根】actually adv.实际上；actual adj.实际的；actually 竟然；in fact 事实上",
+    "phrases": "actually happen 实际发生；not actually 并不是；actually quite 实际上相当",
+    "example": "Actually, that's not quite right.\n实际上,那不完全对。"
+  },
+  {
+    "id": "word:acute",
+    "word": "acute",
+    "phonetic": "[əˈkjuːt]",
+    "meaning": "形 敏锐的;灵敏的;急性的;严重的;成锐角的",
+    "mnemonic": "【谐音】acute = a + cute(可爱)。'a 啊！可爱(cute)'→她顿时变得敏锐、急性的。是个很可爱的女朋友但急性严重。【词源】acute ← 拉丁 acutus(尖的、敏锐的)← acuere(使尖、使敏锐)。【同根】acute adj.敏锐的；acuteness n.剧烈；acutely adv.尖锐地",
+    "phrases": "acute shortage 严重短缺；acute pain 剧痛；an acute observer 敏锐的观察者",
+    "example": "There is an acute shortage of water.\n水严重短缺。"
+  },
+  {
+    "id": "word:adapt",
+    "word": "adapt",
+    "phonetic": "[əˈdæpt]",
+    "meaning": "动 适应;改编",
+    "mnemonic": "【词根词缀】adapt ← ad-(向、到)+ apt(合适的、适应的)。'使合适'=适应、改编。【同根】adapt v.适应；adaptable adj.能适应的；adaptation n.适应；adept adj.熟练的",
+    "phrases": "adapt to 适应；adapt from 改编自；adapt a novel for a movie 把小说改编为电影",
+    "example": "The author will adapt his play for television.\n作者将把他的剧本改编成电视剧。"
+  },
+  {
+    "id": "word:adapt-for",
+    "word": "adapt ... for ...",
+    "phonetic": "[əˈdæpt fɔːr]",
+    "meaning": "短语 把…改编成…",
+    "mnemonic": "【词根词缀】adapt for ← adapt(改编、适应)+ for。'改编为某用途'。【同根】adapt v.改编；adaptation n.适应；adaptable adj.可适应的",
+    "phrases": "adapt materials for 将材料改编为；adapt for the screen 改编为电影",
+    "example": "These teaching materials can be adapted for older children.\n这些教材可以修改一下给大一点的孩子用。"
+  },
+  {
+    "id": "word:addition",
+    "word": "addition",
+    "phonetic": "[əˈdɪʃn]",
+    "meaning": "名 增加;加法;附加物",
+    "mnemonic": "【词根词缀】addition ← ad-(向、到)+ dit(给、给予)+ -ion < 拉丁 additio(增加)。'加上'=加、增加。【同根】addition n.加；additional adj.附加的；add v.加",
+    "phrases": "in addition to 除…之外；in addition 另外；an addition to 增加",
+    "example": "We've just had an addition to the family.\n我们家里刚刚添了一口人。"
+  },
+  {
+    "id": "word:address",
+    "word": "address",
+    "phonetic": "[əˈdres]",
+    "meaning": "名 地址;演讲;动 向…讲话;提出;解决",
+    "mnemonic": "【词源】address = ad-(向)+ direct(指引)。'指引方向'=地址、演讲、向…讲话。【同根】address n.地址；addressee n.收件人；addressable adj.可寻址的",
+    "phrases": "address a problem 处理问题；address an audience 向听众演说；home address 家庭地址",
+    "example": "The address he gave to me is inaccurate, so we need to call him and check it again.\n他之前给我的地址信息不准确,所以我们需要给他打电话再核实一遍"
+  },
+  {
+    "id": "word:adept",
+    "word": "adept",
+    "phonetic": "[əˈdept]",
+    "meaning": "形 内行的;熟练的;擅长的;名 内行",
+    "mnemonic": "【串记】adapt(适应)→ adept(熟练)→ adopt(采纳)。从适应 → 熟练 → 采纳 的过程。【同根】adept adj.熟练的；adapt v.适应；adopt v.采用",
+    "phrases": "adept at 擅长于；an adept craftsman 一位熟练工匠；become adept at 变得熟练",
+    "example": "He is an adept guitar player.\n他是个吉他能手。"
+  },
+  {
+    "id": "word:adequate",
+    "word": "adequate",
+    "phonetic": "[ˈædɪkwət]",
+    "meaning": "形 足够的;尚可的",
+    "mnemonic": "【谐音】adequate = 我(我 = a, '记' → ade) 得快（qu+ate）—— 食物充足时，我记得特别快。【词源】adequate ← ad-(向)+ equ(相等、平等)+ -ate < 拉丁 adaequare(使相等)。【同根】adequate adj.足够的；adequacy n.足够；inadequate adj.不充足的",
+    "phrases": "adequate for 足以；adequate supply 充足供应；adequate time 足够时间",
+    "example": "His knowledge is adequate to do this job well.\n他的知识足可胜任这项工作。"
+  },
+  {
+    "id": "word:adhere",
+    "word": "adhere",
+    "phonetic": "[ədˈhɪr]",
+    "meaning": "动 黏贴;粘合;坚持;坚持",
+    "mnemonic": "【联想】ad-(向) + here(这儿)。'把它固定在这里' = 黏贴、坚持。【词源】adhere ← ad-(向、到)+ her(粘、附着)< 拉丁 adhaerere(粘着)。【同根】adhere v.黏贴；adherence n.坚持；adhesive adj.黏性的",
+    "phrases": "adhere to 坚持；黏附；adhere to the rules 遵守规则；adhere to the plan 坚持计划",
+    "example": "The two surfaces adhere to each other.\n这两个表面粘住了。"
+  },
+  {
+    "id": "word:adhesive",
+    "word": "adhesive",
+    "phonetic": "[ədˈhiːsɪv]",
+    "meaning": "形 可黏着的;黏性的;名 黏合剂;胶黏剂",
+    "mnemonic": "【词根词缀】adhesive ← ad-(向)+ her(粘)+ -ive(…的)。'附着的'=可黏着的、黏合剂。【同根】adhesive adj.黏性的；adhere v.坚持、附着；adhesion n.黏附",
+    "phrases": "adhesive tape 胶带；waterproof adhesive 防水胶；adhesive bandage 创可贴",
+    "example": "You need a strong adhesive to bond wood to metal.\n需要强力胶才能把木材粘在金属上。"
+  },
+  {
+    "id": "word:adjacent",
+    "word": "adjacent",
+    "phonetic": "[əˈdʒeɪsənt]",
+    "meaning": "形 邻近的;接近的",
+    "mnemonic": "【词源】adjacent ← ad-(向、靠近)+ jac(位于、躺)+ -ent < 拉丁 adjacens(靠近的)。'靠近的'=邻近的。【同根】adjacent adj.邻近的；adjoin v.毗邻",
+    "phrases": "adjacent to 邻近；adjacent angles 邻角；adjacent room 邻近的房间",
+    "example": "adjacent cities\n相邻的城市"
+  },
+  {
+    "id": "word:adjourn",
+    "word": "adjourn",
+    "phonetic": "[əˈdʒɜːrn]",
+    "meaning": "动 体会;休庭;延期",
+    "mnemonic": "【词源】adjourn ← ad-(使、加强)+ journ(天、日)< 古法语 ajorner(约定一天)。'延期到另一天'=体会、延期。【同根】adjourn v.体会；adjournment n.延期；adjourned adj.休会的",
+    "phrases": "adjourn the meeting 休会；adjourn until 延期到；adjourn for lunch 暂停会议去吃午饭",
+    "example": "Let's adjourn until tomorrow.\n咱们体会,明天继续走。"
+  },
+  {
+    "id": "word:adjournment",
+    "word": "adjournment",
+    "phonetic": "[əˈdʒɜːrnmənt]",
+    "meaning": "名 体会;延期;体会期间",
+    "mnemonic": "【词根词缀】adjournment ← adjourn(体会)+ -ment(名缀)。'体会期间'=体会、延期。【同根】adjournment n.体会；adjourn v.体会；adjourned adj.休会的",
+    "phrases": "adjournment of meeting 休会；apply for adjournment 申请延期",
+    "example": "The defendant has applied for an adjournment.\n被告提出休庭申请。"
+  },
+  {
+    "id": "word:adjust",
+    "word": "adjust",
+    "phonetic": "[əˈdʒʌst]",
+    "meaning": "动 调整;使适合;使适应",
+    "mnemonic": "【谐音】adjust = '加(a)+一点点就刚好(just)'——调整就 perfect。【词源】adjust ← ad-(向)+ just(正确、公正)< 拉丁 adjustare。'使之正'=调整。【同根】adjust v.调整；adjustment n.调整；adjustable adj.可调的",
+    "phrases": "adjust to 适应；adjust oneself to 调整自己；adjust the watch 校准手表",
+    "example": "I must adjust my watch because it is slow.\n因为表慢了,所以我必须把它调正。"
+  },
+  {
+    "id": "word:adjust-oneself-to",
+    "word": "adjust oneself to",
+    "phonetic": "[əˈdʒʌst wʌnˈself tu]",
+    "meaning": "短语 使自己适应于",
+    "mnemonic": "【词根词缀】adjust oneself to ← adjust(调整)+ oneself(自己)+ to。'把自己调到合适状态'=使自己适应。【同根】adjust v.调整；adjustment n.调整；adapt oneself to 适应",
+    "phrases": "adjust oneself to new conditions 使自己适应新环境；adjust oneself to the climate 适应气候",
+    "example": "to adjust oneself to new conditions\n使自己适应新的环境"
+  },
+  {
+    "id": "word:administer",
+    "word": "administer",
+    "phonetic": "[ədˈmɪnɪstər]",
+    "meaning": "动 管理;执行;实施;动 给于(药物或治疗);执行",
+    "mnemonic": "【词根词缀】administer ← ad-(做、担任)+ minister(部长、伺候)。'做部长做的事'=管理、执行、给予。【同根】administer v.管理；administration n.管理；ministry n.部；minister n.部长",
+    "phrases": "administer justice 主持公正；administer medicine 给药；administer funds 管理资金",
+    "example": "It takes brains to administer a large corporation.\n管理大公司要有头脑。"
+  },
+  {
+    "id": "word:administration",
+    "word": "administration",
+    "phonetic": "[ədˌmɪnɪˈstreɪʃn]",
+    "meaning": "名 管理;行政",
+    "mnemonic": "【词根词缀】administration ← administer(管理)+ -ation(名缀)。'管理机构'=管理、行政。【同根】administration n.管理；administer v.管理；administrator n.管理者",
+    "phrases": "under the administration of 在…管理下；school administration 学校行政；business administration 工商管理",
+    "example": "He works in hospital administration.\n他从事医院管理工作。"
+  },
+  {
+    "id": "word:admirable",
+    "word": "admirable",
+    "phonetic": "[ˈædmərəbəl]",
+    "meaning": "形 令人钦佩的;令人赞赏的",
+    "mnemonic": "【谐音】admirable = 爱得没人抱——还是令人钦佩。【词源】admirable ← ad-(向、引起)+ mir(惊奇、惊讶)+ -able(可…的)< 拉丁 admirabilis(令人惊奇的)。【同根】admirable adj.令人钦佩；admire v.钦佩；admiration n.钦佩",
+    "phrases": "an admirable performance 令人钦佩的表演；admirable courage 令人钦佩的勇气",
+    "example": "Her thick black hair is admirable.\n她那满头浓密的黑发真令人美。"
+  },
+  {
+    "id": "word:admission",
+    "word": "admission",
+    "phonetic": "[ədˈmɪʃən]",
+    "meaning": "名 允许进入;承认;坦白",
+    "mnemonic": "【谐音】admission = 我的门神 → 我的门神有权允许/承认进入。【词源】admission ← ad-(向)+ miss(送)+ -ion < 拉丁 admissio(允许进入)。【同根】admission n.允许进入；admit v.承认、准许；admissible adj.可接受的",
+    "phrases": "admission ticket 入场券；college admission 大学录取；admission of guilt 认罪",
+    "example": "He made an admission that he was the thief.\n他承认他是贼。"
+  },
+  {
+    "id": "word:admit",
+    "word": "admit",
+    "phonetic": "[ədˈmɪt]",
+    "meaning": "动 承认;允许进入",
+    "mnemonic": "【词源】admit ← ad-(向、到)+ mit(送、放)< 拉丁 admittere(送进、准许进入)。'送进'=承认、准许进入。【同根】admit v.承认；admission n.允许；admittance n.准入",
+    "phrases": "admit defeat 承认失败；admit one's mistake 承认错误；admit to hospital 收治入院",
+    "example": "admit a fact\n承认事实"
+  },
+  {
+    "id": "word:adopt",
+    "word": "adopt",
+    "phonetic": "[əˈdɑːpt]",
+    "meaning": "动 采纳;采用;采取;正式通过",
+    "mnemonic": "【串记】adapt(适应)→ adept(熟练)→ adopt(采纳、收养)。'适应→熟练→采纳'三阶段。【词源】adopt ← ad-(向、到)+ opt(选择)< 拉丁 adoptare(选择、采纳)。【同根】adopt v.采纳；adoption n.采纳；adoptive adj.收养的",
+    "phrases": "adopt a child 收养孩子；adopt a policy 采纳政策；adopt a resolution 通过决议",
+    "example": "The manager decided to adopt her suggestion.\n经理决定采纳她的建议。"
+  },
+  {
+    "id": "word:advance",
+    "word": "advance",
+    "phonetic": "[ədˈvæns]",
+    "meaning": "名 进展;进步;提前;动 前进;发展;提前;形 预先的;在前面的",
+    "mnemonic": "【谐音】advance = 俺得晚死 ('an-d-van-se' ≈ '俺得晚死') → 我还要发展、前进，所以俺不能死。【词源】advance ← ad-(向、到)+ vance(走、来自拉丁 ante 在前)。【同根】advance v.前进；advancement n.提升；advanced adj.高级的",
+    "phrases": "advance toward 向…前进；in advance 提前；advance the deadline 提前期限",
+    "example": "advance the deadline by one week\n把期限提前一星期"
+  },
+  {
+    "id": "word:advantage",
+    "word": "advantage",
+    "phonetic": "[ədˈvæntɪdʒ]",
+    "meaning": "名 优势;好处;有利条件",
+    "mnemonic": "【词源】advantage ← advance(前进、在前)+ -age(名缀)。'走在前面的事'=优势、好处。【同根】advantage n.优势；advantageous adj.有利的；disadvantage n.不利",
+    "phrases": "take advantage of 利用；占…便宜；have an advantage over 优于；to one's advantage 对…有利",
+    "example": "The advantage of booking tickets in advance is that you get better seats.\n提前订票的好处就是可以得到比较好的座位。"
+  },
+  {
+    "id": "word:adverse",
+    "word": "adverse",
+    "phonetic": "[ædˈvɜːrs]",
+    "meaning": "形 不利的;有害的;相反的;敌对的",
+    "mnemonic": "【词根词缀】adverse ← ad-(向、到)+ vers(转)+ -e < 拉丁 adversus(转向相反的)。'转向相反'=不利的、有害的。【同根】adverse adj.不利的；adversity n.逆境；adversary n.敌手；adverse 反过来",
+    "phrases": "adverse to 反对；adverse effect 不良影响；adverse conditions 不利条件",
+    "example": "The judge gave us an adverse decision.\n法官作出对我们不利的判决。"
+  },
+  {
+    "id": "word:advert",
+    "word": "advert",
+    "phonetic": "[ˈædvɜːrt]",
+    "meaning": "名 广告;同\"advertisement\"动 留意;谈到",
+    "mnemonic": "【词根词缀】advert ← ad-(向、朝)+ vert(转)。'转向某事'=提及、留意、广告。【同根】advert v.留意；advertise v.做广告；advertisement n.广告；avert v.避开",
+    "phrases": "advert to 提及；注意；advert to the matter 提及此事",
+    "example": "Try not to advert to money when talking with friends.\n跟朋友聊天时尽量不要谈到钱的问题。"
+  },
+  {
+    "id": "word:advertise",
+    "word": "advertise",
+    "phonetic": "[ˈædvərtaɪz]",
+    "meaning": "动 做广告;登广告",
+    "mnemonic": "【词根词缀】advertise ← ad-(向)+ vert(转)+ -ise(动后)。'让注意力转向'=做广告。【同根】advertise v.做广告；advertisement n.广告；advertising n.广告业",
+    "phrases": "advertise for 登广告征求；advertise a product 为产品做广告",
+    "example": "We advertise our new product.\n我们为我们的新产品做广告。"
+  },
+  {
+    "id": "word:advertisement",
+    "word": "advertisement",
+    "phonetic": "[ædˈvɜːtɪsmənt]",
+    "meaning": "名 广告",
+    "mnemonic": "【谐音】advertisement = '阿德我踢门特'——阿德力气踢门为做广告。【词源】advertisement ← advertise(做广告)+ -ment(名缀)< 古法语 advertissement(注意、宣布)。【同根】advertisement n.广告；advertise v.做广告",
+    "phrases": "put an advertisement 登广告；advertisement for 招聘广告",
+    "example": "She was attracted by the novel advertisement.\n她被这新颖的广告吸引了。"
+  },
+  {
+    "id": "word:advertising-agency",
+    "word": "advertising agency",
+    "phonetic": "[ˈædvərtaɪzɪŋ ˈeɪdʒənsi]",
+    "meaning": "短语 广告公司",
+    "mnemonic": "【词根词缀】advertising agency ← advertising(广告业)+ agency(机构、代理)。'代理广告业'=广告公司。【同根】advertise v.广告；agency n.机构；advertising n.广告业",
+    "phrases": "work for an advertising agency 在广告公司工作；advertising agency business 广告业",
+    "example": "The advertising agency will launch a campaign to introduce a new soap.\n广告商要大办一次广告来介绍一种新型香皂。"
+  },
+  {
+    "id": "word:advise",
+    "word": "advise",
+    "phonetic": "[ədˈvaɪz]",
+    "meaning": "动 向他;提出建议;劝告;通知",
+    "mnemonic": "【谐音】advise = 氮的袜子 (ad-vise ≈ '呆袜子') → 建议清洗。【词源】advise ← ad-(向)+ vis(看、认为)+ -e < 古法语 aviser(考虑、劝告)。【同根】advise v.建议；advice n.建议；advisable adj.可取的",
+    "phrases": "advise someone to do 建议某人做；advise against 劝阻；advise on 就…提出建议",
+    "example": "I advise you to be cautious.\n我劝你小心谨慎。"
+  },
+  {
+    "id": "word:advocate",
+    "word": "advocate",
+    "phonetic": "[ˈædvəkeɪt]",
+    "meaning": "动 提倡;主张 名 提倡者;拥护者;辩护律师;辩护人",
+    "mnemonic": "【谐音】advocate = 爱我 + cat → 我爱我的猫，是动物保护的提倡者。【词源】advocate ← ad-(向)+ voc(叫、召)+ -ate < 拉丁 advocatus(被召来的帮手)。【同根】advocate v.提倡；advocacy n.提倡；advocator n.提倡者",
+    "phrases": "advocate for 支持；提倡；advocate of peace 和平的拥护者；advocate reform 主张改革",
+    "example": "We advocate a healthy lifestyle.\n我们提倡健康的生活。"
+  },
+  {
+    "id": "word:affect",
+    "word": "affect",
+    "phonetic": "[əˈfekt]",
+    "meaning": "动 影响;感动;假装",
+    "mnemonic": "【词根词缀】affect ← af-(朝、向)+ fect(做、做出来的) < 拉丁 afficere(作用于)。'对…起作用'=影响。【同根】affect v.影响；effect n.影响；affection n.感情",
+    "phrases": "affect the outcome 影响结果；be deeply affected 深受影响",
+    "example": "Climate and weather affect every aspect of our life.\n气候和天气影响着我们的生活的方方面面。"
+  },
+  {
+    "id": "word:affection",
+    "word": "affection",
+    "phonetic": "[əˈfekʃ(ə)n]",
+    "meaning": "名 钟爱;喜爱",
+    "mnemonic": "【词根词缀】affection ← affect(影响)+ -ion(名缀)。'影响于心'=钟爱、喜爱。【同根】affection n.钟爱；affect v.影响；affective adj.感情的",
+    "phrases": "have affection for 喜爱；show affection 表示爱意；motherly affection 母爱",
+    "example": "Every mother has affection for her children.\n每个母亲都疼爱自己的孩子。"
+  },
+  {
+    "id": "word:affiliate",
+    "word": "affiliate",
+    "phonetic": "[əˈfɪlieɪt]",
+    "meaning": "动 求属于;并入;加入;名 分公司;附属机构",
+    "mnemonic": "【谐音】affiliate = 啊，费力特 (af-fil-iate ≈ '费力特')！费力吞下其他公司，使成附属机构。【词源】affiliate ← af-(向)+ fil(儿子、女儿)+ -iate < 拉丁 affiliare(收养为子)。【同根】affiliate v.隶属于；affiliation n.隶属关系",
+    "phrases": "be affiliated with 隶属于；affiliate company 附属公司；affiliate membership 准会员资格",
+    "example": "The two companies are affiliated to the corporation.\n这两家公司隶属于此企业。"
+  },
+  {
+    "id": "word:affirm",
+    "word": "affirm",
+    "phonetic": "[əˈfɜːrm]",
+    "meaning": "动 断言;肯定;证实;批准;坚持意见",
+    "mnemonic": "【辨析】affirm vs assert vs claim：affirm 坚定断言；assert 主观宣称；claim 要求承认。【词源】affirm ← af-(向)+ firm(坚固)< 拉丁 affirmare(使坚固、断言)。【同根】affirm v.断言；affirmation n.肯定；affirmative adj.肯定的",
+    "phrases": "affirm one's belief 坚定信念；affirm the truth of 断言…的真实；affirm in writing 书面肯定",
+    "example": "I affirm that what he said is true.\n我可以肯定他所说的是实情。"
+  },
+  {
+    "id": "word:affix",
+    "word": "affix",
+    "phonetic": "[əˈfɪks]",
+    "meaning": "动 附加;粘贴;署名;名 附加物;词缀",
+    "mnemonic": "【词根词缀】affix ← af-(加强)+ fix(固定、钉)。'钉得牢牢'=附加、贴上、署名。【同根】affix v./n.贴上；fix v.固定；prefix n.前缀；suffix n.后缀",
+    "phrases": "affix a stamp 贴邮票；affix one's signature 署名；affix to 贴上",
+    "example": "a verbal affix\n动词词缀"
+  },
+  {
+    "id": "word:affluent",
+    "word": "affluent",
+    "phonetic": "[ˈæfluənt]",
+    "meaning": "形 富有的;丰富的;富足的",
+    "mnemonic": "【谐音】affluent = fluent(流利)的发音很流利 —— aff(luent) 一定是有丰富的知识。【词源】affluent ← af-(向)+ flu(流)+ -ent < 拉丁 affluens(流出的、丰富的)。【同根】affluent adj.富有的；affluence n.富裕；fluent adj.流利的",
+    "phrases": "affluent society 富足的社会；affluent in 富有…；the affluent 富人",
+    "example": "Australia is affluent in natural resources.\n澳大利亚的自然资源丰富。"
+  },
+  {
+    "id": "word:afford",
+    "word": "afford",
+    "phonetic": "[əˈfɔːrd]",
+    "meaning": "动 买得起;负担得起;有时留够;给予",
+    "mnemonic": "【词源】afford ← af-(向)+ ford(前行)< 古英语 geforthian(推进、给予)。'负担得起'=买得起。【同根】afford v.买得起；affordable adj.可承受的",
+    "phrases": "afford to buy 买得起；afford protection 提供保护；can afford 负担得起",
+    "example": "The police will afford protection.\n警方将给予保护。"
+  },
+  {
+    "id": "word:affordable",
+    "word": "affordable",
+    "phonetic": "[əˈfɔːrdəbəl]",
+    "meaning": "形 支付得起的",
+    "mnemonic": "【词根词缀】affordable ← afford(买得起)+ -able(能…的)。'买得起的'=可承受的。【同根】affordable adj.可负担的；afford v.买得起；unaffordable adj.买不起的",
+    "phrases": "affordable housing 经济适用房；affordable price 可接受的价格",
+    "example": "It could make extra training and instruction affordable.\n它可以使额外的培训和指导负担得起。"
+  },
+  {
+    "id": "word:after-all",
+    "word": "after all",
+    "phonetic": "[ˈæftər ɔːl]",
+    "meaning": "短语 毕竟;终究",
+    "mnemonic": "【词源】after all = after(在…之后)+ all(全部、终究)。'在所有之后'=毕竟、终究。【同根】after prep.在后；all adj.全部的",
+    "phrases": "after all 毕竟；终究；after all this time 这么长时间之后",
+    "example": "After all, he is just a child.\n他毕竟只是个孩子。"
+  },
+  {
+    "id": "word:agency",
+    "word": "agency",
+    "phonetic": "[ˈeɪdʒənsi]",
+    "meaning": "名 机构;局;代理处",
+    "mnemonic": "【词根词缀】agency ← ag(做、做事的)+ -ency(名缀)< 拉丁 agentia(做)。'代办做事'=代理、机构。【同根】agency n.机构；agent n.代理人；agenda n.议程",
+    "phrases": "travel agency 旅行社；news agency 通讯社；employment agency 职业介绍所",
+    "example": "They gave their child to an adoption agency.\n他们把自己的孩子交给了一家收养所。"
+  },
+  {
+    "id": "word:agenda",
+    "word": "agenda",
+    "phonetic": "[əˈdʒendə]",
+    "meaning": "名 议程;议事日程;不为某人列的意图",
+    "mnemonic": "【词根词缀】agenda ← ag(做)+ -enda(待做的事)< 拉丁 agenda(要做的事)。'待办事项'=议程。【同根】agenda n.议程；agent n.代理人；agency n.代理",
+    "phrases": "on the agenda 在议程上；hidden agenda 隐藏的意图；set the agenda 确定议程",
+    "example": "Is there anything else to put on the agenda?\n还有什么东西要列入议程吗?"
+  },
+  {
+    "id": "word:agent",
+    "word": "agent",
+    "phonetic": "[ˈeɪdʒənt]",
+    "meaning": "名 代理人;经纪人;动因;特工;(药)剂",
+    "mnemonic": "【词根词缀】agent ← ag(做)+ -ent(人、事)< 拉丁 agens(做事者)。'做事之人'=代理人、特工。【同根】agent n.代理人；agency n.机构；agenda n.议程",
+    "phrases": "real estate agent 房产经纪人；secret agent 特工；sole agent 独家代理",
+    "example": "house agent\n房产经纪"
+  },
+  {
+    "id": "word:aggravate",
+    "word": "aggravate",
+    "phonetic": "[ˈæɡrəveɪt]",
+    "meaning": "动 加剧;使恶化;激怒",
+    "mnemonic": "【词源】aggravate ← ag-(加强)+ grav(重)+ -ate < 拉丁 aggravare(使更重)。'使更重'=加剧、使恶化。【同根】aggravate v.加剧；aggravation n.恶化；grave adj.严重的",
+    "phrases": "aggravate a situation 使局势恶化；aggravate the suffering 加剧痛苦",
+    "example": "Drought will aggravate the food shortage.\n干旱使食物短缺问题更加严重。"
+  },
+  {
+    "id": "word:aggressive",
+    "word": "aggressive",
+    "phonetic": "[əˈɡresɪv]",
+    "meaning": "形 侵略性的;攻击性的;有进取心的",
+    "mnemonic": "【词根词缀】aggressive ← ag-(向、到)+ gress(走、步)+ -ive < 拉丁 aggressivus(攻击性的)。'向…走'=有攻击性的、有进取心的。【同根】aggressive adj.侵略的；aggression n.侵略；aggressor n.侵略者",
+    "phrases": "aggressive behavior 攻击性行为；aggressive sales tactics 咄咄逼人的推销；aggressive expansion 积极扩张",
+    "example": "He gets aggressive when he's drunk.\n他喝醉了酒就变得寻衅肇事。"
+  },
+  {
+    "id": "word:agree",
+    "word": "agree",
+    "phonetic": "[əˈɡriː]",
+    "meaning": "动 同意;赞成",
+    "mnemonic": "【词源】agree ← a-(使、向)+ gree(高兴、愿意)< 古法语 agreer(使高兴)。'使高兴'=同意、赞成。【同根】agree v.同意；agreement n.同意；disagree v.不同意",
+    "phrases": "agree with 同意(某人看法)；agree to 同意(某事)；agree on 对…取得一致意见",
+    "example": "I totally agree.\n我完全同意。"
+  },
+  {
+    "id": "word:agreement",
+    "word": "agreement",
+    "phonetic": "[əˈɡriːmənt]",
+    "meaning": "名 一致;同意;协议",
+    "mnemonic": "【词根词缀】agreement ← agree(同意)+ -ment(名缀)。'一致的意见'=协议、同意。【同根】agreement n.协议；agree v.同意；disagreement n.分歧",
+    "phrases": "reach an agreement 达成协议；sign an agreement 签订协议；agreement on 关于…的协议",
+    "example": "agreement for sale\n买卖协议"
+  },
+  {
+    "id": "word:ahead-of-schedule",
+    "word": "ahead of schedule",
+    "phonetic": "[əˈhed əv ˈskedʒuːl]",
+    "meaning": "短语 提前",
+    "mnemonic": "【词源】ahead of schedule ← ahead(在…前)+ of + schedule(时间表)。'在时间表前面'=提前。【同根】ahead adv.在前面；schedule n.时间表",
+    "phrases": "finish ahead of schedule 提前完成；be ahead of schedule 比预定时间提前",
+    "example": "The production plan was fulfilled ahead of schedule.\n生产计划提前完成了。"
+  },
+  {
+    "id": "word:ahead-of-time",
+    "word": "ahead of time",
+    "phonetic": "[əˈhed əv taɪm]",
+    "meaning": "短语 提前",
+    "mnemonic": "【词源】ahead of time ← ahead(在前)+ of + time(时间)。'在时间前面'=提前。【同根】ahead adv.在前面；time n.时间",
+    "phrases": "arrive ahead of time 提前到达；plan ahead of time 提前计划",
+    "example": "They completed the project ahead of time.\n他们提前完成了这个项目。"
+  },
+  {
+    "id": "word:aid",
+    "word": "aid",
+    "phonetic": "[eɪd]",
+    "meaning": "动 帮助;协助;名 帮助;援助",
+    "mnemonic": "【谐音】aid = 爱的，有爱就要伸出援助之手。【词源】aid ← 古法语 aidier(帮助)< 拉丁 adjutare。【同根】aid v./n.援助；aide n.助手；first aid 急救",
+    "phrases": "first aid 急救；financial aid 经济援助；aid and abet 协助与教唆",
+    "example": "Let us appeal to the President to aid us.\n让我们恳求总统援助我们。"
+  },
+  {
+    "id": "word:aim",
+    "word": "aim",
+    "phonetic": "[eɪm]",
+    "meaning": "名 目标;目的;动 瞄准;以其为目标;为…的",
+    "mnemonic": "【谐音】aim = 爱慕。恋爱目标就是追上自己爱慕的女神。【词源】aim ← 古法语 esmer(估计)< 拉丁 aestimare(估价)。【同根】aim n.目标；aimless adj.无目标的",
+    "phrases": "aim at 瞄准；aim for 目标在于；achieve one's aim 达到目标",
+    "example": "What is your aim in life?\n你的生活目标是什么?"
+  },
+  {
+    "id": "word:air-freight",
+    "word": "air freight",
+    "phonetic": "[er freɪt]",
+    "meaning": "短语 航空运费;空运",
+    "mnemonic": "【词源】air freight ← air(空中)+ freight(货物、运输)。'空中货运'=空运。【同根】air n.空气；freight n.货运；airline n.航空公司",
+    "phrases": "send by air freight 空运；air freight charges 空运费；air freight services 空运服务",
+    "example": "to send goods by air freight\n空运货物"
+  },
+  {
+    "id": "word:air-traffic-controller",
+    "word": "air-traffic controller",
+    "phonetic": "[er træfɪk kənˈtroʊlər]",
+    "meaning": "短语 空中交通管制人员;空管员",
+    "mnemonic": "【词源】air-traffic controller ← air(空中)+ traffic(交通)+ control(控制)+ -er(人)。'空中交通管控员'=空管员。【同根】control v.控制；controller n.控制者",
+    "phrases": "work as an air-traffic controller 担任空管员；air-traffic control system 空管系统",
+    "example": "The air-traffic controller looked at his radar screen.\n空中交通控制员看着他的雷达屏幕。"
+  },
+  {
+    "id": "word:aircraft",
+    "word": "aircraft",
+    "phonetic": "[ˈerkræft]",
+    "meaning": "名 航空器;飞行器",
+    "mnemonic": "【词根词缀】aircraft ← air(空中)+ craft(技术、器具)。'空中器具'=航空器。【同根】aircraft n.飞行器；airline n.航线；spacecraft n.航天器",
+    "phrases": "unmanned aircraft 无人机；passenger aircraft 客机；military aircraft 军用飞机",
+    "example": "The wings of the aircraft had iced up.\n机翼上结了一层冰。"
+  },
+  {
+    "id": "word:airfare",
+    "word": "airfare",
+    "phonetic": "[ˈerfer]",
+    "meaning": "名 飞机票价",
+    "mnemonic": "【词源】airfare ← air(空中、飞机)+ fare(费用、车费)。'飞机费用'=飞机票价。【同根】fare n.费用；airline n.航空公司；airport n.机场",
+    "phrases": "cheap airfare 便宜的机票；international airfare 国际机票；airfare discount 机票折扣",
+    "example": "Airfare is cheaper in the low season.\n飞机票价在淡季时很便宜。"
+  },
+  {
+    "id": "word:airline",
+    "word": "airline",
+    "phonetic": "[ˈerlaɪn]",
+    "meaning": "名 航空公司",
+    "mnemonic": "【词源】airline ← air(空中)+ line(线)。'空中航线'=航空公司。【同根】air n.空气；line n.航线；airline industry 航空业",
+    "phrases": "national airline 国有航空公司；low-cost airline 廉价航空；major airline 主要航空公司",
+    "example": "international airline\n国际航空公司"
+  },
+  {
+    "id": "word:airmail",
+    "word": "airmail",
+    "phonetic": "[ˈermeɪl]",
+    "meaning": "名 航空邮件;航空邮政",
+    "mnemonic": "【词源】airmail ← air(空中)+ mail(邮件)。'空中邮件'=航空邮政。【同根】mail n.邮件；air adj.航空的；airmail letter 航空信",
+    "phrases": "send by airmail 通过航空邮寄；airmail envelope 航空信封；airmail stamp 航空邮票",
+    "example": "Airmail is quicker than sea mail.\n航空邮递比海上邮递快。"
+  },
+  {
+    "id": "word:airport-tax",
+    "word": "airport tax",
+    "phonetic": "[ˈerpɔːrt tæks]",
+    "meaning": "短语 机场税",
+    "mnemonic": "【词源】airport tax ← airport(机场)+ tax(税)。'机场税'=对旅客征的税。【同根】airport n.机场；tax n.税；departure tax 离境税",
+    "phrases": "pay airport tax 缴纳机场税；airport tax included 含机场税；airport tax exemption 机场税减免",
+    "example": "Right, and does that include airport tax?\n对, 这包括机场税吗?"
+  },
+  {
+    "id": "word:airtight",
+    "word": "airtight",
+    "phonetic": "[ˈertaɪt]",
+    "meaning": "形 密封的;不漏气的;无懈可击的",
+    "mnemonic": "【词根词缀】airtight ← air(空气)+ tight(紧的)。'空气进不去'=密封的。【同根】airtight adj.密封；air n.空气；tight adj.紧的",
+    "phrases": "airtight container 密封容器；airtight seal 密封；airtight argument 无懈可击的论点",
+    "example": "an airtight excuse\n无懈可击的借口"
+  },
+  {
+    "id": "word:airway-bill",
+    "word": "airway bill",
+    "phonetic": "[ˈerweɪ bɪl]",
+    "meaning": "短语 空运提单",
+    "mnemonic": "【词源】airway bill ← airway(航空路线)+ bill(单、票据)。'航空货运单'=空运提单。【同根】airway n.航线；bill n.票据；waybill n.运单",
+    "phrases": "issue an airway bill 开具空运提单；check the airway bill 检查空运提单",
+    "example": "Could you tell me your airway bill number?\n您能告诉我您的空运提单号码吗?"
+  },
+  {
+    "id": "word:aisle-seat",
+    "word": "aisle seat",
+    "phonetic": "[aɪl siːt]",
+    "meaning": "短语 普通席;靠过道的座位",
+    "mnemonic": "【词源】aisle seat ← aisle(过道)+ seat(座位)。'靠过道的座位'。【同根】aisle n.过道；seat n.座位；window seat 靠窗座位",
+    "phrases": "prefer an aisle seat 偏好靠过道座位；aisle seat on a flight 航班靠过道座位",
+    "example": "Do you prefer a window seat or an aisle seat?\n你是喜欢靠窗户的位置还是靠过道的呢?"
+  },
+  {
+    "id": "word:alcohol",
+    "word": "alcohol",
+    "phonetic": "[ˈælkəhɔːl]",
+    "meaning": "名 酒精;乙醇;含酒精的饮料",
+    "mnemonic": "【谐音】alcohol = '一(a)口(co)喝(hol)'，一口喝。【词源】alcohol ← 中世纪拉丁 alcohol < 阿拉伯语 al-kuhl(粉末、精华)。【同根】alcohol n.酒精；alcoholic adj.酒精的；abuse alcohol 酗酒",
+    "phrases": "alcohol abuse 酗酒；alcohol content 酒精含量；drinking alcohol 喝酒",
+    "example": "an addiction to alcohol\n酒瘾"
+  },
+  {
+    "id": "word:alert",
+    "word": "alert",
+    "phonetic": "[əˈlɜːrt]",
+    "meaning": "形 警觉的;警惕的;动 (使)警惕;(使)戒备;名 警报",
+    "mnemonic": "【串记】alert ↔ alter(改变)、avert(转移)。'转移注意力=警觉'。【词源】alert ← 意大利语 all'erta(在岗上)< 拉丁 erigere(竖起)。【同根】alert adj.警觉；alertness n.警觉",
+    "phrases": "alert to 对…警觉；on the alert 警戒着；sound the alert 拉响警报",
+    "example": "He is always alert to danger.\n他对危险时刻保持警惕。"
+  },
+  {
+    "id": "word:all-aspects",
+    "word": "all aspects",
+    "phonetic": "[ɔːl ˈæspekts]",
+    "meaning": "短语 各个方面;各个环节",
+    "mnemonic": "【词源】all aspects ← all(全部、所有)+ aspects(方面、来自 spect 看)。'全部看的方向'=各个方面。【同根】aspect n.方面；respect n.尊重",
+    "phrases": "from all aspects 从各个角度；cover all aspects 涵盖各个方面",
+    "example": "The book aims to cover all aspects of city life.\n这本书旨在涵盖城市生活的各个方面。"
+  },
+  {
+    "id": "word:all-but",
+    "word": "all but",
+    "phonetic": "[ɔːl bʌt]",
+    "meaning": "短语 几乎;差点;除…外其余都",
+    "mnemonic": "【词源】all but ← all(全部、几乎)+ but(除了)。'除了剩的以外'=几乎、差点。【同根】all adv.全部；but prep.除…之外；almost 几乎",
+    "phrases": "all but impossible 几乎不可能；all but a few 除了少数几个",
+    "example": "My younger sister is all but fourteen years old.\n我妹妹差不多十四岁了。"
+  },
+  {
+    "id": "word:allergic-to",
+    "word": "allergic to",
+    "phonetic": "[əˈlɜːrdʒɪk tu]",
+    "meaning": "短语 对…过敏;对…反感",
+    "mnemonic": "【词根词缀】allergic to ← allergic(过敏的)+ to。allergic ← allerg(过敏反应)+ -ic。【同根】allergy n.过敏症；allergen n.过敏原；allergic adj.过敏的",
+    "phrases": "allergic to 对…过敏；be allergic to pollen 对花粉过敏；allergic reaction 过敏反应",
+    "example": "I'm allergic to cats.\n我对猫过敏。"
+  },
+  {
+    "id": "word:alleviate",
+    "word": "alleviate",
+    "phonetic": "[əˈliːvieɪt]",
+    "meaning": "动 减轻;缓解;缓和",
+    "mnemonic": "【辨析】alleviate vs relieve vs ease vs mitigate：alleviate 减轻(痛苦)；relieve 解除(痛苦)；ease 缓和；mitigate 减轻(灾难、危险)。【词源】alleviate ← al-(加强)+ lev(轻、来自拉丁 levis)+ -iate。【同根】alleviate v.减轻；alleviation n.缓和；elevate v.升高",
+    "phrases": "alleviate pain 减轻疼痛；alleviate poverty 缓解贫困；alleviate stress 缓解压力",
+    "example": "This medicine will alleviate your sore throat.\n这种药会减轻你的嗓子痛。"
+  },
+  {
+    "id": "word:alliance",
+    "word": "alliance",
+    "phonetic": "[əˈlaɪəns]",
+    "meaning": "名 联盟;联姻;结盟",
+    "mnemonic": "【词根词缀】alliance ← ally(联盟)+ -ance(名缀)。'结盟的状态'=联盟。【同根】alliance n.联盟；ally n.盟友；ally v.结盟",
+    "phrases": "form an alliance 结成联盟；strategic alliance 战略联盟；military alliance 军事同盟",
+    "example": "political alliance\n政治同盟"
+  },
+  {
+    "id": "word:allocate",
+    "word": "allocate",
+    "phonetic": "[ˈæləkeɪt]",
+    "meaning": "动 分配;配给;拨给",
+    "mnemonic": "【联想】all(所有)+ locate(定位)。'所有人都有定位'=分配、配给。【词源】allocate ← al-(向、到)+ loc(地方、位置)+ -ate。【同根】allocate v.分配；allocation n.分配；location n.位置",
+    "phrases": "allocate resources 分配资源；allocate funds 拨款；allocate to 分配给",
+    "example": "allocate shares\n分配股份"
+  },
+  {
+    "id": "word:allot",
+    "word": "allot",
+    "phonetic": "[əˈlɑːt]",
+    "meaning": "动 分配;分配;配给",
+    "mnemonic": "【辨析】allot vs assign vs allocate：allot 整体分若干份；assign 指定分配；allocate 政府拨款。【词源】allot ← al-(加强)+ lot(份、签)。'加强份'=分配。【同根】allot v.分配；lot n.份额；allotment n.分配",
+    "phrases": "allot shares 分配股份；allot time 分配时间；allot to 分给",
+    "example": "They allot everyone a separate desk.\n他们分配给每个人一张单独的桌"
+  },
+  {
+    "id": "word:allow",
+    "word": "allow",
+    "phonetic": "[əˈlaʊ]",
+    "meaning": "动 允许;准许;给于;留出;同意;承认",
+    "mnemonic": "【词源】allow ← al-(向、对)+ low(赞美、感谢)< 古法语 alouer(赞扬、允许)。'赞扬以允许'=允许、准许。【同根】allow v.允许；allowance n.津贴；disallow v.不允许",
+    "phrases": "allow for 考虑到；allow someone to do 允许某人做；allow access 允许进入",
+    "example": "Do they allow smoking in the cinemas?\n他们允许在电影院里抽烟吗?"
+  },
+  {
+    "id": "word:allowance",
+    "word": "allowance",
+    "phonetic": "[əˈlaʊəns]",
+    "meaning": "名 零用钱;津贴",
+    "mnemonic": "【谐音】allowance = 允许(allow)你玩(wan)+name(ce名)= 只有给零用钱才允许你出去玩。【词源】allowance ← allow(允许)+ -ance(名缀)。【同根】allowance n.津贴；allow v.允许",
+    "phrases": "travel allowance 出差补贴；housing allowance 住房补贴；make allowance for 考虑到",
+    "example": "I have to work to earn my allowance.\n我不得不工作来挣零用钱。"
+  },
+  {
+    "id": "word:alter",
+    "word": "alter",
+    "phonetic": "[ˈɔːltər]",
+    "meaning": "动 变更;改动",
+    "mnemonic": "【谐音】alter = Alt 键(电脑键盘)。Alt键就是转换、改动键。【词源】alter ← 拉丁 alter(其他的、变化)。【同根】alter v.变更；alteration n.改变；alternative adj.供选择的",
+    "phrases": "alter the date 改动日期；alter the course 改变方向；alter radically 大改",
+    "example": "alter the attitude\n改变态度"
+  },
+  {
+    "id": "word:alternative",
+    "word": "alternative",
+    "phonetic": "[ɔːlˈtɜːrnətɪv]",
+    "meaning": "形 供选择的;名 供替代的选择",
+    "mnemonic": "【谐音】alternative = 奥特曼特(al-ter-na-tive ≈ '奥特曼特')。我和奥特曼二选其一，特认真在二者之间选一个。【词源】alternative ← alter(其他的)+ -ative(…的)。'其他的'=供选择的。【同根】alternative n.选择；alternate v.交替；alter v.改变",
+    "phrases": "alternative energy 替代能源；have no alternative 别无选择；seek alternatives 寻找替代方案",
+    "example": "alternative energy\n替代能源(指太..."
+  },
+  {
+    "id": "word:amateur",
+    "word": "amateur",
+    "phonetic": "[ˈæmətər]",
+    "meaning": "名 业余爱好者;形 业余的",
+    "mnemonic": "【谐音】amateur = 'a+ma+teur'(a 非)+ mature(成熟的) → '不成熟的'=业余的。【词源】amateur ← 拉丁 amator(爱好者)< amare(爱)。'爱好的'=业余者。【同根】amateur n.业余者；amateurish adj.不熟练的；amateurism n.业余性质",
+    "phrases": "amateur photographer 业余摄影师；amateur athlete 业余运动员；amateur performance 业余表演",
+    "example": "He is an amateur painter.\n他是一个业余画家。"
+  },
+  {
+    "id": "word:amaze",
+    "word": "amaze",
+    "phonetic": "[əˈmeɪz]",
+    "meaning": "动 使惊异;使吃惊",
+    "mnemonic": "【词根词缀】amaze ← a-(引起、导致)+ maze(迷路、困惑)< 古英语 amasan。'令人困惑'=使惊奇。【同根】amaze v.使惊讶；amazing adj.惊人的；amazement n.惊讶",
+    "phrases": "amaze the world 震惊世界；amazing grace 神奇恩典；be amazed at 对…感到惊奇",
+    "example": "Women have strengths that amaze men.\n女人有着令男人吃惊的力量。"
+  },
+  {
+    "id": "word:ambassador",
+    "word": "ambassador",
+    "phonetic": "[æmˈbæsədər]",
+    "meaning": "名 大使",
+    "mnemonic": "【谐音】ambassador = 俺们办事的(大使)们——为他们办事就是设大使馆。【词源】ambassador ← 古法语 ambassadeur。【同根】ambassador n.大使；embassy n.大使馆；ambassadress n.女大使",
+    "phrases": "appoint an ambassador 任命大使；ambassador to the U.S. 驻美大使；roaming ambassador 巡回大使",
+    "example": "He never failed to send the ambassador a weekly report.\n他一定会给大使送周报。"
+  },
+  {
+    "id": "word:ambition",
+    "word": "ambition",
+    "phonetic": "[æmˈbɪʃ(ə)n]",
+    "meaning": "名 野心;雄心;抱负",
+    "mnemonic": "【谐音】ambition = 俺必胜(ambition ≈ '俺必胜')。心里暗自默念必胜——有雄心!【词源】ambition ← 拉丁 ambitio(为竞选奔走)< ambire(到处走)。【同根】ambition n.野心；ambitious adj.有抱负的",
+    "phrases": "have ambition 有抱负；achieve one's ambition 实现抱负；political ambition 政治野心",
+    "example": "There are no bounds to his ambition.\n他的野心是无止境的。"
+  },
+  {
+    "id": "word:ambitious",
+    "word": "ambitious",
+    "phonetic": "[æmˈbɪʃəs]",
+    "meaning": "形 有野心的;有雄心的",
+    "mnemonic": "【谐音】ambitious = 俺必胜=多么雄心勃勃、雄心壮志!【词源】ambitious ← ambition(野心、抱负)+ -ous(…的)。【同根】ambitious adj.野心勃勃的；ambition n.抱负；unambitious adj.无野心的",
+    "phrases": "ambitious project 雄心勃勃的项目；ambitious young man 有抱负的年轻人",
+    "example": "They are ambitious although they are poor.\n他们虽穷却很有雄心壮志。"
+  },
+  {
+    "id": "word:amendment",
+    "word": "amendment",
+    "phonetic": "[əˈmendmənt]",
+    "meaning": "名 改正;修改",
+    "mnemonic": "【联想】amendment = 'a-mend-ment'——一个个男人(men)修正自我改正。【词源】amendment ← amend(改正)+ -ment(名缀)< 古法语 amender(改正)< 拉丁 emendare。【同根】amendment n.修正；amend v.修改；emend v.校订",
+    "phrases": "constitutional amendment 宪法修正案；first amendment 第一修正案；propose an amendment 提出修正案",
+    "example": "a constitutional amendment\n宪法修正案"
+  },
+  {
+    "id": "word:amount",
+    "word": "amount",
+    "phonetic": "[əˈmaʊnt]",
+    "meaning": "名 数量;数额;动 总计;等于",
+    "mnemonic": "【联想】a(一)+ mount(山)= 山上一个数量。【词源】amount ← a-(向、到)+ mount(山、上升)< 拉丁 ad montem(向上、向山)。'累计上升'=合计。【同根】amount n.数量；mount v.登上；mountain n.山",
+    "phrases": "amount to 总计；等于；a large amount 大量；in large amounts 大量地",
+    "example": "The amount of your bill is $252.\n你的账单总额为252美元。"
+  },
+  {
+    "id": "word:ample",
+    "word": "ample",
+    "phonetic": "[ˈæmpl]",
+    "meaning": "形 足够的;充裕的;丰富的",
+    "mnemonic": "【谐音】ample = 苹果(apple)是充足丰富的(ample)。【词源】ample ← 拉丁 amplus(大的、丰富的)。【同根】ample adj.充足的；amply adv.充足地；amplify v.放大",
+    "phrases": "ample space 充足的空间；ample evidence 充分的证据；ample opportunity 充分的机会",
+    "example": "We have ample money for the journey.\n我们有足够的钱去旅游。"
+  },
+  {
+    "id": "word:amplify",
+    "word": "amplify",
+    "phonetic": "[ˈæmplɪfaɪ]",
+    "meaning": "动 放大;扩大;增强;详述",
+    "mnemonic": "【词根词缀】amplify ← ampl(大的、来自 ample)+ -ify(使)。'使变大'=放大。【同根】amplify v.放大；amplifier n.放大器；amplitude n.振幅",
+    "phrases": "amplify the signal 放大信号；amplify the sound 扩音；amplify a point 详述观点",
+    "example": "The manager wants to amplify the company.\n经理想要扩大公司。"
+  },
+  {
+    "id": "word:amply",
+    "word": "amply",
+    "phonetic": "[ˈæmpli]",
+    "meaning": "副 充足地;详细地",
+    "mnemonic": "【词根词缀】amply ← ample(充足的)+ -ly(副)。'充足地'=详细地。【同根】amply adv.充足地；ample adj.充足的",
+    "phrases": "amply supplied 充足供应；amply demonstrated 充分证明；amply rewarded 得到充分回报",
+    "example": "They were amply supplied with food.\n他们有充足的食物供应。"
+  },
+  {
+    "id": "word:amuse",
+    "word": "amuse",
+    "phonetic": "[əˈmjuːz]",
+    "meaning": "动 娱乐;娱乐;消遣",
+    "mnemonic": "【词根词缀】amuse ← a-(使)+ muse(沉思、来自希腊 mousa 缪斯)。'使陷入沉思'=娱乐、消遣。【同根】amuse v.娱乐；amused adj.感到有趣的；amusement n.娱乐",
+    "phrases": "amuse oneself 自我消遣；be amused by 被…逗乐；amuse someone with 用…逗某人",
+    "example": "His jokes amuse the crying child.\n他的笑话逗笑了那个正哭闹的孩子。"
+  },
+  {
+    "id": "word:amusement",
+    "word": "amusement",
+    "phonetic": "[əˈmjuːzmənt]",
+    "meaning": "名 娱乐;消遣;乐趣;娱乐",
+    "mnemonic": "【词根词缀】amusement ← amuse(娱乐)+ -ment(名缀)。'娱乐之事'=消遣。【同根】amusement n.娱乐；amusing adj.有趣的；amuse v.娱乐",
+    "phrases": "amusement park 游乐园；to one's amusement 让某人觉得好笑；amusement arcade 游戏机厅",
+    "example": "To my great amusement, his false beard fell off.\n使我感到极其好笑的是他的假胡子掉下来了。"
+  },
+  {
+    "id": "word:analysis",
+    "word": "analysis",
+    "phonetic": "[əˈnæləsɪs]",
+    "meaning": "名 分析",
+    "mnemonic": "【谐音】analysis = 俺拿来试试(analysis ≈ '俺拿来试')，分析一下。【词源】analysis ← 希腊 analysis(分解)< analyein(解开)。【同根】analysis n.分析；analytical adj.分析的；analyst n.分析家",
+    "phrases": "in the final analysis 归根结底；carry out analysis 进行分析；market analysis 市场分析",
+    "example": "We must make a close analysis of the case.\n我们应该详细分析这案子。"
+  },
+  {
+    "id": "word:analyze",
+    "word": "analyze",
+    "phonetic": "[ˈænəlaɪz]",
+    "meaning": "动 分析",
+    "mnemonic": "【词根词缀】analyze ← analysis(分析)+ -e(动后)。'解开'=分析。【同根】analyze v.分析；analysis n.分析；analyst n.分析者",
+    "phrases": "analyze data 分析数据；analyze the problem 分析问题",
+    "example": "Scientists analyze samples of leaves.\n科学家们分析树叶标本。"
+  },
+  {
+    "id": "word:anecdote",
+    "word": "anecdote",
+    "phonetic": "[ˈænɪkdoʊt]",
+    "meaning": "名 趣闻;轶事",
+    "mnemonic": "【联想】a(俺)+ nec(捏)+ dote(都她) → 俺能捏词讲给她听＝趣闻轶事。【词源】anecdote ← 希腊 anekdota(未发表之事)< an-(不)+ ekdotos(发表的)。【同根】anecdote n.轶事；anecdotal adj.轶事的",
+    "phrases": "personal anecdote 个人轶事；tell anecdotes 讲趣闻；historical anecdote 历史轶事",
+    "example": "It's a humorous anecdote.\n该事是一件幽默的轶"
+  },
+  {
+    "id": "word:anniversary",
+    "word": "anniversary",
+    "phonetic": "[ˌænɪˈvɜːrsəri]",
+    "meaning": "名 周年纪念日",
+    "mnemonic": "【词根词缀】anniversary ← ann(年、来自拉丁 annus)+ i+ vers(转)+ -ary。'每年转到的日子'=周年纪念日。【同根】anniversary n.周年纪念；annual adj.年度的；annals 编年史",
+    "phrases": "wedding anniversary 结婚周年纪念；anniversary celebration 周年庆典；50th anniversary 50 周年",
+    "example": "They held a party to celebrate the anniversary.\n为了庆祝周年纪念他们举办了一个宴会。"
+  },
+  {
+    "id": "word:announce",
+    "word": "announce",
+    "phonetic": "[əˈnaʊns]",
+    "meaning": "动 宣布;宣告",
+    "mnemonic": "【谐音】announce = '啊南瑟'(announce ≈ '阿闹事')。一个人突然闹事想宣布决定。【词源】announce ← an-(向)+ nounce(报告、来自拉丁 nuntiare)。【同根】announce v.宣布；announcement n.公告；denounce v.谴责",
+    "phrases": "announce a decision 宣布决定；announce publicly 公开宣布；announce the news 公布消息",
+    "example": "announce a decision\n宣布一项决定"
+  },
+  {
+    "id": "word:annual",
+    "word": "annual",
+    "phonetic": "[ˈænjuəl]",
+    "meaning": "形 每年的;一年一次的",
+    "mnemonic": "【谐音】annual = 爱侬哦(annual ≈ '爱侬哦')。每年都爱侬哦。【词源】annual ← ann(年、来自拉丁 annus)+ -ual < 拉丁 annualis(年的)。【同根】annual adj.年度的；anniversary n.周年纪念；biannual adj.一年两次的",
+    "phrases": "annual report 年度报告；annual income 年收入；annual meeting 年会",
+    "example": "annual salary\n年薪"
+  },
+  {
+    "id": "word:annual-leave",
+    "word": "annual leave",
+    "phonetic": "[ˈænjuəl liːv]",
+    "meaning": "短语 年度假",
+    "mnemonic": "【词源】annual leave ← annual(年度的)+ leave(休假)。'年度休假'=年假。【同根】annual adj.年度的；leave n.休假；annual leave 年假",
+    "phrases": "annual leave entitlement 年假天数；take annual leave 休年假；annual leave balance 年假余额",
+    "example": "They have docked us of two days of our annual leave.\n他们已从我们每年的休假里扣除两天。"
+  },
+  {
+    "id": "word:anonymous",
+    "word": "anonymous",
+    "phonetic": "[əˈnɑːnəməs]",
+    "meaning": "形 匿名的;无名的;不知名的",
+    "mnemonic": "【词根词缀】anonymous ← an-(无、否)+ nym(名字、来自希腊 onyma)+ -ous(有…的)。'没有名字的'=匿名的。【同根】anonymous adj.匿名；anonymity n.匿名；pseudonym n.笔名",
+    "phrases": "anonymous letter 匿名信；anonymous donation 匿名捐赠；remain anonymous 保持匿名",
+    "example": "I received an anonymous letter.\n我收到了一封匿名信。"
+  },
+  {
+    "id": "word:answering-machine",
+    "word": "answering machine",
+    "phonetic": "[ˈænsərɪŋ məˈʃiːn]",
+    "meaning": "短语 录音电话;自动应答录音电话机",
+    "mnemonic": "【词源】answering machine = answer(回答)+ -ing + machine(机器)。'替主人接电话回答的机器'=电话答录机。【同根】answer v.回答；machine n.机器；answering service 应答服务",
+    "phrases": "leave a message on an answering machine 在答录机上留言；answering machine tape 答录机磁带",
+    "example": "I play back the message on my answering machine.\n我回放听答话机的留言。"
+  },
+  {
+    "id": "word:anthem",
+    "word": "anthem",
+    "phonetic": "[ˈænθəm]",
+    "meaning": "名 国家或组织的法定歌曲",
+    "mnemonic": "【联想】anthem = an a+ theme(主题)。'一个主题'=颂歌、主题曲。【词源】anthem ← 古英语 antefn < 拉丁 antiphona(对唱)< 希腊 antiphōnos(对响的)。【同根】anthem n.颂歌；national anthem 国歌",
+    "phrases": "national anthem 国歌；company anthem 公司颂歌；anthem for teens 青少年颂歌",
+    "example": "a national anthem\n国歌"
+  },
+  {
+    "id": "word:antibiotic",
+    "word": "antibiotic",
+    "phonetic": "[ˌæntibaɪˈɑːtɪk]",
+    "meaning": "形 抗菌的;抗菌的;名 抗菌素;抗生素",
+    "mnemonic": "【词根词缀】antibiotic ← anti-(反、对抗)+ bio(生命、来自希腊 bios)+ -tic。'反抗生物的'=抗菌的、抗生素。【同根】antibiotic n.抗生素；biology n.生物学；antibody n.抗体",
+    "phrases": "take antibiotics 服用抗生素；broad-spectrum antibiotic 广谱抗生素；antibiotic resistance 抗生素耐药性",
+    "example": "the antibiotic medicine\n抗生素药物"
+  },
+  {
+    "id": "word:anticipate",
+    "word": "anticipate",
+    "phonetic": "[ænˈtɪsɪpeɪt]",
+    "meaning": "动 预期;预期;期望;抢先;提前使用",
+    "mnemonic": "【词根词缀】anticipate ← anti-(前、先)+ cip(抓)+ -ate < 拉丁 anticipare(提前抓取)。'提前抓'=预期、期待。【同根】anticipate v.预期；anticipation n.预期；anticipated adj.预期的",
+    "phrases": "anticipate the future 预期未来；look forward to 是 '前望'; eagerly anticipate 热切期待",
+    "example": "We anticipate hearing from you again.\n我们期待再接收到你的来信。"
+  },
+  {
+    "id": "word:antique",
+    "word": "antique",
+    "phonetic": "[ænˈtiːk]",
+    "meaning": "名 古董;古代文物;形 古老的;过时的",
+    "mnemonic": "【词源】antique ← 拉丁 antiquus(古代的)< ante(在前)。'在前面的、古老的'=古董。【同根】antique n.古董；antiquity n.古代；ancient adj.古老的",
+    "phrases": "antique shop 古董店；antique furniture 古董家具；antique collector 古董收藏家",
+    "example": "She wore an antique gown to the costume party.\n她穿着一件古色古香的长袍参加化装舞会。"
+  },
+  {
+    "id": "word:anxiety",
+    "word": "anxiety",
+    "phonetic": "[æŋˈzaɪəti]",
+    "meaning": "形 忧虑;焦虑;渴望",
+    "mnemonic": "【词源】anxiety ← 拉丁 anxietas(苦恼)< angere(使窒息、挤压)。'被挤得要窒息'=焦虑。【同根】anxiety n.焦虑；anxious adj.焦虑的；uneasy adj.不安的",
+    "phrases": "feel anxiety 感到焦虑；social anxiety 社交焦虑；anxiety disorder 焦虑症",
+    "example": "Anxiety aged her overnight.\n忧虑使她一夜之间变老。"
+  },
+  {
+    "id": "word:apart",
+    "word": "apart",
+    "phonetic": "[əˈpɑːrt]",
+    "meaning": "副 分开地;相隔;形 分离的;分隔的",
+    "mnemonic": "【联想】a(一个)+ part(部分)= 让它成为一个部分, 分开、分隔。【词源】apart ← a-(离开)+ part(部分)< 古法语 a part。'离开成部分'=分隔。【同根】apart adv.分开；depart v.离开；apartheid n.种族隔离",
+    "phrases": "live apart 分居；fall apart 散架；tell apart 区分",
+    "example": "The two places are 10 miles apart.\n这两地相距十英里。"
+  },
+  {
+    "id": "word:apologize",
+    "word": "apologize",
+    "phonetic": "[əˈpɑːlədʒaɪz]",
+    "meaning": "动 道歉",
+    "mnemonic": "【谐音】apologize = 啊砸了寨子 (apologize ≈ '啊破了来斋')。我给你们道歉!【词源】apologize ← apo-(离开、远离)+ log(说、讲)+ -ize < 希腊 apologeisthai。'离开说话'=道歉。【同根】apologize v.道歉；apology n.道歉；apologia n.辩护",
+    "phrases": "apologize to someone 向某人道歉；apologize for 为…道歉；apologize sincerely 真诚道歉",
+    "example": "They ought to apologize.\n他们应该道歉。"
+  },
+  {
+    "id": "word:apologize-for",
+    "word": "apologize for",
+    "phonetic": "[əˈpɑːlədʒaɪz fɔːr]",
+    "meaning": "短语 为…道歉",
+    "mnemonic": "【词根词缀】apologize for ← apologize(道歉)+ for。'为某事道歉'。【同根】apologize v.道歉；apology n.道歉",
+    "phrases": "apologize for the mistake 为错误道歉；apologize for being late 因迟到道歉",
+    "example": "I must apologize for calling so late.\n我真是抱歉这么晚了才打电话给"
+  },
+  {
+    "id": "word:apparatus",
+    "word": "apparatus",
+    "phonetic": "[ˌæpəˈrætəs]",
+    "meaning": "名 装置;仪器;器械",
+    "mnemonic": "【谐音】apparatus = APP(应用)+ a rat(一只鼠)+ us——手机应用和鼠标都跟仪器设备有关!【词源】apparatus ← 拉丁 apparatus(器械)< apparare(准备)。【同根】apparatus n.器械；apparent adj.显然的；prepare v.准备",
+    "phrases": "mechanical apparatus 机械设备；experimental apparatus 实验装置；gymnastic apparatus 体操器械",
+    "example": "mechanical apparatus\n机械设备"
+  },
+  {
+    "id": "word:apparel",
+    "word": "apparel",
+    "phonetic": "[əˈpærəl]",
+    "meaning": "名 衣服;(尤指)正装;动 装饰;给…穿衣服",
+    "mnemonic": "【联想】apparel = 穿衣服(apparel) 可能会吸引人(appall), 也可能使人惊骇。【词源】apparel ← 古法语 apareillier(准备)< 拉丁 apparare。'准备好的衣服'=服装。【同根】apparel n.服装；appall v.使惊骇",
+    "phrases": "sports apparel 运动服装；ladies' apparel 女士服装；apparel industry 服装业",
+    "example": "an apparel store\n服装店"
+  },
+  {
+    "id": "word:apparent",
+    "word": "apparent",
+    "phonetic": "[əˈpærənt]",
+    "meaning": "形 明显的;显然的;表面上的",
+    "mnemonic": "【辨析】apparent vs obvious vs evident：apparent 表面如此但未必；obvious 极为明显；evident 明显的事实。【词源】apparent ← ap-(向、到)+ par(出现)+ -ent < 拉丁 apparere(出现)。'能够看见'=明显的。【同根】apparent adj.显然的；apparently adv.表面上；appear v.出现",
+    "phrases": "apparent to 对…明显；apparent contradiction 表面矛盾；apparent sincerity 表面的真诚",
+    "example": "There is no apparent change in this garden.\n这个花园没有明显的变化。"
+  },
+  {
+    "id": "word:apparently",
+    "word": "apparently",
+    "phonetic": "[əˈpærəntli]",
+    "meaning": "副 显然;表面上看来;似乎",
+    "mnemonic": "【词根词缀】apparently ← apparent(明显的)+ -ly(副)。'看着明显地'=显然、似乎。【同根】apparently adv.显然；apparent adj.显然的；appear v.出现",
+    "phrases": "apparently so 似乎是这样；apparently oblivious 明显未察觉",
+    "example": "Apparently, you have done a lot of work.\n实际上, 你们已经做了很多工作。"
+  },
+  {
+    "id": "word:appeal",
+    "word": "appeal",
+    "phonetic": "[əˈpiːl]",
+    "meaning": "名 恳求;呼吁;上诉;动 吸引力;呼吁;诉请",
+    "mnemonic": "【谐音】appeal = '啊配尔'。呼吁上给我个匹配的朋友吧!【词源】appeal ← ap-(向、到)+ pell(驱动、来自拉丁 pellere)。'向…驱动'=恳求、上诉。【同根】appeal v./n.呼吁；appellate adj.上诉的；appellant n.上诉人",
+    "phrases": "appeal to 吸引；上诉；appeal for 呼吁；court of appeal 上诉法院",
+    "example": "reject an appeal\n驳回上诉"
+  },
+  {
+    "id": "word:appeal-for",
+    "word": "appeal for",
+    "phonetic": "[əˈpiːl fɔːr]",
+    "meaning": "短语 呼吁;请求",
+    "mnemonic": "【词源】appeal for ← appeal(呼吁)+ for(请求)。'呼吁某事'=呼吁。【同根】appeal v.呼吁；appealing adj.吸引人的",
+    "phrases": "appeal for help 求助；appeal for donations 呼吁捐款",
+    "example": "overcharged shippers are unlikely to appeal for rate relief.\n被过度收费的供应商不太可能为减经费用而上诉"
+  },
+  {
+    "id": "word:appeal-to",
+    "word": "appeal to",
+    "phonetic": "[əˈpiːl tu]",
+    "meaning": "短语 上诉;呼吁;有吸引力;使感兴趣",
+    "mnemonic": "【词源】appeal to ← appeal(呼吁)+ to。'对…呼吁；对…有吸引力'=上诉、吸引。【同根】appeal v.吸引；appealing adj.吸引人的",
+    "phrases": "appeal to someone 对某人有吸引力；appeal to a higher court 上诉至上一级法院",
+    "example": "I appeal to your sense of justice.\n我呼吁你拿出正义感。"
+  },
+  {
+    "id": "word:appeal-to-sb-for-sth",
+    "word": "appeal to sb. for sth.",
+    "phonetic": "[əˈpiːl tu ˈsʌmhɑːdi fɔːr sʌmθɪŋ]",
+    "meaning": "短语 向…请求…",
+    "mnemonic": "【词源】appeal to sb. for sth. = appeal(呼吁)+ to+ sb.+ for+ sth。'向某人恳求某事'。【同根】appeal v.呼吁",
+    "phrases": "appeal to friends for support 求助朋友的支援；appeal to the public for donations 向公众呼吁捐款",
+    "example": "to appeal to one's friends for support\n请求朋友支持"
+  },
+  {
+    "id": "word:appendix",
+    "word": "appendix",
+    "phonetic": "[əˈpendɪks]",
+    "meaning": "名 附录;阑尾;附件",
+    "mnemonic": "【辨析】appendix vs supplement vs attachment：appendix 书末附录；supplement 补充部分；attachment 附件。【词源】appendix ← 拉丁 appendix(悬挂物)< appendere(悬挂)。【同根】appendix n.附录；append v.附加；appendage n.附属物",
+    "phrases": "remove one's appendix 切除阑尾；appendix of a book 书的附录；appendix A 附录 A",
+    "example": "He had his appendix taken out.\n他的阑尾割去了。"
+  },
+  {
+    "id": "word:appetite",
+    "word": "appetite",
+    "phonetic": "[ˈæpɪtaɪt]",
+    "meaning": "名 胃口;食欲;嗜好;爱好",
+    "mnemonic": "【谐音】appetite = 爱陪太女(appetite ≈ '爱配太你')。太女胃口好，陪你吃饭时食欲大增。【词源】appetite ← 拉丁 appetitus(渴望)< appetere(渴望、攻击)。'渴望'=食欲。【同根】appetite n.食欲；appetizer n.开胃品；appetizing adj.开胃的",
+    "phrases": "have a good appetite 胃口好；lose one's appetite 没有食欲；whet one's appetite 引起兴趣",
+    "example": "A walk before dinner will arouse your appetite.\n晚饭前的散步会引起你的食欲。"
+  },
+  {
+    "id": "word:appetizer",
+    "word": "appetizer",
+    "phonetic": "[ˈæpɪtaɪzər]",
+    "meaning": "名 (餐前的)开胃品",
+    "mnemonic": "【词根词缀】appetizer ← appetize(开胃)+ -er(物)< appetite+ -ize。'开胃物'=开胃品。【同根】appetizer n.开胃品；appetite n.食欲；appetizing adj.开胃的",
+    "phrases": "serve as an appetizer 作为开胃菜；order an appetizer 点开胃菜；appetizer platter 开胃拼盘",
+    "example": "Would you like an appetizer?\n你想来点什么开胃小菜吗?"
+  },
+  {
+    "id": "word:applaud",
+    "word": "applaud",
+    "phonetic": "[əˈplɔːd]",
+    "meaning": "动 鼓掌;称赞",
+    "mnemonic": "【词源】applaud ← ap-(向)+ plaud(拍手、来自拉丁 plaudere)。'向着拍手'=鼓掌。【同根】applaud v.鼓掌；applause n.喝彩；plaudit n.称赞",
+    "phrases": "applaud the decision 鼓掌赞许这个决定；applaud warmly 热烈鼓掌",
+    "example": "I applaud your decision.\n我赞成你的决定。"
+  },
+  {
+    "id": "word:applause",
+    "word": "applause",
+    "phonetic": "[əˈplɔːz]",
+    "meaning": "名 鼓掌;喝彩",
+    "mnemonic": "【词根词缀】applause ← ap-(向)+ plaus(拍手)+ -e < 拉丁 applausus。'拍手之声'=鼓掌。【同根】applause n.掌声；applaud v.鼓掌；plausible adj.似乎合理的",
+    "phrases": "win the applause of 赢得…的掌声；thunderous applause 雷鸣般的掌声；round of applause 一阵掌声",
+    "example": "His speech won the applause of the audience.\n他的讲话赢得了听众的掌声。"
+  },
+  {
+    "id": "word:appliance",
+    "word": "appliance",
+    "phonetic": "[əˈplaɪəns]",
+    "meaning": "名 家用电器;器具",
+    "mnemonic": "【词根词缀】appliance ← apply(适用、应用)+ -ance(名缀)。'应用之物'=器具、家用电器。【同根】appliance n.器具；apply v.应用；applicable adj.适用的",
+    "phrases": "home appliance 家用电器；electrical appliance 电器；kitchen appliance 厨房电器",
+    "example": "electrical appliance shop\n电器商店"
+  },
+  {
+    "id": "word:applicant",
+    "word": "applicant",
+    "phonetic": "[ˈæplɪkənt]",
+    "meaning": "名 申请人",
+    "mnemonic": "【词根词缀】applicant ← apply(申请)+ -ant(人)。'申请之人'=申请人。【同根】applicant n.申请人；application n.申请；apply v.申请",
+    "phrases": "job applicant 求职者；applicant pool 申请人池；qualified applicant 合格的申请人",
+    "example": "The job applicant must have good verbal skills.\n这份工作的申请者必须具备良好的语言表达"
+  },
+  {
+    "id": "word:application",
+    "word": "application",
+    "phonetic": "[ˌæplɪˈkeɪʃn]",
+    "meaning": "名 应用;申请",
+    "mnemonic": "【词根词缀】application ← apply(应用)+ -ation(名缀)。'应用之物'=应用、申请。【同根】application n.申请；applicant n.申请人；apply v.申请",
+    "phrases": "job application 工作申请；submit an application 提交申请；application form 申请表",
+    "example": "the application of science to industry\n科学在工业上的应用"
+  },
+  {
+    "id": "word:apply-for",
+    "word": "apply for",
+    "phonetic": "[əˈplaɪ fɔːr]",
+    "meaning": "短语 请求;申请",
+    "mnemonic": "【词根词缀】apply for ← apply(申请)+ for。'申请某物'=请求、申请。【同根】apply v.申请；application n.申请；applicant n.申请人",
+    "phrases": "apply for a job 申请工作；apply for a visa 申请签证；apply for membership 申请会员",
+    "example": "apply for copyright\n申请版权"
+  },
+  {
+    "id": "word:apply-to",
+    "word": "apply to",
+    "phonetic": "[əˈplaɪ tu]",
+    "meaning": "短语 适用于;运用",
+    "mnemonic": "【词根词缀】apply to ← apply(适用)+ to。'适用于、运用于'。【同根】apply v.应用；applicable adj.适用的",
+    "phrases": "apply to everyone 适用于每个人；apply pressure on 对…施加压力；apply oneself to 致力于",
+    "example": "The laws apply to everybody.\n法律适用于所有人。"
+  },
+  {
+    "id": "word:appoint",
+    "word": "appoint",
+    "phonetic": "[əˈpɔɪnt]",
+    "meaning": "动 任命;委派;约定;指定",
+    "mnemonic": "【词根词缀】appoint ← ap-(加强)+ point(指向)。'指向某人'=指定、任命。【同根】appoint v.任命；appointment n.约定；appointed adj.被任命的",
+    "phrases": "appoint a manager 任命经理；appoint someone to a position 任命某人某职",
+    "example": "You may appoint a proxy for you to vote.\n你可以委托代表来替你投票。"
+  },
+  {
+    "id": "word:appointment",
+    "word": "appointment",
+    "phonetic": "[əˈpɔɪntmənt]",
+    "meaning": "名 约会;约定;职位;任命",
+    "mnemonic": "【词根词缀】appointment ← appoint(指定)+ -ment(名缀)。'指定的时间'=约会、任命。【同根】appointment n.约会；appoint v.任命；disappointment n.失望",
+    "phrases": "make an appointment 预约；keep an appointment 守约；cancel an appointment 取消约会",
+    "example": "Mr. Li is to take up an appointment as the chairman of the company.\n李先生将被任命为公司的董事长。"
+  },
+  {
+    "id": "word:apportion",
+    "word": "apportion",
+    "phonetic": "[əˈpɔːrʃən]",
+    "meaning": "动 分摊;分配",
+    "mnemonic": "【词根词缀】apportion ← ap-(加强)+ portion(部分)。'分部分'=分摊、分配。【同根】apportion v.分配；portion n.部分；proportion n.比例",
+    "phrases": "apportion blame 分担责任；apportion costs 分摊费用",
+    "example": "to apportion the money\n分配一笔钱"
+  },
+  {
+    "id": "word:apportionment",
+    "word": "apportionment",
+    "phonetic": "[əˈpɔːrʃənmənt]",
+    "meaning": "名 分摊;分派",
+    "mnemonic": "【词根词缀】apportionment ← apportion(分摊)+ -ment(名缀)。'分摊'=分派、分配。【同根】apportionment n.分配；apportion v.分配；portion n.部分",
+    "phrases": "apportionment of funds 资金分配；apportionment of blame 责任分摊",
+    "example": "the apportionment of resources\n对资源的分配"
+  },
+  {
+    "id": "word:appraisal",
+    "word": "appraisal",
+    "phonetic": "[əˈpreɪz(ə)l]",
+    "meaning": "名 评估;评价;鉴定",
+    "mnemonic": "【谐音】appraisal = 阿普瑞泽(appraise ≈ '阿扑瑞斯')——评估一个人很难!【词源】appraisal ← ap-(向、到)+ prais(价值、来自拉丁 pretium)+ -al。'对价值评估'=评估。【同根】appraisal n.评估；appraise v.评价；praise v.赞美",
+    "phrases": "performance appraisal 绩效评估；real estate appraisal 房地产评估；give an appraisal 给出评估",
+    "example": "a forthright appraisal\n一个直率的评价"
+  },
+  {
+    "id": "word:appreciate",
+    "word": "appreciate",
+    "phonetic": "[əˈpriːʃieɪt]",
+    "meaning": "动 欣赏;理解;感激;增值",
+    "mnemonic": "【谐音】appreciate = 阿婆爱爱她(欣赏)。【词源】appreciate ← ap-(向)+ pret(价值)+ -iate < 拉丁 appretiare(估价)。'估以价值'=欣赏。【同根】appreciate v.欣赏；appreciation n.感激；apprehensible adj.可理解的",
+    "phrases": "appreciate the beauty 欣赏美；appreciate the value 评估价值；I appreciate it 我很感谢",
+    "example": "Very few people appreciate his works.\n没多少人赏识他的作品。"
+  },
+  {
+    "id": "word:apprehend",
+    "word": "apprehend",
+    "phonetic": "[ˌæprɪˈhend]",
+    "meaning": "动 理解;逮捕",
+    "mnemonic": "【谐音】apprehend = 阿婆(app)又(re)狠(hend)她的儿子，被逮捕了。【词源】apprehend ← ap-(加强)+ prehend(抓、拿)< 拉丁 apprehendere。'抓住'=理解、逮捕。【同根】apprehend v.逮捕；apprehensible adj.可理解的；comprehend v.理解",
+    "phrases": "apprehend a criminal 逮捕罪犯；apprehend the meaning 理解意思",
+    "example": "The police apprehend the burglar.\n警方抓住了那个夜贼。"
+  },
+  {
+    "id": "word:approach",
+    "word": "approach",
+    "phonetic": "[əˈproʊtʃ]",
+    "meaning": "动 接近;接近;临近;处理;名 方法;接近;靠近;途径",
+    "mnemonic": "【谐音】approach = 雅扑肉吃(approach ≈ '雅扑肉吃')。蹲靠近接近肉。【词源】approach ← ap-(向、到)+ proach(近、来自拉丁 prope)。'向…靠近'=接近、方法。【同根】approach v.接近；approachability n.可接近性",
+    "phrases": "approach to 接近；方法；approach a problem 看待问题；final approach 最后途径",
+    "example": "the approach of spring\n春天的来临"
+  },
+  {
+    "id": "word:approval",
+    "word": "approval",
+    "phonetic": "[əˈpruːv(ə)l]",
+    "meaning": "名 赞成;批准",
+    "mnemonic": "【词根词缀】approval ← approve(批准)+ -al(名缀)。'批准的事'=赞成、批准。【同根】approval n.批准；approve v.批准；disapproval n.不赞成",
+    "phrases": "seek approval 寻求同意；approval rating 好感度；on approval 包退换",
+    "example": "I anxiously await your approval.\n我急切地等待你的批准。"
+  },
+  {
+    "id": "word:approve",
+    "word": "approve",
+    "phonetic": "[əˈpruːv]",
+    "meaning": "动 批准;认可;通过;赞成(述)",
+    "mnemonic": "【辨析】approve vs consent vs endorse：approve 单人批准；consent 同意；endorse 公开支持。【词源】approve ← ap-(向、到)+ prov(证明、有利)< 拉丁 approbare。'证明有利'=批准。【同根】approve v.批准；approval n.批准；disprove v.反驳",
+    "phrases": "approve the budget 批准预算；approve of 赞同；approve the plan 批准计划",
+    "example": "I don't approve of smoking.\n我不赞成抽烟。"
+  },
+  {
+    "id": "word:approximate",
+    "word": "approximate",
+    "phonetic": "[əˈprɑːksɪmət]",
+    "meaning": "形 近似的;大约的;动 近似;粗略估计",
+    "mnemonic": "【词根词缀】approximate ← ap-(向、到)+ proxim(最接近、来自拉丁 proximus)+ -ate。'最接近的'=近似的、估计。【同根】approximate adj.大约；approximation n.近似；proximity n.接近",
+    "phrases": "approximate number 近似值；approximate cost 大概成本；approximately 大约",
+    "example": "an approximate figure\n一个近似值"
+  },
+  {
+    "id": "word:approximately",
+    "word": "approximately",
+    "phonetic": "[əˈprɑːksɪmətli]",
+    "meaning": "副 大约;大概",
+    "mnemonic": "【谐音】approximately = 俺赛(洗米)特紧。'大约是年起五'。【词源】approximately ← approximate(近似)+ -ly(副)。【同根】approximately adv.大约；approximate adj.大约的",
+    "phrases": "approximately 100 people 大约 100 人；approximately equal 大致相等",
+    "example": "His salary is approximately 85 dollars a week.\n他的新水大约一星期85美元。"
+  },
+  {
+    "id": "word:aptitude",
+    "word": "aptitude",
+    "phonetic": "[ˈæptɪtjuːd]",
+    "meaning": "名 天资;天赋;才能",
+    "mnemonic": "【联想】attitude(态度)+ altitude(高度)= '态'+ aptitude(才能)。态度和才能决定成就高度。【词源】aptitude ← apt(合适的)+ -itude < 拉丁 aptitudo(适合)。【同根】aptitude n.才能；apt adj.恰当的；inapt adj.不恰当的",
+    "phrases": "natural aptitude 天生的才能；aptitude test 能力测试；have an aptitude for 有…的天分",
+    "example": "He skipped the fourth grade because of his aptitude.\n他因天资聪颖从三年级跳到了五年级。"
+  },
+  {
+    "id": "word:arbitrate",
+    "word": "arbitrate",
+    "phonetic": "[ˈɑːrbɪtreɪt]",
+    "meaning": "动 仲裁;公断",
+    "mnemonic": "【词根词缀】arbitrate ← arbitr(裁决、来自拉丁 arbiter)+ -ate。'裁决事情'=仲裁、公断。【同根】arbitrate v.仲裁；arbitration n.仲裁；arbitrary adj.任意的",
+    "phrases": "arbitrate a dispute 仲裁纠纷；agree to arbitrate 同意仲裁",
+    "example": "They agreed to arbitrate their dispute.\n他们同意经仲裁解决争端。"
+  },
+  {
+    "id": "word:archaeology",
+    "word": "archaeology",
+    "phonetic": "[ˌɑːrkiˈɑːlədʒi]",
+    "meaning": "名 考古学",
+    "mnemonic": "【词根词缀】archaeology ← archae(古、来自希腊 archaios)+ -ology(学)。'古代研究学'=考古学。【同根】archaeology n.考古学；archaeologist n.考古学家；archaic adj.古老的",
+    "phrases": "study archaeology 学习考古学；the science of archaeology 考古科学",
+    "example": "architecture / archaeology / agriculture\n建筑学/考古学/农业"
+  },
+  {
+    "id": "word:architect",
+    "word": "architect",
+    "phonetic": "[ˈɑːrkɪtekt]",
+    "meaning": "名 建筑师;设计者;创造者",
+    "mnemonic": "【词根词缀】architect ← archi-(首、主要)+ tect(建筑、来自希腊 tekton 匠人)。'主要的匠人'=建筑师。【同根】architect n.建筑师；architecture n.建筑学；architectural adj.建筑的",
+    "phrases": "chief architect 主建筑师；architect of one's own fortunes 自我命运的设计师",
+    "example": "the architect of his own fortunes\n他自己命运的缔造者"
+  },
+  {
+    "id": "word:area-code",
+    "word": "area code",
+    "phonetic": "[ˈeriə koʊd]",
+    "meaning": "短语 电话区号",
+    "mnemonic": "【词源】area code ← area(地区)+ code(代码)。'地区代码'=电话区号。【同根】area n.地区；code n.代码",
+    "phrases": "dial the area code 拨区号；area code list 区号列表；wrong area code 错误区号",
+    "example": "Sorry. I must have got the wrong area code.\n对不起。我一定是拨错区号了。"
+  },
+  {
+    "id": "word:arguable",
+    "word": "arguable",
+    "phonetic": "[ˈɑːrɡjuəbəl]",
+    "meaning": "形 可论证的;可争论的;可论辩的",
+    "mnemonic": "【词根词缀】arguable ← argue(争论)+ -able(可…的)。'可争论的'=可论证的。【同根】arguable adj.可争论的；arguably adv.可论证地；argument n.争论",
+    "phrases": "arguable claim 有争议的主张；arguable point 可争辩的点",
+    "example": "an arguable question, still unresolved\n一个尚未决定的可争辩的问题"
+  },
+  {
+    "id": "word:arise-from",
+    "word": "arise from",
+    "phonetic": "[əˈraɪz frəm]",
+    "meaning": "短语 起于;由…引起",
+    "mnemonic": "【词源】arise from ← arise(升起、出现)+ from。'起因于…'=由…引起、起源于。【同根】arise v.出现；arise from 起源于；rise v.升起",
+    "phrases": "arise from misunderstandings 因误会而起；problems arising from 起因于…的问题",
+    "example": "Mistakes often arise from misunderstandings.\n错误常常源于误会。"
+  },
+  {
+    "id": "word:around-the-corner",
+    "word": "around the corner",
+    "phonetic": "[əˈraʊnd ðə ˈkɔːrnər]",
+    "meaning": "短语 在拐角处;即将;来临",
+    "mnemonic": "【词源】around the corner ← around(在…周围)+ the corner(角落)。'在角落处'=即将、拐角处。【同根】around prep.在周围；corner n.角落",
+    "phrases": "around the corner 即将；turn the corner 拐弯；around the corner coming 即将到来",
+    "example": "Winter approaching, spring will be around the corner.\n冬天来了,春天也就不远了。"
+  },
+  {
+    "id": "word:arrange",
+    "word": "arrange",
+    "phonetic": "[əˈreɪndʒ]",
+    "meaning": "动 安排;排列;改编(乐曲)",
+    "mnemonic": "【词根词缀】arrange ← ar-(加强)+ range(排列、行列)。'加强排列'=安排、排列。【同根】arrange v.安排；arrangement n.安排；range n.范围",
+    "phrases": "arrange a meeting 安排会议；arrange the books 整理书；arrange for 安排",
+    "example": "You can arrange the meeting at your convenience.\n你可以把会议安排在你有空的时候。"
+  },
+  {
+    "id": "word:arrangement",
+    "word": "arrangement",
+    "phonetic": "[əˈreɪndʒmənt]",
+    "meaning": "名 安排;商定",
+    "mnemonic": "【谐音】arrangement = oranges(橘子们)来了，安排一下。【词源】arrangement ← arrange(安排)+ -ment(名缀)。【同根】arrangement n.安排；arrange v.安排；disarrange v.打乱",
+    "phrases": "make arrangements 安排；seating arrangement 座位安排；an arrangement with 与…的协议",
+    "example": "We are busy in making arrangements for Christmas.\n我们正忙着为圣诞节做安排。"
+  },
+  {
+    "id": "word:array",
+    "word": "array",
+    "phonetic": "[əˈreɪ]",
+    "meaning": "名 大批;数列;动 排列;部署(兵力)",
+    "mnemonic": "【词源】array ← ar-(向)+ ray(光线、排列)。'像光线一样'=大批、排列。【同根】array v./n.排列；disarray n.混乱；ray n.光线",
+    "phrases": "an array of 一系列；in array 排列整齐；vivid array 光彩夺目",
+    "example": "Array the paintings so everyone can see them.\n把画陈列好, 以便每个人都能看到。"
+  },
+  {
+    "id": "word:arrest",
+    "word": "arrest",
+    "phonetic": "[əˈrest]",
+    "meaning": "动 逮捕;拘留;阻止;吸引;名 逮捕;拘捕",
+    "mnemonic": "【词源】arrest ← ar-(向、到)+ rest(停留、来自拉丁 restare)。'强制停下来'=逮捕。【同根】arrest v./n.逮捕；arresting adj.引人注目的；rest v.休息",
+    "phrases": "arrest a criminal 逮捕罪犯；under arrest 被捕；house arrest 软禁",
+    "example": "arrest the bandit\n逮捕匪徒"
+  },
+  {
+    "id": "word:arrival-date",
+    "word": "arrival date",
+    "phonetic": "[əˈraɪv(ə)l deɪt]",
+    "meaning": "短语 到达日期;抵达日期",
+    "mnemonic": "【词源】arrival date ← arrival(到达)+ date(日期)。'到达的日期'=抵达日期。【同根】arrival n.到达；date n.日期；arrive v.到达",
+    "phrases": "arrival date 抵达日期；arrival and departure date 到达与离开日期",
+    "example": "Users must enter an arrival date and a departure date.\n用户必须输入到达日期和离去日期。"
+  },
+  {
+    "id": "word:arrive-at-a-conclusion",
+    "word": "arrive at a conclusion",
+    "phonetic": "[əˈraɪv ət ə kənˈkluːʒən]",
+    "meaning": "短语 得出结论",
+    "mnemonic": "【词源】arrive at a conclusion = arrive(到达)+ at+ a+ conclusion(结论)。'到达结论'=得出结论。【同根】arrive v.到达；conclusion n.结论；conclude v.得出结论",
+    "phrases": "arrive at a conclusion 得出结论；reach a conclusion 达成结论；come to a conclusion 得出结论",
+    "example": "arrive at a /the conclusion\n得出结论"
+  },
+  {
+    "id": "word:article",
+    "word": "article",
+    "phonetic": "[ˈɑːrtɪk(ə)l]",
+    "meaning": "名 文章;物件;条目;条款;冠词",
+    "mnemonic": "【词源】article ← 拉丁 articulus(关节、小部分)< artus(关节)。'小段、部件'=文章、物品。【同根】article n.文章；articulate v.发音清晰；articulable adj.可表达的",
+    "phrases": "write an article 写文章；feature article 特写；article of clothing 衣物",
+    "example": "Please give this article a headline.\n请给这篇文章一个大字标题。"
+  },
+  {
+    "id": "word:articulate",
+    "word": "articulate",
+    "phonetic": "[ɑːrˈtɪkjəleɪt]",
+    "meaning": "动 发音清晰的;善于表达的;口才好的;动 清楚地讲话;发音;以关节连接",
+    "mnemonic": "【联想】articulate = '啊替'culate(计算好)。'表达清楚=articulate'。【词源】articulate ← 拉丁 articulare(清楚地说)< articulus(关节)。'关节相连=连接清楚'=清晰表达。【同根】articulate v.清楚地表达；articulation n.清晰度；article n.关节",
+    "phrases": "articulate clearly 表达清楚；articulate one's thoughts 表达想法；articulate speaker 口才好的演讲者",
+    "example": "The injured bone didn't articulate well.\n受伤的骨头没有连接好。"
+  },
+  {
+    "id": "word:artificial",
+    "word": "artificial",
+    "phonetic": "[ˌɑːrtɪˈfɪʃ(ə)l]",
+    "meaning": "形 人造的;人工的;假的",
+    "mnemonic": "【辨析】artificial vs synthetic vs false：artificial 人造的；synthetic 化学合成的；false 假的。【词源】artificial ← 拉丁 artificialis(做出来的)< artificium(手艺)< ars(技术)+ facere(做)。'人工造的'=人造的。【同根】artificial adj.人造的；artifice n.诡计；artisan n.工匠",
+    "phrases": "artificial intelligence 人工智能；artificial flowers 假花；artificial selection 人工选择",
+    "example": "artificial flowers\n假花"
+  },
+  {
+    "id": "word:artistry",
+    "word": "artistry",
+    "phonetic": "[ˈɑːrtɪstri]",
+    "meaning": "名 艺术性;艺术修养;艺术才能;技艺",
+    "mnemonic": "【词根词缀】artistry ← artist(艺术家)+ -ry(技艺、行为)。'艺术家的技艺'=艺术性。【同根】artistry n.艺术性；artist n.艺术家；artistic adj.艺术的",
+    "phrases": "artistry of painting 绘画技艺；performer with great artistry 技艺精湛的表演者",
+    "example": "He has artistry as a pianist.\n他有作为钢琴家的艺术。"
+  },
+  {
+    "id": "word:artwork",
+    "word": "artwork",
+    "phonetic": "[ˈɑːrtwɜːrk]",
+    "meaning": "名 艺术;美术品",
+    "mnemonic": "【词根词缀】artwork ← art(艺术)+ work(工作、产品)。'艺术产品'=美术品。【同根】artwork n.艺术品；art n.艺术；work n.作品",
+    "phrases": "exhibit artwork 展出艺术品；digital artwork 数字艺术；artwork design 美术设计",
+    "example": "Her artwork is based on traditional concepts.\n她的艺术是按传统观念设计的。"
+  },
+  {
+    "id": "word:as-follows",
+    "word": "as follows",
+    "phonetic": "[æz ˈfɑːloʊz]",
+    "meaning": "短语 如下",
+    "mnemonic": "【辨析】as follows vs as below：as follows 下面紧跟列举(较正式)；as below 下面有补充。【词源】as follows = as+ follows(跟随)。'如下所述'。【同根】follow v.跟随；following adj.下列的",
+    "phrases": "as follows 如下；listed as follows 列举如下；the items as follows 如下项目",
+    "example": "The report runs as follows.\n报告如下。"
+  },
+  {
+    "id": "word:as-for",
+    "word": "as for",
+    "phonetic": "[æz fɔːr]",
+    "meaning": "短语 关于;至于",
+    "mnemonic": "【扩展】as for = '至于、关于'。和 as to 类似：as to 关于、ask for 要求。【词源】as for 中 as(作为)+ for(对、对于)。【同根】as 关于；for 关于",
+    "phrases": "as for 关于；至于；as for me 至于我；as for the matter 关于这件事",
+    "example": "As for me, I agree with the opinion.\n就我看来, 我同意这个意见。"
+  },
+  {
+    "id": "word:as-general-rule",
+    "word": "as a general rule",
+    "phonetic": "[æz ə ˈdʒen(ə)rəl ruːl]",
+    "meaning": "短语 一般说来",
+    "mnemonic": "【联想】as a general rule = in general = usually = in most situations. '一般规则'。【词源】as a general rule = as+ a+ general(一般的)+ rule(规则)。【同根】general adj.一般的；rule n.规则",
+    "phrases": "as a general rule 一般说来；general rule 一般规则；as a rule 通常",
+    "example": "As a general rule, prices follow demands.\n一般而言, 物价随需求而变化。"
+  },
+  {
+    "id": "word:as-of-now",
+    "word": "as of now",
+    "phonetic": "[æz əv naʊ]",
+    "meaning": "短语 到目前为止",
+    "mnemonic": "【词源】as of now = as of(到…时为止)+ now(现在)。'到目前'=至今为止。【同根】as of 到…时为止；now 此刻",
+    "phrases": "as of now 至今为止；as of today 截至今天；as of the date mentioned 在所述日期",
+    "example": "As of now, smoking is forbidden in this house.\n从现在起, 这栋房子里禁止吸烟。"
+  },
+  {
+    "id": "word:as-per",
+    "word": "as per",
+    "phonetic": "[æz pər]",
+    "meaning": "短语 按照",
+    "mnemonic": "【联想】as per = according to。'依照'。as per 形式简洁，商务邮件中常用。【词源】as per = as(按照)+ per(由、按照)。【同根】as per 按照；according to 根据",
+    "phrases": "as per instructions 根据指示；as per the contract 按合同规定；as per the regulations 按照规定",
+    "example": "The work has been done as per instructions.\n工作已按指示做完。"
+  },
+  {
+    "id": "word:as-the-representative-of",
+    "word": "as the representative of",
+    "phonetic": "[æz ðə ˌreprɪˈzentətɪv əv]",
+    "meaning": "短语 作为…的代表",
+    "mnemonic": "【词源】as the representative of = as+ the+ representative(代表)+ of. '作为…的代表'。【同根】represent v.代表；representative n.代表",
+    "phrases": "as the representative of 作为…的代表；representative of 代表性的",
+    "example": "He is elected as the representative of the National People's Congress.\n他当选为全国人民代表大会的代表。"
+  },
+  {
+    "id": "word:ask-around",
+    "word": "ask around",
+    "phonetic": "[æsk əˈraʊnd]",
+    "meaning": "短语 到处打听",
+    "mnemonic": "【串记】ask about 询问；ask around 到处打听；ask for 请求；ask out 邀请约会；ask over 邀请过来。【词源】ask around = ask(问)+ around(到处)。【同根】ask v.问；around adv.到处",
+    "phrases": "ask around 到处打听；ask for 请求；ask out 邀请出去；ask over 邀请过来",
+    "example": "Ask around to find out if anyone knows it.\n到处问问,看有没有人知道。"
+  },
+  {
+    "id": "word:ask-for",
+    "word": "ask for",
+    "phonetic": "[æsk fɔːr]",
+    "meaning": "短语 要;要求;请求",
+    "mnemonic": "【辨析】ask (sb. for sth.) vs ask about: ask for 请求；ask about 询问。'问+求'=要、请求。【词源】ask for = ask+ for。【同根】ask v.询问；request v.请求",
+    "phrases": "ask for a favor 请求帮忙；ask for directions 问路；ask for advice 请教",
+    "example": "May I ask for a photograph of you?\n我要一张你的照片好吗?"
+  },
+  {
+    "id": "word:aspect",
+    "word": "aspect",
+    "phonetic": "[ˈæspekt]",
+    "meaning": "名 方面;模样;朝向",
+    "mnemonic": "【词根词缀】aspect ← a-(向)+ spect(看)< 拉丁 aspicere(看)。'朝向看的样子'=方面、外表。【同根】aspect n.方面；inspect v.检查；expect v.期待",
+    "phrases": "in all aspects 在各方面；from this aspect 从这个角度看；a key aspect 关键方面",
+    "example": "His brother is a man with a serious aspect.\n他兄弟是一个神色严肃的人。"
+  },
+  {
+    "id": "word:aspire",
+    "word": "aspire",
+    "phonetic": "[əˈspaɪər]",
+    "meaning": "动 向往;渴望;追求;立志",
+    "mnemonic": "【词源】aspire ← a-(向、到)+ spir(呼吸、来自拉丁 aspirare)。'向某处呼吸'=渴望。【同根】aspire v.渴望；aspiration n.抱负；aspiring adj.有志的",
+    "phrases": "aspire to 渴望；aspire to greatness 渴望伟大",
+    "example": "Many unknown writers aspire to fame.\n许多不知名的作家渴望成名。"
+  },
+  {
+    "id": "word:assemble",
+    "word": "assemble",
+    "phonetic": "[əˈsembəl]",
+    "meaning": "动 装配;集合",
+    "mnemonic": "【词源】assemble ← as-(加强)+ semble(类似、放一起)< 拉丁 as(向)+ simulare(一起)。'放到一起'=装配、集合。【同根】assemble v.装配；assembly n.装配；resemble v.类似",
+    "phrases": "assemble a machine 装配机器；assemble at the gate 在大门口集合；assemble a model 组装模型",
+    "example": "Some boys like to assemble model airplanes.\n有一些男孩是喜欢组装飞机模型的。"
+  },
+  {
+    "id": "word:assembly-line",
+    "word": "assembly line",
+    "phonetic": "[əˈsembli laɪn]",
+    "meaning": "短语 生产线;装配线",
+    "mnemonic": "【词根词缀】assembly line ← assembly(装配、集结)+ line(线、排)。'装配的流水线'=生产线。【同根】assembly n.装配；line n.线；assemble v.装配",
+    "phrases": "on the assembly line 在生产线上；assembly line worker 流水线工人",
+    "example": "Robots are replacing people on the assembly line.\n机器人逐渐代替了装配线上的工人。"
+  },
+  {
+    "id": "word:assent",
+    "word": "assent",
+    "phonetic": "[əˈsent]",
+    "meaning": "动 同意;赞成;名 同意;赞成",
+    "mnemonic": "【串记】assent(赞同)↔ consent(同意)↔ dissent(反对)↔ resent(憎恨)。'感觉同向=赞同'。【词源】assent ← as-(向)+ sent(感觉、来自拉丁 sentire)。'向着同感'=同意。【同根】assent v.同意；consent v.同意；dissent v.反对",
+    "phrases": "give one's assent 给予同意；with one consent 一致同意；assent to 同意",
+    "example": "I gave my assent to the plan.\n我对计划表示同意。"
+  },
+  {
+    "id": "word:assert",
+    "word": "assert",
+    "phonetic": "[əˈsɜːrt]",
+    "meaning": "动 断言;宣称;坚持;维护",
+    "mnemonic": "【辨析】assert vs affirm vs claim：assert 主观宣称；affirm 坚定断言；claim 要求承认。【词源】assert ← as-(向、强调)+ sert(加入、来自拉丁 serere)。'加入到事实中'=断言。【同根】assert v.断言；assertion n.主张；assertive adj.断言的",
+    "phrases": "assert oneself 坚持自己权利；assert one's innocence 断言无辜",
+    "example": "They assert that he was innocent.\n他们断言, 他当时是无罪的。"
+  },
+  {
+    "id": "word:assertion",
+    "word": "assertion",
+    "phonetic": "[əˈsɜːrʃ(ə)n]",
+    "meaning": "名 断言;主张;声明",
+    "mnemonic": "【词根词缀】assertion ← assert(断言)+ -ion(名缀)。'断言之事'=主张。【同根】assertion n.断言；assert v.断言；assertive adj.断言的",
+    "phrases": "make an assertion 做出断言；self-assertion 自我主张；support the assertion 支持主张",
+    "example": "He supports this assertion with evidence.\n他用证据支持他的主张。"
+  },
+  {
+    "id": "word:assess",
+    "word": "assess",
+    "phonetic": "[əˈses]",
+    "meaning": "动 评定;评估",
+    "mnemonic": "【联想】assess = '四(s)评价标准'(asses = assessment 的简写)，评估。【词源】assess ← as-(向)+ sess(坐、来自拉丁 sedere)。'坐在旁边评估'=评定。【同根】assess v.评估；assessment n.评估；access n.接近",
+    "phrases": "assess the situation 评估形势；assess a tax 评定税额",
+    "example": "They look at the house and assess its market value.\n他们看了看房子并估算了其市场价值。"
+  },
+  {
+    "id": "word:assessment",
+    "word": "assessment",
+    "phonetic": "[əˈsesmənt]",
+    "meaning": "名 评估;估价",
+    "mnemonic": "【谐音】assessment = 'a 四 s[1]店'——评估。【词源】assessment ← assess(评估)+ -ment(名缀)。【同根】assessment n.评估；assess v.评估；assessor n.评估人",
+    "phrases": "performance assessment 绩效评估；risk assessment 风险评估；make an assessment 做出评估",
+    "example": "He made an assessment of the situation.\n他对形势作了评估。"
+  },
+  {
+    "id": "word:asset",
+    "word": "asset",
+    "phonetic": "[ˈæset]",
+    "meaning": "名 资产;有有价值的人或物;长处",
+    "mnemonic": "【词根词缀】asset ← as-(加强)+ set(放、置)。'不断置办之物'=资产。【同根】asset n.资产；set v.放；upset v.打翻",
+    "phrases": "company assets 公司资产；asset value 资产价值；be an asset to 成为…的财富",
+    "example": "She will be an asset to the team.\n她将是这个队的骨干。"
+  },
+  {
+    "id": "word:assign",
+    "word": "assign",
+    "phonetic": "[əˈsaɪn]",
+    "meaning": "动 分配;指派",
+    "mnemonic": "【联想】as(作为)+ sign(标志)。'作为标志 → 指向某方向'=指定、分配。【词源】assign ← as-(向、到)+ sign(标记、来自拉丁 signare)。'加记号'=指派。【同根】assign v.分配；assignment n.任务；design v.设计",
+    "phrases": "assign homework 布置作业；assign a task 分派任务；assign to 分配给",
+    "example": "They assigned a very difficult mission to us.\n他们把一个很艰巨的任务分配给我们。"
+  },
+  {
+    "id": "word:assignment",
+    "word": "assignment",
+    "phonetic": "[əˈsaɪnmənt]",
+    "meaning": "名 分派;指派;任务;作业",
+    "mnemonic": "【辨析】assignment vs task：assignment 被分配的任务(长期)；task 自愿或指派的工作(短期)。【词源】assignment ← assign(指派)+ -ment(名缀)。【同根】assignment n.任务；assign v.分配；assignor n.指派人",
+    "phrases": "writing assignment 写作任务；on assignment 在执行任务；complete an assignment 完成作业",
+    "example": "His assignment was to follow the spy.\n他的任务是跟踪这个间谍。"
+  },
+  {
+    "id": "word:assist-a-with-b",
+    "word": "assist A with B",
+    "phonetic": "[əˈsɪst eɪ wɪð biː]",
+    "meaning": "短语 协助A做B",
+    "mnemonic": "【词源】assist A with B = assist(帮助)+ A+ with(就、用)+ B. '用 B 帮助 A'。【同根】assist v.帮助；assistance n.帮助；assistant n.助手",
+    "phrases": "assist someone with the work 帮某人工作；assist A with B 用 B 帮 A",
+    "example": "He used to assist his wife with the housework.\n他过去常帮助妻子做家务。"
+  },
+  {
+    "id": "word:assistance",
+    "word": "assistance",
+    "phonetic": "[əˈsɪstəns]",
+    "meaning": "名 帮助;援助;协助",
+    "mnemonic": "【词根词缀】assistance ← assist(帮助)+ -ance(名缀)。'帮助'=援助。【同根】assistance n.帮助；assist v.帮助；assistant n.助手",
+    "phrases": "request assistance 求助；come to one's assistance 援助某人；financial assistance 经济援助",
+    "example": "We offer them economic assistance.\n我们向他们提供经济援助。"
+  },
+  {
+    "id": "word:associate",
+    "word": "associate",
+    "phonetic": "[əˈsoʊʃieɪt]",
+    "meaning": "动 联系;联系在一起;交往;联想;形 副的;名 伙伴;副的;形 副的;联想",
+    "mnemonic": "【词源】associate ← as-(加强)+ soci(同伴、来自拉丁 socius)+ -ate。'加强与同伴的联系'=联系、联想。【同根】associate v.联系；association n.协会；social adj.社会的",
+    "phrases": "associate with 与…交往；associate degree 副学士学位；associate professor 副教授",
+    "example": "I filed charges against my associate.\n我对我的同事提出起诉。"
+  },
+  {
+    "id": "word:assume",
+    "word": "assume",
+    "phonetic": "[əˈsuːm]",
+    "meaning": "动 假定;设想;呈现;承担;承受",
+    "mnemonic": "【词源】assume ← as-(加强)+ sum(拿、取、来自拉丁 sumere)。'取走权责'=假设、承担。【同根】assume v.假设；assumption n.假设；presume v.假定",
+    "phrases": "assume responsibility 承担责任；assume office 就职；assume a position 担任职位",
+    "example": "Let's assume it to be true.\n让我们假设这是真的。"
+  },
+  {
+    "id": "word:assume-responsibility",
+    "word": "assume responsibility",
+    "phonetic": "[əˈsuːm rɪˌspɑːnsəˈbɪləti]",
+    "meaning": "短语 承担责任",
+    "mnemonic": "【词源】assume responsibility = assume(承担)+ responsibility(责任)。'承担责任'。【同根】responsibility n.责任；assume v.承担",
+    "phrases": "assume responsibility for 为…承担责任；take responsibility 承担责任",
+    "example": "I made a mistake and I will assume responsibility for it.\n我错了, 我愿为此承担责任。"
+  },
+  {
+    "id": "word:assumption",
+    "word": "assumption",
+    "phonetic": "[əˈsʌmpʃ(ə)n]",
+    "meaning": "名 假设;设想",
+    "mnemonic": "【词根词缀】assumption ← assume(假设)+ -ption < 拉丁 assumptio(取走、承担)。'假设之事'=假设。【同根】assumption n.假设；assume v.假设；presumption n.假定",
+    "phrases": "false assumption 错误的假设；make an assumption 做假设；based on the assumption 基于假设",
+    "example": "His actions were based on a false assumption.\n他的行为基于错误的设想上。"
+  },
+  {
+    "id": "word:assurance",
+    "word": "assurance",
+    "phonetic": "[əˈʃʊrəns]",
+    "meaning": "名 保证;担保;保险;确信;自信",
+    "mnemonic": "【谐音】assurance = 'a 一个'(熟人)死(死)。还好他买了保险(assurance)。【词源】assurance ← assure(保证)+ -ance(名缀)。【同根】assurance n.保证；assure v.保证；reassure v.使放心",
+    "phrases": "life assurance 人寿保险；with assurance 有把握地；give assurance 给予保证",
+    "example": "We have full assurance of success this time.\n这次我们稳操胜券。"
+  },
+  {
+    "id": "word:assure",
+    "word": "assure",
+    "phonetic": "[əˈʃʊr]",
+    "meaning": "动 保证",
+    "mnemonic": "【词根词缀】assure ← as-(强调、再次)+ sure(确定)。'再次确定'=保证。【同根】assure v.保证；assurance n.保证；sure adj.确信的",
+    "phrases": "assure someone of 向某人保证；assure success 确保成功；I assure you 我向你保证",
+    "example": "assure sb. of sth./assure sb. that...\n向某人保证。"
+  },
+  {
+    "id": "word:astonishingly",
+    "word": "astonishingly",
+    "phonetic": "[əˈstɑːnɪʃɪŋli]",
+    "meaning": "副 令人惊讶地;异乎寻常地",
+    "mnemonic": "【词根词缀】astonishingly ← astonishing(令人惊奇的)+ -ly(副)。'令人惊讶地'。【同根】astonishingly adv.惊人地；astonish v.使惊讶；astonished adj.惊讶的",
+    "phrases": "astonishingly good 出奇地好；astonishingly fast 出奇地快",
+    "example": "Jack took the news astonishingly well.\n杰克对这个消息表现出奇地冷静。"
+  },
+  {
+    "id": "word:at-all-times",
+    "word": "at all times",
+    "phonetic": "[æt ɔːl taɪmz]",
+    "meaning": "短语 一直;随时;每时每刻",
+    "mnemonic": "【扩展】at all times = all the time 总是；in times of 在…时候。【词源】at all times = at+ all+ times(时刻)。【同根】at all times 总是；all the time 一直",
+    "phrases": "be ready at all times 随时准备好；be on call at all times 全天候待命",
+    "example": "The girl is ready at all times to go to parties.\n那女孩随时都准备去参加聚会。"
+  },
+  {
+    "id": "word:at-large-discount",
+    "word": "at large discount",
+    "phonetic": "[æt lɑːrdʒ ˈdɪskaʊnt]",
+    "meaning": "短语 以很低的折扣",
+    "mnemonic": "【词源】at large discount = at+ large(大)+ discount(折扣)。'以大折扣'=以很低折扣。【同根】large adj.大的；discount n.折扣",
+    "phrases": "sell at large discount 以很低的折扣卖出；at a large discount 大幅打折",
+    "example": "to sell at large discount\n以很低的折扣卖出"
+  },
+  {
+    "id": "word:at-least",
+    "word": "at least",
+    "phonetic": "[æt liːst]",
+    "meaning": "短语 至少;不少于;起码",
+    "mnemonic": "【扩展】at most 最多；at least 至少；at last 最后；at first 最初。【词源】at least = at+ least(最少)。【同根】at least 至少；least adv.最少",
+    "phrases": "at least 至少；起码；at least once 至少一次",
+    "example": "He has been there at least twice.\n他至少去过那儿两次。"
+  },
+  {
+    "id": "word:at-no-charge",
+    "word": "at no charge",
+    "phonetic": "[æt noʊ tʃɑːrdʒ]",
+    "meaning": "短语 不收费;免费",
+    "mnemonic": "【联想】at no charge = '免费'(free of charge)。'无费用'=不收费。【词源】at no charge = at+ no+ charge(费用)。【同根】no charge 不收费；free of charge 免费",
+    "phrases": "at no charge 免费地；no extra charge 不另收费；free of charge 免费",
+    "example": "The clinic in our company is open to our employees at no charge.\n本公司的诊所免费对员工开放。"
+  },
+  {
+    "id": "word:at-ones-convenience",
+    "word": "at one's convenience",
+    "phonetic": "[æt wʌnz kənˈviːniəns]",
+    "meaning": "短语 在某人方便时;顺便;趁便",
+    "mnemonic": "【源】at one's convenience = at+ one's(某人的)+ convenience(方便)。'在某人方便时'=趁便。【同根】convenient adj.方便的；convenience n.方便",
+    "phrases": "at one's convenience 在某人方便时；at your earliest convenience 在您方便时尽早",
+    "example": "Come by to pick me up at your convenience.\n在你方便的时候来接我。"
+  },
+  {
+    "id": "word:at-ones-disposal",
+    "word": "at one's disposal",
+    "phonetic": "[æt wʌnz dɪˈspoʊzəl]",
+    "meaning": "短语 由某人做主;由某人随意支用",
+    "mnemonic": "【词源】at one's disposal = at+ one's(某人的)+ disposal(处置)。'由某人自由处置'=随意支用。【同根】disposal n.处置；dispose v.处置",
+    "phrases": "at one's disposal 由某人自由支配；put at one's disposal 由某人处置",
+    "example": "A huge supply of books is at your disposal in the library.\n图书馆里有大量的图书任你学习使用。"
+  },
+  {
+    "id": "word:at-ones-expense",
+    "word": "at one's expense",
+    "phonetic": "[æt wʌnz ɪkˈspens]",
+    "meaning": "短语 由某人负担费用",
+    "mnemonic": "【词源】at one's expense = at+ one's(某人的)+ expense(费用)。'由某人负担费用'。【同根】expense n.费用；expensive adj.昂贵的",
+    "phrases": "at one's expense 由某人负担费用；at the company's expense 由公司负担费用",
+    "example": "it means generally having a good laugh at the groom's expense\n也就是说说通常是拿新郎开涮"
+  },
+  {
+    "id": "word:at-ones-own-risk",
+    "word": "at one's own risk",
+    "phonetic": "[æt wʌnz oʊn rɪsk]",
+    "meaning": "短语 自担风险;自行负责",
+    "mnemonic": "【词源】at one's own risk = at+ one's own(自己的)+ risk(风险)。'自担风险'。【同根】risk n.风险；risky adj.冒险的",
+    "phrases": "at one's own risk 自担风险；park at your own risk 停车自担风险(免责)",
+    "example": "You leave valuables in the classroom at your own risk.\n你把贵重物品留在教室, 丢失后果自负。"
+  },
+  {
+    "id": "word:at-our-option",
+    "word": "at our option",
+    "phonetic": "[æt ˈaʊər ˈɑːpʃ(ə)n]",
+    "meaning": "短语 由我方决定",
+    "mnemonic": "【词源】at our option = at+ our(我方)+ option(选择)。'由我方选择'。【同根】option n.选择；optional adj.可选择的",
+    "phrases": "at our option 由我方决定；at one's option 由…决定",
+    "example": "The shipment time is February or March at our option.\n装运期为二月或三月, 由我方决定。"
+  },
+  {
+    "id": "word:at-the-bottom-of",
+    "word": "at the bottom of",
+    "phonetic": "[æt ðə ˈbɑːtəm əv]",
+    "meaning": "短语 在…的底部",
+    "mnemonic": "【扩展】at the top of 在顶部；at the bottom of 在底部；in the middle of 在中间。【词源】at the bottom of = at+ the+ bottom(底)+ of。'在…的底部'。【同根】bottom n.底；top n.顶",
+    "phrases": "at the bottom of page 在页底；start at the bottom from 从底层开始",
+    "example": "The fruit in the bottom of the box had been squashed.\n箱底的水果已经压烂了。"
+  },
+  {
+    "id": "word:at-the-latest",
+    "word": "at the latest",
+    "phonetic": "[æt ðə ˈleɪtɪst]",
+    "meaning": "短语 最迟",
+    "mnemonic": "【扩展】at least 至少；at most 最多；at the latest 最迟。【词源】at the latest = at+ the+ latest(最迟的)。【同根】latest adj.最迟的；late adj.晚的",
+    "phrases": "at the latest 最迟；by Friday at the latest 最迟周五",
+    "example": "You shall be back by six at the latest.\n你应该最迟不超过6点钟回来。"
+  },
+  {
+    "id": "word:at-the-moment",
+    "word": "at the moment",
+    "phonetic": "[æt ðə ˈmoʊmənt]",
+    "meaning": "短语 当前;现在",
+    "mnemonic": "【扩展】at the moment 现在、此时；in a moment 一会儿；for the moment 目前。【词源】at the moment = at+ the+ moment(时刻)。【同根】moment n.时刻；momently adv.随时",
+    "phrases": "at the moment 目前；for the moment 暂时；the moment 一…就",
+    "example": "I can't think of his name at the moment.\n我现在想不起他的名字。"
+  },
+  {
+    "id": "word:at-the-request-of",
+    "word": "at the request of",
+    "phonetic": "[æt ðə rɪˈkwest əv]",
+    "meaning": "短语 应…之请求;鉴…之请求",
+    "mnemonic": "【联想】at the request of = 应…之邀/请求。request = 要求。【词源】at the request of = at+ the+ request(请求)+ of。'应…之请求'。【同根】request n.请求；require v.要求",
+    "phrases": "at the request of 应…的请求；by request 应邀；upon request 应…的要求",
+    "example": "I bought it at the request of my father.\n我应父亲的要求买了这个。"
+  },
+  {
+    "id": "word:at-the-site",
+    "word": "at the site",
+    "phonetic": "[æt ðə saɪt]",
+    "meaning": "短语 在现场",
+    "mnemonic": "【扩展】onsite 现场的；offsite 场外的；at the site 在现场。【词源】at the site = at+ the+ site(场所、位置)。【同根】site n.位置；website n.网址",
+    "phrases": "at the site 在现场；work at the site 在现场作业；construction site 建筑工地",
+    "example": "The police arrived at the site of homicide.\n警察赶到了凶案现场。"
+  },
+  {
+    "id": "word:at-the-speed-of",
+    "word": "at the speed of",
+    "phonetic": "[æt ðə spiːd əv]",
+    "meaning": "短语 以…的速度",
+    "mnemonic": "【词源】at the speed of = at+ the+ speed(速度)+ of. '以…速度'。【同根】speed n.速度；speedy adj.快速的",
+    "phrases": "at the speed of light 以光速；at the speed of 100 km/h 以 100 公里时速",
+    "example": "We are walking at the speed of one mile an hour.\n我们每小时一英里的速度行进。"
+  },
+  {
+    "id": "word:athletic",
+    "word": "athletic",
+    "phonetic": "[æθˈletɪk]",
+    "meaning": "形 运动的;运动员的;身强力壮的",
+    "mnemonic": "【辨析】athletic vs aesthetic：athletic 运动的；aesthetic 审美的。【词源】athletic ← 拉丁 athleticus < 希腊 athletikos(适合比赛)< athlein(比赛)。【同根】athletic adj.运动的；athletics n.体育；athlete n.运动员",
+    "phrases": "athletic ability 运动能力；athletic event 体育赛事；athletic build 运动体型",
+    "example": "an athletic boy\n身强力壮的"
+  },
+  {
+    "id": "word:athletics",
+    "word": "athletics",
+    "phonetic": "[æθˈletɪks]",
+    "meaning": "名 体育运动;田径运动;竞技",
+    "mnemonic": "【谐音】athletics = '爱死泪提克斯'——他们受死了昨天来替代比赛=体育运动。【词源】athletics ← 拉丁 athlete(竞赛者)+ -ics(学、活动)。【同根】athletics n.体育；athletic adj.运动的；athlete n.运动员",
+    "phrases": "athletics competition 体育比赛；intercollegiate athletics 大学体育赛事",
+    "example": "The athletics will be held in the stadium.\n这个体育招待要进行竞技运动。"
+  },
+  {
+    "id": "word:atmosphere",
+    "word": "atmosphere",
+    "phonetic": "[ˈætməsfɪər]",
+    "meaning": "名 大气;气氛;氛围",
+    "mnemonic": "【词根词缀】atmosphere ← atmo(蒸汽、空气)+ sphere(球、范围)。'包围地球的空气'=大气、氛围。【同根】atmosphere n.大气；atmospheric adj.大气的；sphere n.球体",
+    "phrases": "friendly atmosphere 友好的氛围；earth's atmosphere 地球大气层；atmospheric pressure 大气压",
+    "example": "The atmosphere of the city is polluted.\n城市的空气受到了污染。"
+  },
+  {
+    "id": "word:attach",
+    "word": "attach",
+    "phonetic": "[əˈtætʃ]",
+    "meaning": "动 系上;贴上;附上;使依附;隶属于",
+    "mnemonic": "【词根词缀】attach ← at-(到、向)+ tach(接触、来自拉丁 tangere)。'接触住'=系上、贴上、依恋。【同根】attach v.附上；attachment n.附件；detach v.拆开",
+    "phrases": "attach to 系上；依恋；attach importance to 重视；attach a file to the email 邮件附文件",
+    "example": "to attach photos to an email\n在电子邮件中附加照片"
+  },
+  {
+    "id": "word:attempt",
+    "word": "attempt",
+    "phonetic": "[əˈtempt]",
+    "meaning": "名 企图;试图;动 企业图;试图",
+    "mnemonic": "【谐音】attempt = '啊停坡特'——不要企图、试图、努力尝试啊我。【词源】attempt ← at-(向)+ tempt(尝试、来自拉丁 temptare)。'试着做'=试图。【同根】attempt v.尝试；attempted adj.未遂的；tempt v.引诱",
+    "phrases": "attempt to do 试图做；attempt suicide 自杀未遂；first attempt 第一次尝试",
+    "example": "Never attempt to overtake.\n不要企图超车。"
+  },
+  {
+    "id": "word:attend",
+    "word": "attend",
+    "phonetic": "[əˈtend]",
+    "meaning": "动 出产;参加;照料;注意;专心",
+    "mnemonic": "【谐音】attend = '铜修的'——无法参加/出席，无法专心照料。tend (倾向)+ at。【词源】attend ← at-(向)+ tend(伸展)。'向…伸展'=出席、关注。【同根】attend v.出席；attendance n.出席；attendant n.服务员",
+    "phrases": "attend a meeting 出席会议；attend to 处理；attend school 上学",
+    "example": "Who will attend this baby?\n谁来照料这婴儿?"
+  },
+  {
+    "id": "word:attentive",
+    "word": "attentive",
+    "phonetic": "[əˈtentɪv]",
+    "meaning": "形 注意的;留心的;关心的;体贴的;殷勤的",
+    "mnemonic": "【词根词缀】attentive ← attend(关注)+ -ive(…的)。'关注的'=注意的、殷勤的。【同根】attentive adj.注意的；attend v.出席；attention n.注意力",
+    "phrases": "be attentive to 注意；attentive service 殷勤的服务；attentive listener 认真的听众",
+    "example": "Be attentive to the detail.\n留心细节。"
+  },
+  {
+    "id": "word:attire",
+    "word": "attire",
+    "phonetic": "[əˈtaɪər]",
+    "meaning": "名 服装;衣服",
+    "mnemonic": "【联想】attire = 'at tire'(每天想穿什么衣服真累)。tire 使…累。【词源】attire ← 古法语 atirer(准备、装备)< a- + tire(顺序)。'装备好的服装'=服装。【同根】attire n.服装；retire v.退休",
+    "phrases": "formal attire 正装；casual attire 便装；attire for 穿着",
+    "example": "formal attire\n正式的着装"
+  },
+  {
+    "id": "word:attitude-to",
+    "word": "attitude to",
+    "phonetic": "[ˈætɪtjuːd tu]",
+    "meaning": "短语 态度;看法",
+    "mnemonic": "【辨析】attitude to vs attitude toward：英式 to；美式 toward。【词源】attitude ← 拉丁 aptitudo(适合)< aptus. '适合的姿态'=态度。【同根】attitude n.态度；altitude n.高度；aptitude n.才能",
+    "phrases": "attitude to/toward 对…的态度；adopt an attitude 采取态度",
+    "example": "Okay, now number 29, a reference to Shannon's attitude to fame.\n好的,现在是第 29 题,提及香农对出名的态度。"
+  },
+  {
+    "id": "word:attitude-toward",
+    "word": "attitude toward",
+    "phonetic": "[ˈætɪtjuːd təˈrɑːd]",
+    "meaning": "短语 态度;看法",
+    "mnemonic": "【联想】altitude 高度；aptitude 才能；attitude 态度；longitude 经度；latitude 纬度；gratitude 感激。【词源】attitude toward 较美式用法。'对…的态度'。【同根】attitude n.态度",
+    "phrases": "attitude toward women 对女人的态度；cavalier attitude 轻率的态度",
+    "example": "a cavalier attitude toward women\n对女人表现出 骑士风度"
+  },
+  {
+    "id": "word:attorney",
+    "word": "attorney",
+    "phonetic": "[əˈtɜːrni]",
+    "meaning": "名 律师;辩护律师;代理人",
+    "mnemonic": "【谐音】attorney = '二源托你'—二位委托你→委托律师帮你们打官司、代理。【词源】attorney ← 古法语 atorne(被委托者)< tourner(转动)。'被转动到'=代理人、律师。【同根】attorney n.律师；attorney general 司法部长",
+    "phrases": "hire an attorney 聘请律师；district attorney 地方检察官；attorney at law 律师",
+    "example": "The district attorney has promised to look into the matter.\n地方检察官已承诺会调查此事。"
+  },
+  {
+    "id": "word:attract",
+    "word": "attract",
+    "phonetic": "[əˈtrækt]",
+    "meaning": "动 吸引",
+    "mnemonic": "【词根词缀】attract ← at-(向、到)+ tract(拉、拖)。'向…拉'=吸引。【同根】attract v.吸引；attraction n.吸引力；attractive adj.有吸引力的",
+    "phrases": "attract attention 引起注意；attract investors 吸引投资者；attracted to 受…吸引",
+    "example": "attract foreign investment\n吸引外资"
+  },
+  {
+    "id": "word:attraction",
+    "word": "attraction",
+    "phonetic": "[əˈtrækʃ(ə)n]",
+    "meaning": "名 吸引;吸引力",
+    "mnemonic": "【谐音】attraction = '啊一个不'——为了有吸引力，每天问自己：'啊，穿什么?'。【词源】attraction ← attract(吸引)+ -ion(名缀)。'吸引之事'=吸引力。【同根】attraction n.吸引力；attract v.吸引；attractive adj.有吸引力的",
+    "phrases": "tourist attraction 旅游景点；magnetic attraction 磁吸引；mutual attraction 相互吸引",
+    "example": "magnetic attraction\n磁性吸力"
+  },
+  {
+    "id": "word:attractive",
+    "word": "attractive",
+    "phonetic": "[əˈtræktɪv]",
+    "meaning": "形 有吸引力的",
+    "mnemonic": "【词根词缀】attractive ← attract(吸引)+ -ive(…的)。'吸引人的'=有吸引力的。【同根】attractive adj.有吸引力的；attract v.吸引；attraction n.吸引力",
+    "phrases": "attractive offer 诱人的报价；attractive price 吸引人的价格；attractive appearance 迷人的外表",
+    "example": "Ice cream is attractive to children.\n冰淇淋对孩子们非常有吸引"
+  },
+  {
+    "id": "word:attribute",
+    "word": "attribute",
+    "phonetic": "[əˈtrɪbjuːt]",
+    "meaning": "动 由…引起;把…归因于;认为是…归的;名 属性;品质;特征",
+    "mnemonic": "【词根词缀】attribute ← at-(向、到)+ tribut(给、贡品)。'给予…头上'=把…归因于。【同根】attribute v.归因于；attribution n.归属；contribute v.贡献",
+    "phrases": "attribute to 归因于；attribute one's success to 把成功归于；an attribute of …的属性",
+    "example": "Most experts attribute the drawing to Michelangelo.\n大多数专家认为这幅画出自米开朗基之之手。"
+  },
+  {
+    "id": "word:auction",
+    "word": "auction",
+    "phonetic": "[ˈɔːkʃ(ə)n]",
+    "meaning": "名 拍卖;动 拍卖",
+    "mnemonic": "【联想】auction 拍卖的行动(action)需要你(au)参与进来。【词源】auction ← 拉丁 auctio(增加)< augere(增加)。'增价'=拍卖。【同根】auction n.拍卖；auctioneer n.拍卖师；auction off 拍卖掉",
+    "phrases": "hold an auction 举行拍卖会；put up for auction 拍卖；auction price 拍卖价",
+    "example": "She got a bargain at the auction.\n她在拍卖会上购了一笔合算"
+  },
+  {
+    "id": "word:audience",
+    "word": "audience",
+    "phonetic": "[ˈɔːdiəns]",
+    "meaning": "名 观众;听众",
+    "mnemonic": "【词根词缀】audience ← aud(听、来自拉丁 audire)+ -ience(名缀)。'听的人'=听众、观众。【同根】audience n.观众；audio adj.音频的；audible adj.听得见的",
+    "phrases": "live audience 现场观众；TV audience 电视观众；in front of an audience 在观众面前",
+    "example": "His speech won the applause of the audience.\n他的讲话赢得了听众的掌声。"
+  },
+  {
+    "id": "word:audit",
+    "word": "audit",
+    "phonetic": "[ˈɔːdɪt]",
+    "meaning": "动 审计;查账;名 审计;查账",
+    "mnemonic": "【词根词缀】audit ← aud(听、来自拉丁 audire)+ -it(动后)。'听账'=审计、查账。【同根】audit v.审计；auditor n.审计员；audition n.试听",
+    "phrases": "audit the accounts 审计账目；internal audit 内部审计；audit report 审计报告",
+    "example": "I audit the account myself.\n我会自审计部项账目。"
+  },
+  {
+    "id": "word:audition",
+    "word": "audition",
+    "phonetic": "[ɔːˈdɪʃ(ə)n]",
+    "meaning": "名 试听;试镜;动 试听",
+    "mnemonic": "【词根词缀】audition ← aud(听)+ -ition(名缀)。'试听'=试镜。【同根】audition n.试听；audience n.观众；audio adj.音频的",
+    "phrases": "audition for 试镜；go to an audition 去试镜；audition tape 试镜带",
+    "example": "How does the hospital check audition commonly?\n医院检查听力一般怎么检查的?"
+  },
+  {
+    "id": "word:auditorium",
+    "word": "auditorium",
+    "phonetic": "[ˌɔːdɪˈtɔːriəm]",
+    "meaning": "名 礼堂;听众席;观众席",
+    "mnemonic": "【词根词缀】auditorium ← audit(旁听)+ -orium(场所、来自拉丁 auditorium)。'听报告的场所'=礼堂。【同根】auditorium n.礼堂；auditor n.审计员；audience n.听众",
+    "phrases": "school auditorium 学校礼堂；concert hall auditorium 音乐厅",
+    "example": "The auditorium seats 3,000 people.\n观众席可容纳三千人。"
+  },
+  {
+    "id": "word:authentic",
+    "word": "authentic",
+    "phonetic": "[ɔːˈθentɪk]",
+    "meaning": "形 真正的;真实的;真诚的;可靠的;可信的;可靠的",
+    "mnemonic": "【串记】author(作者)→ authority(权威)→ authentic(真实的)。作者权威、证明真实可靠。【词源】authentic ← 希腊 authentikos(原创)< authentes(行为者)。【同根】authentic adj.真实的；authenticity n.真实性；author n.作者",
+    "phrases": "authentic Chinese food 地道中餐；authentic document 真实文件；authentic signature 亲笔签名",
+    "example": "He got an authentic letter by Shakespeare.\n他弄到了一封莎士比亚的亲笔信。"
+  },
+  {
+    "id": "word:authoritative",
+    "word": "authoritative",
+    "phonetic": "[ɔːˈθɔːrəteɪtɪv]",
+    "meaning": "形 权威性的;命令式的",
+    "mnemonic": "【词根词缀】authoritative ← author(作者)+ -ity(性)+ -ative(…的)。'权威性的'=命令式的。【同根】authoritative adj.权威的；authority n.权力；authorize v.授权",
+    "phrases": "authoritative source 权威来源；authoritative opinion 权威意见；an authoritative book 权威著作",
+    "example": "This is an authoritative book.\n这是一本具有权威的书。"
+  },
+  {
+    "id": "word:authorize",
+    "word": "authorize",
+    "phonetic": "[ˈɔːθəraɪz]",
+    "meaning": "动 授权;委托;批准",
+    "mnemonic": "【词根词缀】authorize ← author(作者)+ -ize(使)。'作家做的事'=授权、批准。【同根】authorize v.授权；authorization n.授权；author n.作者",
+    "phrases": "authorize to do 授权做；authorized signature 经授权的签字；authorization letter 授权书",
+    "example": "We authorize the president to use force if necessary.\n我们授权总统在必要的时候使用武力。"
+  },
+  {
+    "id": "word:auto-company",
+    "word": "auto company",
+    "phonetic": "[ˈɔːtoʊ ˈkʌmpəni]",
+    "meaning": "短语 汽车公司",
+    "mnemonic": "【词源】auto company ← auto(自动、汽车)+ company(公司)。'汽车公司'。【同根】auto 汽车；company n.公司；automobile n.汽车",
+    "phrases": "auto company 汽车公司；car company 汽车公司",
+    "example": "The agent of the Buick Auto Company is extremely cautious in making the contract lest it is not watertight enough to prevent unnecessary loss.\n别克汽车公司的代理在起草合同时非常谨慎, 以免合同不够严密, 遭..."
+  },
+  {
+    "id": "word:auto-theft",
+    "word": "auto theft",
+    "phonetic": "[ˈɔːtoʊ θeft]",
+    "meaning": "短语 汽车盗窃",
+    "mnemonic": "【词源】auto theft ← auto(汽车)+ theft(盗窃)。'汽车盗窃'。【同根】auto 汽车；theft n.盗窃；auto insurance 汽车保险",
+    "phrases": "auto theft prevention 汽车防盗；auto theft case 汽车盗窃案",
+    "example": "system for auto theft prevention\n汽车防盗系统"
+  },
+  {
+    "id": "word:autobiography",
+    "word": "autobiography",
+    "phonetic": "[ˌɔːtəbaɪˈɑːɡrəfi]",
+    "meaning": "名 自传;自传体写作",
+    "mnemonic": "【词根词缀】autobiography ← auto-(自己的)+ bio-(生命、来自希腊 bios)+ graphy(写)。'自己写生命'=自传。【同根】autobiography n.自传；biography n.传记；photograph n.照片",
+    "phrases": "write one's autobiography 写自传；publish an autobiography 出版自传",
+    "example": "He published his autobiography.\n他出版了自己的自传。"
+  },
+  {
+    "id": "word:autograph",
+    "word": "autograph",
+    "phonetic": "[ˈɔːtəɡræf]",
+    "meaning": "名 亲笔签名;亲笔稿;动 亲笔签于…书写",
+    "mnemonic": "【词根词缀】autograph ← auto-(自己)+ graph(写、来自希腊 graphein)。'亲手写'=亲笔签名。【同根】autograph n.亲笔签名；photograph n.照片；telegraph n.电报",
+    "phrases": "ask for an autograph 要求签名；get one's autograph 得到…的签名",
+    "example": "an autograph letter\n一封亲笔信"
+  },
+  {
+    "id": "word:automatic-transmission",
+    "word": "automatic transmission",
+    "phonetic": "[ɔːtəˈmætɪk trænzˈmɪʃ(ə)n]",
+    "meaning": "短语 自动变速器",
+    "mnemonic": "【词根词缀】automatic transmission ← auto-(自动)+ transmission(传送)。【同根】automatic adj.自动的；transmission n.传送；automobile n.汽车",
+    "phrases": "car with automatic transmission 自动挡汽车；manual transmission 手动变速器",
+    "example": "The car has automatic transmission.\n这辆车有自动变速器。"
+  },
+  {
+    "id": "word:automaton",
+    "word": "automaton",
+    "phonetic": "[ɔːˈtɑːmətɑːn]",
+    "meaning": "名 自动装置;机器人;机动的人",
+    "mnemonic": "【词根词缀】automaton ← auto-(自动)+ maton(思想、行动者)。'自动运作的'=机器人。【同根】automaton n.机器人；automatic adj.自动的；automate v.使自动化",
+    "phrases": "behave like an automaton 像机器人一样行事",
+    "example": "He was accused of being an automaton.\n他被责为一个不动脑筋机械行事的人"
+  },
+  {
+    "id": "word:availability",
+    "word": "availability",
+    "phonetic": "[əˌveɪləˈbɪləti]",
+    "meaning": "名 可用性;可获得性",
+    "mnemonic": "【词根词缀】availability ← avail(有用)+ -able(可…的)+ -ity(性)。'有用的属性'=可用性。【同根】availability n.可用性；available adj.可获得的；avail v.有益",
+    "phrases": "availability of resources 资源的可用性；limited availability 有限的可用性",
+    "example": "This kind of job is of easy availability.\n这种工作易于获得。"
+  },
+  {
+    "id": "word:available",
+    "word": "available",
+    "phonetic": "[əˈveɪləbəl]",
+    "meaning": "形 可获得的;可用的;有空的;空闲的",
+    "mnemonic": "【词根词缀】available ← avail(有用、有利)+ -able(可…的)。'有用的'=可获得的、有空的。【同根】available adj.可获得的；availability n.可用性；avail v.有益",
+    "phrases": "available to 适用于；be available for 可用于；readily available 随时可用",
+    "example": "available fund\n可用资金"
+  },
+  {
+    "id": "word:avenue",
+    "word": "avenue",
+    "phonetic": "[ˈævənuː]",
+    "meaning": "名 大街;林荫道;途径",
+    "mnemonic": "【串记】avenue 大道；revenue 收入；intervene 干涉。【词源】avenue ← 法语 avenue < avenir(来到)< 拉丁 advenire(来到)。'来到的方式'=大街。【同根】avenue n.大街；revenue n.收入",
+    "phrases": "main avenue 主大街；a tree-lined avenue 林荫道；explore avenues 探索途径",
+    "example": "The avenue has broadened out.\n这条大街加宽了。"
+  },
+  {
+    "id": "word:average",
+    "word": "average",
+    "phonetic": "[ˈæv(ə)rɪdʒ]",
+    "meaning": "形 平均的;普通的;名 平均数;平均水平;动 平均为…",
+    "mnemonic": "【谐音】average = 'every 值'——平均值。【词源】average ← 中世纪拉丁 averagium(海损、均摊)。原指海上货损均摊，后引申为平均数。【同根】average n.平均；averagely adv.平均地",
+    "phrases": "above average 平均以上；on average 平均；average out 算出平均数",
+    "example": "His income is below the average.\n他的收入低于平均水平。"
+  },
+  {
+    "id": "word:average-level",
+    "word": "average level",
+    "phonetic": "[ˈæv(ə)rɪdʒ ˈlev(ə)l]",
+    "meaning": "短语 平均水平",
+    "mnemonic": "【词源】average level ← average(平均)+ level(水平)。'平均的水平'。【同根】average adj.平均的；level n.水平",
+    "phrases": "average level 平均水平；above average level 高于平均水平",
+    "example": "Those babies whose umbilical clamps had been applied after three minutes had, on average, iron levels 45% higher than those whose cords had been clamped immediately.\n那些脐带在三分钟后才被钳住的儿童, 体内的铁元素平均水平要比采...用钳钳法的儿童高出45%。"
+  },
+  {
+    "id": "word:aviation",
+    "word": "aviation",
+    "phonetic": "[ˌeɪviˈeɪʃ(ə)n]",
+    "meaning": "名 航空;航空学;飞行(术)",
+    "mnemonic": "【谐音】aviation = '一爱飞爱开'——我热爱飞行、开飞机 → 航空(学)。【词源】aviation ← 拉丁 avis(鸟)+ -ation(名词后缀)。'像鸟飞翔的艺术'=航空。【同根】aviation n.航空；aviator n.飞行员；avian adj.鸟的",
+    "phrases": "civil aviation 民用航空；aviation industry 航空业；military aviation 军用航空",
+    "example": "He devoted all his life to China's aviation.\n他的一生都贡献于中国的航空事业。"
+  },
+  {
+    "id": "word:avid",
+    "word": "avid",
+    "phonetic": "[ˈævɪd]",
+    "meaning": "形 渴望的;热切的;贪婪的;贪婪的;热衷的",
+    "mnemonic": "【词根词缀】avid ← av(渴望、来自拉丁 avere=渴望)+ -id。'极渴的'=渴望的、热切的。【同根】avid adj.渴望的；avidity n.贪婪；avarice n.贪心",
+    "phrases": "avid reader 热衷的读者；avid for 渴望；avid supporter 热情支持者",
+    "example": "be avid for adventure\n渴求冒险"
+  },
+  {
+    "id": "word:avoid",
+    "word": "avoid",
+    "phonetic": "[əˈvɔɪd]",
+    "meaning": "动 避免;避开",
+    "mnemonic": "【联想】avoid = 前方有一个(a)空隙(void)要躲避，避免。【词源】avoid ← a-(离开、远离)+ void(空的、来自拉丁 vacuus)< 法语 esvuidier(使空)。【同根】avoid v.避免；avoidance n.避免；void n.空间",
+    "phrases": "avoid doing 避免做；avoid mistakes 避免错误；avoid trouble 避开麻烦",
+    "example": "She wanted to avoid another conflict with her father.\n她想避免和父亲再次发生冲突。"
+  },
+  {
+    "id": "word:aware",
+    "word": "aware",
+    "phonetic": "[əˈwer]",
+    "meaning": "形 意识到的;知道的;对…意识到的;对…意识到的",
+    "mnemonic": "【扩展】aware 意识到的；awareness n.意识；be aware of 意识到。【词源】aware ← 古英语 gewaer(注意的、谨慎的)。【同根】aware adj.意识到的；awareness n.意识；unaware adj.未察觉的",
+    "phrases": "be aware of 意识到；aware that 知道；become aware of 开始意识到",
+    "example": "He pretended not to be aware of my presence.\n他假装不知道我在场。"
+  },
+  {
+    "id": "word:bachelors-degree",
+    "word": "bachelor's degree",
+    "phonetic": "[ˈbætʃələrz dɪˈɡriː]",
+    "meaning": "短语 学士学位",
+    "mnemonic": "【扩展】bachelor's 学士；master's 硕士；doctor's 博士；academic degree 学位。【词源】bachelor's degree ← bachelor(学士)+ -'s(所有格)+ degree(学位)。【同根】bachelor n.学士；degree n.学位",
+    "phrases": "bachelor's degree in finance 财经学士；earn a bachelor's degree 取得学士学位",
+    "example": "bachelor's degree in finance\n财经学的学士学位"
+  },
+  {
+    "id": "word:back-off",
+    "word": "back off",
+    "phonetic": "[bæk ɔːf]",
+    "meaning": "短语 后退;放弃;让步",
+    "mnemonic": "【串记】back up 支持、备份；back out 退出；back off 后退、放弃；back down 让步。【词源】back off ← back(后退)+ off(离开)。'后退离开'=后退、放弃。【同根】back v.后退",
+    "phrases": "back off 后退；back down 放弃；back out 不履行",
+    "example": "She refused to back off on a point of principle.\n她在一个原则问题上拒绝让步。"
+  },
+  {
+    "id": "word:back-order",
+    "word": "back order",
+    "phonetic": "[bæk ɔːrdər]",
+    "meaning": "短语 积压订单;待发货订单",
+    "mnemonic": "【商业术语】back order ← back(延迟、积压)+ order(订单)。'因无现货而待日后交付的订单'=积压订单。【同根】order n.订单；backorder v.延后订货",
+    "phrases": "back order 待发货订单；back-ordered 缺货待补；place a back order 提交延后订单",
+    "example": "The boss pointed out that the factory had a lot of back order on hand.\n老板指出, 这个厂家手头上有很多积压订单。"
+  },
+  {
+    "id": "word:badly",
+    "word": "badly",
+    "phonetic": "[ˈbædli]",
+    "meaning": "副 坏地;严重地;非常;极度",
+    "mnemonic": "【词根词缀】badly ← bad(坏的)+ -ly(副)。'坏地'=严重地、非常。【同根】badly adv.严重地；bad adj.坏的；badness n.坏",
+    "phrases": "badly off 贫困的；need badly 急需；badly hurt 严重受伤",
+    "example": "His foot was badly hurt.\n他的脚伤得厉害。"
+  },
+  {
+    "id": "word:baggage",
+    "word": "baggage",
+    "phonetic": "[ˈbæɡɪdʒ]",
+    "meaning": "名 行李",
+    "mnemonic": "【谐音】baggage = '白给奇'——行李不是白给你寄的。【词源】baggage ← bag(袋)+ -age(总称)。'一堆袋子'=行李。【同根】baggage n.行李；bag n.袋；bagful n.一袋",
+    "phrases": "check one's baggage 托运行李；carry baggage 携带行李；excess baggage 超重行李",
+    "example": "my baggage\n我的行李"
+  },
+  {
+    "id": "word:baggage-claim",
+    "word": "baggage claim",
+    "phonetic": "[ˈbæɡɪdʒ kleɪm]",
+    "meaning": "短语 领取行李",
+    "mnemonic": "【扩展】baggage claim 行李认领(美国)；baggage reclaim 行李认领(英国)。claim 行李的认领、主张。【词源】baggage claim ← baggage(行李)+ claim(认领)。【同根】claim v.认领；baggage n.行李",
+    "phrases": "baggage claim area 行李认领区；pick up at baggage claim 在行李认领处取件",
+    "example": "Where is the Baggage Claim?\n请问行李认领处在哪儿?"
+  },
+  {
+    "id": "word:balance",
+    "word": "balance",
+    "phonetic": "[ˈbæləns]",
+    "meaning": "名 天平;秤;平衡;收支差额;余额;动 (使)平衡;(使)相抵",
+    "mnemonic": "【谐音】balance = 'bai lan ce'——平衡、收支平衡后剩下账户余额。【词源】balance ← 古法语 balance(天平)< 拉丁 bilanx(两秤)。【同根】balance n.天平；balancer n.平衡者；unbalance v.使失衡",
+    "phrases": "balance sheet 资产负债表；keep one's balance 保持平衡；lose one's balance 失去平衡",
+    "example": "adverse balance of trade\n贸易逆差"
+  },
+  {
+    "id": "word:balance-ones-budget",
+    "word": "balance one's budget",
+    "phonetic": "[ˈbæləns wʌnz ˈbʌdʒɪt]",
+    "meaning": "短语 量入为出",
+    "mnemonic": "【扩展】balance one's budget 量入为出；make ends meet 量入为出；live within one's means 量入为出。【词源】balance one's budget ← balance(平衡)+ one's+ budget(预算)。【同根】budget n.预算",
+    "phrases": "balance one's budget 量入为出；balanced budget 平衡预算",
+    "example": "It is essential to balance one's budget.\n量入为出是很重要的。"
+  },
+  {
+    "id": "word:balcony",
+    "word": "balcony",
+    "phonetic": "[ˈbælkəni]",
+    "meaning": "名 阳台",
+    "mnemonic": "【谐音】balcony = '包括你'(balcony ≈ '白考尼')——这阳台属于所有人，包括你。【词源】balcony ← 意大利语 balcone < 拉丁 balco(高台)。【同根】balcony n.阳台；balconied adj.有阳台的",
+    "phrases": "on the balcony 在阳台上；balcony room 带阳台的房间；step out onto the balcony 走到阳台",
+    "example": "open balcony\n露天阳台"
+  },
+  {
+    "id": "word:bald",
+    "word": "bald",
+    "phonetic": "[bɔːld]",
+    "meaning": "形 秃头的;不加修饰的;赤裸裸的",
+    "mnemonic": "【联想】bald = '爸(ba)老了(old)'会变秃头 b-a-l-d。【词源】bald ← 古英语 balled(白色的、亮的)。【同根】bald adj.秃头的；baldness n.秃头；baldly adv.直率地",
+    "phrases": "go bald 变秃；bald eagle 秃鹰；bald statement 赤裸裸的陈述",
+    "example": "I went into a bald room.\n我走进了一个无装饰"
+  },
+  {
+    "id": "word:ball-game",
+    "word": "ball game",
+    "phonetic": "[bɔːl ɡeɪm]",
+    "meaning": "短语 球类运动;棒球比赛",
+    "mnemonic": "【词源】ball game ← ball(球)+ game(比赛)。'球类比赛'。【同根】ball 球；game 比赛；ballgame 球赛",
+    "phrases": "play ball games 玩球类运动；major ball game 主要球类比赛；on the ball game 在比赛中",
+    "example": "The ball game is on the air now.\n电视台现在正在播放球赛。"
+  },
+  {
+    "id": "word:ballet",
+    "word": "ballet",
+    "phonetic": "[bæˈleɪ]",
+    "meaning": "名 芭蕾舞;芭蕾舞剧",
+    "mnemonic": "【串记】ballot 投票；ballast 压舱物；bullet 子弹；bulletin 公报；ballet 芭蕾舞；wallet 钱包。【词源】ballet ← 法语 ballet < 意大利语 balletto(小舞蹈)< ballo(舞蹈)。【同根】ballet n.芭蕾舞；ballerina n.芭蕾舞女演员",
+    "phrases": "study ballet 学习芭蕾；ballet dancer 芭蕾舞演员；classical ballet 古典芭蕾",
+    "example": "She has studied ballet for five years.\n她学芭蕾舞已经五年了。"
+  },
+  {
+    "id": "word:ballot-box",
+    "word": "ballot box",
+    "phonetic": "[ˈbælət bɑːks]",
+    "meaning": "短语 投票箱",
+    "mnemonic": "【扩展】vote 投票；ballot box 投票箱；suffrage 选举权；referendum 全民公投。【词源】ballot box ← ballot(无记名投票)+ box(箱子)。【同根】ballot n.投票；box n.箱子",
+    "phrases": "place votes in the ballot box 把选票投入投票箱；ballot box stuffing 选票舞弊",
+    "example": "Members were asked to place their votes in the ballot box.\n会员们被要求把选票放入投票箱。"
+  },
+  {
+    "id": "word:ballroom",
+    "word": "ballroom",
+    "phonetic": "[ˈbɔːlruːm]",
+    "meaning": "名 舞厅",
+    "mnemonic": "【串记】ball 球、舞会；ballet 芭蕾；ballroom 舞厅；bedroom 卧室。【词源】ballroom ← ball(舞会)+ room(房间)。'舞会的房间'=舞厅。【同根】ball n.舞会；room n.房间；ballroom n.舞厅",
+    "phrases": "ballroom dancing 交际舞；at the ballroom 在舞厅；grand ballroom 大舞厅",
+    "example": "The ballroom was filled with guests.\n舞厅里满堂宾客。"
+  },
+  {
+    "id": "word:ban",
+    "word": "ban",
+    "phonetic": "[bæn]",
+    "meaning": "动 禁止;名 禁止",
+    "mnemonic": "【谐音】ban = '不能'(can 是能, b(不)能是ban)。'禁止'。【词源】ban ← 古英语 bannian(宣布、禁止)。【同根】ban v.禁止；ban n.禁令；banishment n.流放",
+    "phrases": "ban on 对…的禁止；ban smoking 禁止吸烟；impose a ban 实施禁令",
+    "example": "We have put a ban on swimming in this lake.\n我们已下令禁止在此湖中游泳。"
+  },
+  {
+    "id": "word:bank-account",
+    "word": "bank account",
+    "phonetic": "[bæŋk əˈkaʊnt]",
+    "meaning": "短语 银行账号",
+    "mnemonic": "【词源】bank account ← bank(银行)+ account(账户)。'银行存款账户'。【同根】bank n.银行；account n.账户；bank statement 银行结单",
+    "phrases": "open a bank account 开银行账户；overdraw a bank account 透支银行账户；joint bank account 联名账户",
+    "example": "overdraw a bank account\n透支银行账户"
+  },
+  {
+    "id": "word:bank-statement",
+    "word": "bank statement",
+    "phonetic": "[bæŋk ˈsteɪtmənt]",
+    "meaning": "短语 银行结单",
+    "mnemonic": "【源】bank statement ← bank(银行)+ statement(报告、声明)。'银行给客户的清单'=银行结单。【同根】bank n.银行；statement n.声明、报表",
+    "phrases": "monthly bank statement 月度银行结单；attach a bank statement 附银行结单",
+    "example": "In confirmation, hereof we attach a bank statement.\n为作确认, 我们附上银行结单。"
+  },
+  {
+    "id": "word:bankrupt",
+    "word": "bankrupt",
+    "phonetic": "[ˈbæŋkrʌpt]",
+    "meaning": "形 破产的;名 破产者;破产;动 使破产",
+    "mnemonic": "【联想】bankrupt = 'bank 银行+ rupt 断裂'——银行的资金链断了 → 破产。【词源】bankrupt ← 意大利语 banca rotta(破椅子、倒闭)< 拉丁 ruptus(破裂)。【同根】bankrupt adj.破产的；bankruptcy n.破产",
+    "phrases": "go bankrupt 破产；bankrupt company 破产公司；be morally bankrupt 道义破产",
+    "example": "The company went bankrupt and he lost his job.\n公司破产, 因此他失业了。"
+  },
+  {
+    "id": "word:bankruptcy",
+    "word": "bankruptcy",
+    "phonetic": "[ˈbæŋkrʌptsi]",
+    "meaning": "名 破产;倒闭;无偿付能力",
+    "mnemonic": "【联想】bankruptcy = bank(银行)+rupt(打破)+cy → 银行账户里的钱被打碎了 → 没有钱了 → 破产。【源】bankruptcy ← bankrupt(破产)+ -cy(名词后缀)。【同根】bankruptcy n.破产；bankrupt adj.破产的",
+    "phrases": "declare bankruptcy 宣布破产；file for bankruptcy 申请破产",
+    "example": "The company is close to bankruptcy.\n这家公司正濒临破产边缘。"
+  },
+  {
+    "id": "word:banner",
+    "word": "banner",
+    "phonetic": "[ˈbænər]",
+    "meaning": "名 旗帜;横幅",
+    "mnemonic": "【联想】banner = 用来写'禁止'(ban)标语的东西(ner)。'横幅'。【源】banner ← 古法语 banniere < 拉丁 bandum(旗)。【同根】banner n.横幅；banner ad 横幅广告",
+    "phrases": "banner headline 通栏大字标题；under the banner of 在…旗帜下",
+    "example": "A huge banner over the street said \"Welcome home\".\n街道上方的一条巨大横幅上写着\"欢迎回家\"。"
+  },
+  {
+    "id": "word:banquet",
+    "word": "banquet",
+    "phonetic": "[ˈbæŋkwɪt]",
+    "meaning": "名 宴会;盛宴",
+    "mnemonic": "【谐音】banquet = '办宴席=亏待他'(banquet ≈ '办宽特')。'宴会'。【源】banquet ← 古法语 banquet < 意大利语 banchetto(小凳子、宴会)。【同根】banquet n.宴会；banquet hall 宴会厅",
+    "phrases": "state banquet 国宴；banquet hall 宴会厅；hold a banquet 举办宴会",
+    "example": "state banquet\n国宴"
+  },
+  {
+    "id": "word:bar-code",
+    "word": "bar code",
+    "phonetic": "[bɑːr koʊd]",
+    "meaning": "短语 条形码",
+    "mnemonic": "【扩展】QR code 二维码；2D barcode 二维条码；bar code 条形码。【源】bar code ← bar(条、棒)+ code(代码)。'条形代码'。【同根】bar n.条；code n.代码",
+    "phrases": "scan a bar code 扫描条形码；bar code reader 条码阅读器",
+    "example": "Two-dimensional bar code\n二维码"
+  },
+  {
+    "id": "word:bargain",
+    "word": "bargain",
+    "phonetic": "[ˈbɑːrɡən]",
+    "meaning": "名 便宜货;动 讨价还价",
+    "mnemonic": "【联想】bargain = bar(酒吧)+ gain(获得)。酒吧里东西贵，要讨价还价以获得低价。【源】bargain ← 古法语 bargaignier(讨价还价)。【同根】bargain n.便宜货；bargaining n.讨价还价",
+    "phrases": "bargain with 与…讨价还价；bargain for 指望；a good bargain 便宜货",
+    "example": "bargain with a merchant\n与一个商人讨价还价"
+  },
+  {
+    "id": "word:barrier",
+    "word": "barrier",
+    "phonetic": "[ˈbæriər]",
+    "meaning": "名 屏障;障碍物",
+    "mnemonic": "【联想】barrier = carrier(搬运工)横走的'栅栏'。'屏障'。【源】barrier ← 古法语 barriere(阻挡之物)。【同根】barrier n.屏障；bar v.阻挡；embarrass v.使尴尬",
+    "phrases": "language barrier 语言障碍；trade barrier 贸易壁垒；put up a barrier 设置屏障",
+    "example": "The police put up a barrier to control the crowd.\n警察设置了屏障以控制群众。"
+  },
+  {
+    "id": "word:barring",
+    "word": "barring",
+    "phonetic": "[ˈbɑːrɪŋ]",
+    "meaning": "介 除…以外;除非;动 阻拦;阻碍;阻止;\"bar\"的现在分词",
+    "mnemonic": "【联想】barring = 进酒吧就要被 barring 阻挡。【源】barring ← bar(阻挡)+ -ing。'排除'=除非。【同根】bar v.阻挡；barring prep.除…外",
+    "phrases": "barring accidents 除非有事故；barring any change 除非有任何变化",
+    "example": "Barring the boss, we all went out for drinks on Friday.\n除了老板, 我们星期五都出去喝酒了。"
+  },
+  {
+    "id": "word:base-on",
+    "word": "base on",
+    "phonetic": "[beɪs ɑːn]",
+    "meaning": "短语 基于;以…为根据",
+    "mnemonic": "【联想】base A on B = A 基于 B 的基础上。'基于'。【源】base on ← base(基础)+ on。'将…建立在…之上'。【同根】base n.基础；basis n.根据",
+    "phrases": "base on 根据；based on 基于；base one's argument on 论点基于",
+    "example": "The prices base on the quantities.\n价格依数量而定。"
+  },
+  {
+    "id": "word:basis",
+    "word": "basis",
+    "phonetic": "[ˈbeɪsɪs]",
+    "meaning": "形 基础;根据",
+    "mnemonic": "【串记】base 基础；basic 基本的；basically 基本上；basis 根据；basin 盆地。【源】basis ← 拉丁 basis(基座)< 希腊 basis。< bainein(走)。【同根】basis n.根据；base n.基础",
+    "phrases": "on a regular basis 定期地；on the basis of 根据；on a daily basis 每天",
+    "example": "Wages are paid on a monthly basis.\n工资是按月支付的。"
+  },
+  {
+    "id": "word:batch",
+    "word": "batch",
+    "phonetic": "[bætʃ]",
+    "meaning": "名 一批;一炉;一组;大量",
+    "mnemonic": "【串记】batch 一批；patch 补丁；catch 捕捉；watch 看；match 比赛。【源】batch ← 古英语 *baecce(烤面包的一炉)。'一炉'=一批。【同根】batch n.一批；batch processing 批处理",
+    "phrases": "a batch of 一批；batch number 批号；in batches 分批地",
+    "example": "a batch of orders\n大量订单"
+  },
+  {
+    "id": "word:battle",
+    "word": "battle",
+    "phonetic": "[ˈbæt(ə)l]",
+    "meaning": "名 战斗;战役;动 战斗",
+    "mnemonic": "【谐音】battle = '辫头一战斗'。'战斗'。【源】battle ← 古法语 bataille < 拉丁 battualia(练习击剑)。【同根】battle n.战斗；battlefield n.战场；battalion n.营",
+    "phrases": "battle for 为…而战；battle against 对抗；in battle 在战斗中",
+    "example": "He proved his courage in battle.\n他在战斗中证明了自己的勇"
+  },
+  {
+    "id": "word:bazaar",
+    "word": "bazaar",
+    "phonetic": "[bəˈzɑːr]",
+    "meaning": "名 集市;市场;义卖",
+    "mnemonic": "【谐音】bazaar = '巴扎'(新疆语集市)。又如 bizarre(古怪的)——奇特的 bazaar。【源】bazaar ← 波斯语 bazar(集市)。【同根】bazaar n.集市；bizarre adj.古怪的",
+    "phrases": "church bazaar 教会义卖；bazaar shop 集市商店；annual bazaar 一年一度的义卖",
+    "example": "We bought a cake at the church bazaar.\n我们在教会义卖会上买了个蛋糕。"
+  },
+  {
+    "id": "word:be-absorbed-in",
+    "word": "be absorbed in",
+    "phonetic": "[biː əbˈzɔːrbd ɪn]",
+    "meaning": "短语 全神贯注于;专心于",
+    "mnemonic": "【词源】be absorbed in ← absorb(吸收)+ in。'思想被吸收' → 全神贯注。【同根】absorb v.吸收；absorbed adj.被吸收的、专注的；absorption n.吸收",
+    "phrases": "be absorbed in 全身心投入；absorbed in thought 沉思中；completely absorbed 完全专注",
+    "example": "She is completely absorbed in her book.\n她在专心致志地看书。"
+  },
+  {
+    "id": "word:be-abundant-in",
+    "word": "be abundant in",
+    "phonetic": "[biː əˈbʌndənt ɪn]",
+    "meaning": "短语 富于;有丰富的",
+    "mnemonic": "【扩展】be abundant in 富有；be rich in 富有；be well supplied with 充足。【源】be abundant in ← abundant(丰富的)+ in。'在…上富足'。【同根】abundant adj.丰富的；abundance n.丰盛",
+    "phrases": "be abundant in 富有；abundant in natural resources 自然资源丰富",
+    "example": "The river is abundant in salmon.\n这条河盛产鲑鱼。"
+  },
+  {
+    "id": "word:be-accompanied-by",
+    "word": "be accompanied by",
+    "phonetic": "[biː əˈkʌmpənɪd baɪ]",
+    "meaning": "短语 伴有;陪伴;伴随",
+    "mnemonic": "【辨析】accompanied by 由…陪同；in company with 陪伴。【源】be accompanied by ← accompany(陪伴)+ -ed+ by. '由…陪着'。【同根】accompany v.陪伴；companion n.同伴",
+    "phrases": "be accompanied by 由…陪伴；accompanied by fever 伴有发烧",
+    "example": "She was accompanied by her elder sister.\n她有姐姐陪伴。"
+  },
+  {
+    "id": "word:be-accustomed-to",
+    "word": "be accustomed to",
+    "phonetic": "[biː əˈkʌstəmd tu]",
+    "meaning": "短语 习惯于…",
+    "mnemonic": "【词源】be accustomed to ← accustomed(习惯的)+ to. '被…所习惯'。【同根】accustomed adj.习惯的；accustom v.使习惯；custom n.风俗",
+    "phrases": "be accustomed to 习惯于；be accustomed to hard work 习惯于艰苦工作；be accustomed to the climate 习惯于气候",
+    "example": "be accustomed to hard work\n习惯于艰苦工作"
+  },
+  {
+    "id": "word:be-acquainted-with",
+    "word": "be acquainted with",
+    "phonetic": "[biː əˈkweɪntɪd wɪð]",
+    "meaning": "短语 认识;相熟;对…熟悉",
+    "mnemonic": "【近义】be familiar with 熟悉；be acquainted with 认识。【源】be acquainted with ← acquainted(熟悉的)+ with. '与…熟悉'。【同根】acquaint v.使熟悉；acquaintance n.熟人",
+    "phrases": "be acquainted with 与…相识；acquainted with the facts 熟悉事实",
+    "example": "They are acquainted with each other.\n他们互相认识。"
+  },
+  {
+    "id": "word:be-adaptable-to",
+    "word": "be adaptable to",
+    "phonetic": "[biː əˈdæptəb(ə)l tu]",
+    "meaning": "短语 适合于;适应",
+    "mnemonic": "【扩展】be adaptable to 适应；be compatible with 与…兼容；be consistent with 与…一致。【源】be adaptable to ← adaptable(能适应的)+ to. '能适应…'。【同根】adapt v.适应；adaptable adj.能适应的",
+    "phrases": "be adaptable to new environment 能适应新环境；adaptable personality 适应性强的个性",
+    "example": "She is adaptable to new surroundings.\n她是一个能适应新环境的人。"
+  },
+  {
+    "id": "word:be-addressed-to",
+    "word": "be addressed to",
+    "phonetic": "[biː əˈdrest tu]",
+    "meaning": "短语 寄给",
+    "mnemonic": "【源】be addressed to ← address(寄给、讲话)+ -ed+ to. '寄给某人'。【同根】address v.写信给；addressee n.收件人",
+    "phrases": "be addressed to 寄给；letter addressed to me 寄给我的信",
+    "example": "This letter is addressed to my mother.\n这封信是写给我的母亲的。"
+  },
+  {
+    "id": "word:be-adept-at",
+    "word": "be adept at",
+    "phonetic": "[biː əˈdept æt]",
+    "meaning": "短语 擅长",
+    "mnemonic": "【词源】be adept at ← adept(熟练的)+ at. '在某方面熟练的'。【同根】adept adj.熟练的；adeptly adv.熟练地",
+    "phrases": "be adept at 擅长于；adept at music 精通音乐",
+    "example": "I am adept at computer programming.\n我熟悉电脑程序编制。"
+  },
+  {
+    "id": "word:be-adjacent-to",
+    "word": "be adjacent to",
+    "phonetic": "[biː əˈdʒeɪsənt tu]",
+    "meaning": "短语 与…毗连的;接近的;邻近的",
+    "mnemonic": "【源】be adjacent to ← adjacent(邻近的)+ to. '与…相邻的'。【同根】adjacent adj.邻近的；adjoin v.毗邻",
+    "phrases": "be adjacent to 与…相邻；adjacent to the school 学校旁边",
+    "example": "Cross out duplicate letters that are adjacent to each other.\n划掉彼此相连续的重号字母。"
+  },
+  {
+    "id": "word:be-advised-by",
+    "word": "be advised by",
+    "phonetic": "[biː ədˈvaɪzd baɪ]",
+    "meaning": "短语 受…的建议",
+    "mnemonic": "【源】be advised by ← advise(建议)+ -d+ by. '被…所建议'。【同根】advise v.建议；adviser n.顾问",
+    "phrases": "be advised by 受…建议；advised by one's doctor 受医生建议",
+    "example": "He was advised by his doctor to pull up and take it easy.\n医生劝他要克制自己, 并且不要着急。"
+  },
+  {
+    "id": "word:be-advised-to-do",
+    "word": "be advised to do",
+    "phonetic": "[biː ədˈvaɪzd tu duː]",
+    "meaning": "短语 某人)应该做某事",
+    "mnemonic": "【源】be advised to do ← advise(建议)+ -d+ to+ do. '(某人)应当做某事'。【同根】advise v.建议；advice n.建议",
+    "phrases": "be advised to do 应该做；advised to take rest 被建议休息",
+    "example": "Obese patients are advised to change their diet.\n建议肥胖病人改变饮食。"
+  },
+  {
+    "id": "word:be-aimed-at",
+    "word": "be aimed at",
+    "phonetic": "[biː eɪmd æt]",
+    "meaning": "短语 旨在;目的是;针对",
+    "mnemonic": "【串记】be aimed at 旨在；aim to do 目的、力争；be meant to 旨在；be designed to 旨在。【源】be aimed at ← aim(目的)+ -ed+ at. '旨在'。【同根】aim v.瞄准；aimless adj.无目的",
+    "phrases": "be aimed at 旨在；aimed at students 针对学生；aim at achieving 旨在达到",
+    "example": "is aimed at better balance in work\n目的是在工作中取得更好的平衡"
+  },
+  {
+    "id": "word:be-allergic-to",
+    "word": "be allergic to",
+    "phonetic": "[biː əˈlɜːrdʒɪk tu]",
+    "meaning": "短语 对…过敏",
+    "mnemonic": "【扩展】be allergic to 对…过敏；allergy 过敏；allergen 过敏原。【源】be allergic to ← allergic(过敏的)+ to. '对…过敏'。【同根】allergy n.过敏症；allergen n.过敏原",
+    "phrases": "be allergic to 对…过敏；allergic to cats 对猫毛过敏",
+    "example": "He is allergic to the fur of cats.\n他对猫毛过敏。"
+  },
+  {
+    "id": "word:be-allowed-to",
+    "word": "be allowed to",
+    "phonetic": "[biː əˈlaʊd tu]",
+    "meaning": "短语 被允许",
+    "mnemonic": "【源】be allowed to ← allow(允许)+ -ed+ to. '被允许做某事'。【同根】allow v.允许；allowance n.津贴",
+    "phrases": "be allowed to 被允许；allowed to go 被允许去；be allowed to enter 被允许进入",
+    "example": "Such things mustn't be allowed to happen again.\n不能允许再发生这样的事。"
+  },
+  {
+    "id": "word:be-anxious-about",
+    "word": "be anxious about",
+    "phonetic": "[biː ˈæŋkʃəs əˈbaʊt]",
+    "meaning": "短语 忧虑;担心;想念",
+    "mnemonic": "【扩展】be anxious about 为…担心；be worried about 为…担心；be solicitous about 挂念。【源】be anxious about ← anxious(焦虑的)+ about. '对…焦虑'。【同根】anxiety n.焦虑；anxious adj.焦虑的",
+    "phrases": "be anxious about 担心；anxious about the result 担心结果",
+    "example": "He was a bit anxious about the safety of the machinery.\n他有点担心机器的安全性。"
+  },
+  {
+    "id": "word:be-ashamed-of",
+    "word": "be ashamed of",
+    "phonetic": "[biː əˈʃeɪmd əv]",
+    "meaning": "短语 感到羞愧",
+    "mnemonic": "【源】be ashamed of ← ashamed(羞耻的)+ of. '对…感到羞耻'。【同根】ashamed adj.羞耻的；shame n.羞耻；shameful adj.可耻的",
+    "phrases": "be ashamed of 为…感到羞耻；ashamed of one's behavior 为自己的行为感到羞耻",
+    "example": "You should be ashamed of what you have done.\n你应该为自己所做的事感到羞耻。"
+  },
+  {
+    "id": "word:be-assigned-to",
+    "word": "be assigned to",
+    "phonetic": "[biː əˈsaɪnd tu]",
+    "meaning": "短语 被归于;被分给;分给",
+    "mnemonic": "【源】be assigned to ← assign(分配)+ -ed+ to. '被分配给'。【同根】assign v.分配；assignment n.分配",
+    "phrases": "be assigned to 被分配给；assigned to a team 分配到一个团队",
+    "example": "All the students are assigned to suitable jobs.\n所有的学生都被分配到了合适的工作。"
+  },
+  {
+    "id": "word:be-attached-to",
+    "word": "be attached to",
+    "phonetic": "[biː əˈtætʃt tu]",
+    "meaning": "短语 附属于;喜爱;依恋",
+    "mnemonic": "【扩展】be attached to 依恋、附属于；attach sth. to sth. 将某物系在某物上。【源】be attached to ← attach(附上)+ -ed+ to. '附属于、依恋'。【同根】attach v.附加；attachment n.依恋",
+    "phrases": "be attached to 附属于；依恋；attached to one's family 依恋家人",
+    "example": "I am very attached to her sister.\n我非常爱慕她的妹妹。"
+  },
+  {
+    "id": "word:be-authorized-to",
+    "word": "be authorized to",
+    "phonetic": "[biː ˈɔːθəraɪzd tu]",
+    "meaning": "短语 被授权",
+    "mnemonic": "【辨析】be authorized to do 被授权做；be entitled to 有权；be qualified for 胜任。【源】be authorized to ← authorize(授权)+ -d+ to. '被授权做'。【同根】authorize v.授权；authority n.权威",
+    "phrases": "be authorized to 被授权；authorized to sign contracts 被授权签合同",
+    "example": "You need to be authorized to share folders.\n您需要被授权共享文件夹。"
+  },
+  {
+    "id": "word:be-available-for",
+    "word": "be available for",
+    "phonetic": "[biː əˈveɪləb(ə)l fɔːr]",
+    "meaning": "短语 有效;可利用的",
+    "mnemonic": "【扩展】be available for 可用的；be available to 用于。【源】be available for ← available(可获得的)+ for. '对…可利用'。【同根】available adj.可获得的；availability n.可用性",
+    "phrases": "be available for 可用于；available for purchase 可购买",
+    "example": "The point seems when wealth will be available for you.\n关键是你什么时候有钱呢。"
+  },
+  {
+    "id": "word:be-aware-of",
+    "word": "be aware of",
+    "phonetic": "[biː əˈwer əv]",
+    "meaning": "短语 警觉到;察觉到;知道",
+    "mnemonic": "【近义】be aware of = be conscious of 意识到。【源】be aware of ← aware(意识到的)+ of. '意识到'。【同根】aware adj.意识到的；awareness n.意识",
+    "phrases": "be aware of 意识到；aware of the danger 意识到危险",
+    "example": "You must be aware of the fact.\n你一定要意识到这一事实。"
+  },
+  {
+    "id": "word:be-beneficial-to",
+    "word": "be beneficial to",
+    "phonetic": "[biː ˌbenɪˈfɪʃ(ə)l tu]",
+    "meaning": "短语 对…有益",
+    "mnemonic": "【扩展】be beneficial to 对…有益；be good to 对…好；be favorable to 有利于。【源】be beneficial to ← beneficial(有益的)+ to. '对…有益'。【同根】benefit n.利益；beneficial adj.有益的",
+    "phrases": "be beneficial to 对…有益；beneficial to health 有益健康",
+    "example": "Fresh air is beneficial to our health\n新鲜空气有益于健康。"
+  },
+  {
+    "id": "word:be-bound-for",
+    "word": "be bound for",
+    "phonetic": "[biː baʊnd fɔːr]",
+    "meaning": "短语 开往…;以…为目的地的",
+    "mnemonic": "【串记】be bound for 开往；be bound to 注定的；be bound by 受…约束。【源】be bound for ← bound(准备前往的)+ for. '开往'。【同根】bound v.跳跃；n.边界",
+    "phrases": "be bound for 开往；a ship bound for Shanghai 开往上海的船",
+    "example": "I am bound for Shanghai; that is my destination.\n我到上海去, 那才是我的目的地。"
+  },
+  {
+    "id": "word:be-bound-to",
+    "word": "be bound to",
+    "phonetic": "[biː baʊnd tu]",
+    "meaning": "短语 注定的;一定有…",
+    "mnemonic": "【谐音】be bound to = '被(be)绑(bound)住鬼(to)' → 注定的。【源】be bound to ← bound(被束缚的)+ to. '必然的'。【同根】bound adj.必然的；bind v.捆、绑",
+    "phrases": "be bound to do 必然做；be bound to succeed 必定成功",
+    "example": "The news is bound to shock the nation.\n这个新闻一定会震惊全国。"
+  },
+  {
+    "id": "word:be-capable-of",
+    "word": "be capable of",
+    "phonetic": "[biː ˈkeɪpəb(ə)l əv]",
+    "meaning": "短语 能够",
+    "mnemonic": "【近义】be capable of = be able to = can. '能够'。【源】be capable of ← capable(有能力的)+ of. '有能力做某事'。【同根】capable adj.有能力的；capability n.能力",
+    "phrases": "be capable of 能够；capable of doing 能做某事",
+    "example": "Only human beings are capable of speech.\n只有人类才具有说话的能力。"
+  },
+  {
+    "id": "word:be-cautious-of",
+    "word": "be cautious of",
+    "phonetic": "[biː ˈkɔːʃəs əv]",
+    "meaning": "短语 小心…;谨防…",
+    "mnemonic": "【源】be cautious of ← cautious(谨慎的)+ of. '对…谨慎'。【同根】cautious adj.谨慎的；caution n.小心",
+    "phrases": "be cautious of 小心…；cautious of strangers 提防陌生人",
+    "example": "You should be cautious of the strangers.\n你应该小心提防陌生人。"
+  },
+  {
+    "id": "word:be-centered-on",
+    "word": "be centered on",
+    "phonetic": "[biː ˈsentərd ɑːn]",
+    "meaning": "短语 集中于;以…为中心",
+    "mnemonic": "【考纲】centered: 集中的；be centered on = focus on 集中于。【源】be centered on ← center(中心)+ -ed+ on. '集中在'。【同根】center n.中心；central adj.中心的",
+    "phrases": "be centered on 集中于；centered on the economy 以经济为中心",
+    "example": "Discussions were centered on developments in Eastern Europe.\n讨论围绕着东欧的发展这一中心议题进行。"
+  },
+  {
+    "id": "word:be-certain-of",
+    "word": "be certain of",
+    "phonetic": "[biː ˈsɜːrt(ə)n əv]",
+    "meaning": "短语 确信",
+    "mnemonic": "【联想】be sure of 确信；be certain of 确信。certain = 确定。【源】be certain of ← certain(确信的)+ of. '确信'。【同根】certain adj.确信的；certainty n.确定",
+    "phrases": "be certain of 确信；certain of success 确信成功",
+    "example": "I can't be certain of what time I left the office.\n我不能肯定我是什么时候离开办公室的。"
+  },
+  {
+    "id": "word:be-charged-for",
+    "word": "be charged for",
+    "phonetic": "[biː tʃɑːrdʒd fɔːr]",
+    "meaning": "短语 收取(费用)",
+    "mnemonic": "【辨析】be charged for 收费；be charged with 被指控；take charge of 负责。【源】be charged for ← charge(收费)+ -d+ for. '被收费'。【同根】charge v.收费；n.费用",
+    "phrases": "be charged for 收费；charged for the service 收取服务费",
+    "example": "My credit card had already been charged for the reservation.\n那张对我的信用卡已经被扣款了"
+  },
+  {
+    "id": "word:be-close-to",
+    "word": "be close to",
+    "phonetic": "[biː kloʊs tu]",
+    "meaning": "短语 接近;靠近;紧接;紧接着;亲近",
+    "mnemonic": "【扩展】be close by 接近；be close to 接近；next to 紧挨着。【源】be close to ← close(近的)+ to. '接近'。【同根】close adj.近的；closely adv.紧密地",
+    "phrases": "be close to 接近；close to home 离家近；close to the truth 接近真相",
+    "example": "The population of the city is close to a million.\n这个城市的人口接近一百万。"
+  },
+  {
+    "id": "word:be-concentrated-on",
+    "word": "be concentrated on",
+    "phonetic": "[biː kɑːns(ə)ntreɪtɪd ɑːn]",
+    "meaning": "短语 集中精力于…",
+    "mnemonic": "【扩展】concentrate on / be concentrated on / focus on / be focused on. '集中于'。【源】be concentrated on ← concentrate(集中)+ -d+ on. '集中于'。【同根】concentrate v.集中；concentration n.专注",
+    "phrases": "be concentrated on 集中于；concentrated on the task 专注于任务",
+    "example": "At that moment, all their thoughts were concentrated on themselves.\n此时大家都在想着各自的心事。"
+  },
+  {
+    "id": "word:be-conscious-of",
+    "word": "be conscious of",
+    "phonetic": "[biː ˈkɑːnʃəs əv]",
+    "meaning": "短语 知道;意识;察觉",
+    "mnemonic": "【近义】be conscious of = be aware of. '知道'。【源】be conscious of ← conscious(意识到的)+ of. '意识到'。【同根】conscious adj.意识到的；consciousness n.意识",
+    "phrases": "be conscious of 意识到；conscious of one's mistakes 意识到错误",
+    "example": "I am fully conscious of his honesty.\n我完全清楚他的诚实。"
+  },
+  {
+    "id": "word:be-consistent-with",
+    "word": "be consistent with",
+    "phonetic": "[biː kənˈsɪstənt wɪð]",
+    "meaning": "短语 与…一致;与…相符",
+    "mnemonic": "【扩展】be consistent with 与…一致；be compatible with 兼容；be parallel with 与…平行。【源】be consistent with ← consistent(一致的)+ with. '与…一致'。【同根】consistent adj.一致的；consistency n.连贯性",
+    "phrases": "be consistent with 与…一致；consistent with principles 与原则一致",
+    "example": "His behavior is consistent with his teaching.\n他的行为与其教导相符。"
+  },
+  {
+    "id": "word:be-converted-into",
+    "word": "be converted into",
+    "phonetic": "[biː kənˈvɜːrtɪd ˈɪntuː]",
+    "meaning": "短语 被转换成;被变成",
+    "mnemonic": "【联想】convert 转换、变换、皈依。'被转换成'。【源】be converted into ← convert(转换)+ -ed+ into. '被转变成'。【同根】convert v.转换；conversion n.变换",
+    "phrases": "be converted into 被转换成；converted into a church 改成教堂",
+    "example": "Dollars can no longer be converted into silver.\n美金再也不能兑换银。"
+  },
+  {
+    "id": "word:be-crowded-with",
+    "word": "be crowded with",
+    "phonetic": "[biː ˈkraʊdɪd wɪð]",
+    "meaning": "短语 充满;挤满",
+    "mnemonic": "【源】be crowded with ← crowd(人群)+ -ed+ with. '挤满、充满'。【同根】crowd n.人群；crowded adj.拥挤的",
+    "phrases": "be crowded with 挤满；crowded with passengers 挤满乘客",
+    "example": "The room was crowded with guests.\n房间里挤满了客人。"
+  },
+  {
+    "id": "word:be-curious-about",
+    "word": "be curious about",
+    "phonetic": "[biː ˈkjʊriəs əˈbaʊt]",
+    "meaning": "短语 对…好奇",
+    "mnemonic": "【辨析】curious 好奇的；cautious 小心。'对…好奇'。【源】be curious about ← curious(好奇的)+ about. '对…好奇'。【同根】curiosity n.好奇心；curiously adv.好奇地",
+    "phrases": "be curious about 对…好奇；curious about everything 对一切都好奇",
+    "example": "The boy was curious about everything he saw.\n那男孩对所见到的一切都感到好奇。"
+  },
+  {
+    "id": "word:be-dedicated-to",
+    "word": "be dedicated to",
+    "phonetic": "[biː ˈdedɪkeɪtɪd tu]",
+    "meaning": "短语 致力于…;献给",
+    "mnemonic": "【近义】be dedicated to / be devoted to / be committed to. '致力于'。【源】be dedicated to ← dedicate(奉献)+ -d+ to. '致力于、献给'。【同根】dedicate v.奉献；dedication n.献身",
+    "phrases": "be dedicated to 致力于；dedicated to the cause 献身于事业",
+    "example": "We are dedicated to solving your doubts and problems.\n我们尽心尽力为你解释难题。"
+  },
+  {
+    "id": "word:be-devoted-to",
+    "word": "be devoted to",
+    "phonetic": "[biː dɪˈvoʊtɪd tu]",
+    "meaning": "短语 致力于…",
+    "mnemonic": "【近义】devoted to / committed to / dedicated to. '献身于'。【源】be devoted to ← devote(奉献)+ -d+ to. '献身于'。【同根】devote v.奉献；devotion n.奉献",
+    "phrases": "be devoted to 献身于；devoted to music 热衷于音乐",
+    "example": "He is devoted to the aim.\n他投入于这个目标。"
+  },
+  {
+    "id": "word:be-eligible-for",
+    "word": "be eligible for",
+    "phonetic": "[biː ˈelɪdʒəb(ə)l fɔːr]",
+    "meaning": "短语 有资格的;符合条件的",
+    "mnemonic": "【谐音】eligible = '爱拎着包' = '有资格的'朋友。【源】be eligible for ← eligible(有资格的)+ for. '有资格…'。【同根】eligible adj.有资格的；ineligible adj.无资格的",
+    "phrases": "be eligible for 有资格；eligible for benefits 有资格领取补助",
+    "example": "to be eligible for parole\n符合假释条件"
+  },
+  {
+    "id": "word:be-eligible-to",
+    "word": "be eligible to",
+    "phonetic": "[biː ˈelɪdʒəb(ə)l tu]",
+    "meaning": "短语 符合条件的",
+    "mnemonic": "【源】be eligible to ← eligible(符合条件的)+ to. '符合条件…'。【同根】eligible adj.合格的；elegant adj.优雅的",
+    "phrases": "be eligible to 有资格；eligible to vote 有选举资格",
+    "example": "Only citizens are eligible to vote.\n只有公民有选举资格。"
+  },
+  {
+    "id": "word:be-engaged-in",
+    "word": "be engaged in",
+    "phonetic": "[biː ɪnˈɡeɪdʒd ɪn]",
+    "meaning": "短语 从事于",
+    "mnemonic": "【源】be engaged in ← engage(从事)+ -d+ in. '从事于、忙于'。【同根】engage v.从事；engaged adj.忙碌的",
+    "phrases": "be engaged in 从事；engaged in politics 从政",
+    "example": "Do you want to be engaged in politics or business?\n你想从政还是从商?"
+  },
+  {
+    "id": "word:be-engrossed-in",
+    "word": "be engrossed in",
+    "phonetic": "[biː ɪnˈɡroʊst ɪn]",
+    "meaning": "短语 专心致志于",
+    "mnemonic": "【谐音】be engrossed in = 'in 一到内' + '全身贯注沉浸到刺内'。【源】be engrossed in ← engross(全神贯注)+ -ed+ in. '全身贯注于'。【同根】engross v.使全神贯注；engrossed adj.全神贯注的",
+    "phrases": "be engrossed in 全神贯注于；engrossed in a book 专注于一本",
+    "example": "She was engrossed in painting.\n她全神贯注于绘画。"
+  },
+  {
+    "id": "word:be-entitled-to",
+    "word": "be entitled to",
+    "phonetic": "[biː ɪnˈtaɪtəld tu]",
+    "meaning": "短语 有…的资格;有权",
+    "mnemonic": "【联想】title 头衔 + entitle 给予头衔 = entitled 被授予 → 有权利的。【源】be entitled to ← entitle(命名、授权)+ -d+ to. '有权做…'。【同根】entitle v.命名；entitlement n.权利",
+    "phrases": "be entitled to 有权；entitled to a pension 有权领取养老金",
+    "example": "He is entitled to a pension.\n他有资格领取退休金。"
+  },
+  {
+    "id": "word:be-equal-to",
+    "word": "be equal to",
+    "phonetic": "[biː ˈiːkwəl tu]",
+    "meaning": "短语 相等;胜任",
+    "mnemonic": "【扩展】be equal to 等于；胜任；up to 胜任；be worth one's salt 称职。【源】be equal to ← equal(相等的)+ to. '等于；胜任'。【同根】equal adj.相等的；equality n.平等",
+    "phrases": "be equal to 等于；胜任；equal to the task 胜任这项工作",
+    "example": "The blacks should be equal to the whites.\n黑人应该与白人平等。"
+  }
+]

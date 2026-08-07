@@ -143,12 +143,14 @@ export function createNovelReaderDocument(
 
 export function findNovelPageIndex(pages: NovelReaderPage[], offset: number) {
   if (pages.length === 0 || offset <= pages[0].startOffset) return 0;
+
+  // Adjacent pages can share a boundary offset. Resolve that exact offset to
+  // the page beginning there so advancing never falls back to the prior page.
   let low = 0;
   let high = pages.length - 1;
   while (low <= high) {
     const middle = Math.floor((low + high) / 2);
-    if (pages[middle].startOffset <= offset && offset <= pages[middle].endOffset) return middle;
-    if (pages[middle].startOffset < offset) low = middle + 1;
+    if (pages[middle].startOffset <= offset) low = middle + 1;
     else high = middle - 1;
   }
   return Math.min(pages.length - 1, Math.max(0, high));

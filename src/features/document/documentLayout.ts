@@ -7,7 +7,7 @@ export const DOCUMENT_LAYOUT = Object.freeze({
   lineHeight: 34,
   learningRows: 6,
   learningTop: 386,
-  learningGapLines: 1.2,
+  learningGapLines: 0,
   lowerContentTop: 631,
   continuationLineCapacity: 27,
 });

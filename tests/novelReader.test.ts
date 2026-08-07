@@ -40,6 +40,17 @@ describe("novel reader", () => {
     expect(wide.pages[restoredPage].endOffset).toBeGreaterThanOrEqual(offset);
   });
 
+  it("resolves a shared page boundary to the following page", () => {
+    const pages = [
+      { lines: [], startOffset: 0, endOffset: 10 },
+      { lines: [], startOffset: 10, endOffset: 20 },
+      { lines: [], startOffset: 20, endOffset: 30 },
+    ];
+
+    expect(findNovelPageIndex(pages, 10)).toBe(1);
+    expect(findNovelPageIndex(pages, 20)).toBe(2);
+  });
+
   it("persists progress by file fingerprint", () => {
     const store = new NovelProgressStore(new MemoryStorage());
     const progress = {

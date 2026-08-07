@@ -16,6 +16,8 @@ interface FloatingBarProps {
   reader?: {
     page: number;
     totalPages: number;
+    canPrevious: boolean;
+    canNext: boolean;
     hidden: boolean;
     onPrevious: () => void;
     onNext: () => void;
@@ -135,7 +137,7 @@ export function FloatingBar({
         <>
           <button onClick={reader.onToggleHidden}>{reader.hidden ? label("恢复", "H") : label("隐藏", "H")}</button>
           <button onClick={reader.onSwitchToWords}>背词</button>
-          <button onClick={reader.onPrevious}>{label("上一页", "←")}</button>
+          <button onClick={reader.onPrevious} disabled={!reader.canPrevious}>{label("上一页", "←")}</button>
           <span className="reader-page-jump">
             <input aria-label="小说页码" inputMode="numeric" value={readerPageInput}
               onChange={(event) => setReaderPageInput(event.target.value.replace(/\D/g, ""))}
@@ -143,7 +145,7 @@ export function FloatingBar({
               onKeyDown={(event) => { if (event.key === "Enter") jumpToReaderPage(); }} />
             <span>/ {reader.totalPages}</span>
           </span>
-          <button className="primary-action" onClick={reader.onNext}>{label("下一页", "→")}</button>
+          <button className="primary-action" onClick={reader.onNext} disabled={!reader.canNext}>{label("下一页", "→")}</button>
         </>
       ) : state.phase === "editingMnemonic" ? (
         <>

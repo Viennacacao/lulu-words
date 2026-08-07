@@ -30,10 +30,7 @@ import {
   clampDocumentZoom,
   DocumentLayoutCache,
 } from "./features/document/documentLayout";
-import {
-  builtInTexts,
-  createTextDocumentTemplate,
-} from "./features/document/textSources";
+import { createTextDocumentTemplate } from "./features/document/textSources";
 import {
   documentTemplates,
   getDocumentTemplate,
@@ -58,6 +55,11 @@ import {
   NovelProgressStore,
   type NovelReadingProgress,
 } from "./features/reader/novelReader";
+import {
+  isDesktopApp,
+  NovelLibraryService,
+  type NovelLibraryEntry,
+} from "./features/reader/NovelLibraryService";
 import { createLearningRepository } from "./infrastructure/persistence/createLearningRepository";
 
 const emptyStatistics: LearningStatistics = {
@@ -70,6 +72,7 @@ const emptyStatistics: LearningStatistics = {
 };
 
 interface NovelSource {
+  libraryId: string;
   name: string;
   text: string;
   fingerprint: string;
@@ -83,6 +86,9 @@ function App() {
   const [customTextTemplate, setCustomTextTemplate] = useState<DocumentTemplate>();
   const [selectedTextName, setSelectedTextName] = useState("");
   const [novelSource, setNovelSource] = useState<NovelSource>();
+  const [novelLibraryEntries, setNovelLibraryEntries] = useState<NovelLibraryEntry[]>([]);
+  const [novelLibraryError, setNovelLibraryError] = useState("");
+  const [busyNovelId, setBusyNovelId] = useState<string>();
   const [studyMode, setStudyMode] = useState<"words" | "novel">("words");
   const [novelOffset, setNovelOffset] = useState(0);
   const [readerHidden, setReaderHidden] = useState(false);
@@ -94,6 +100,7 @@ function App() {
   const documentTemplate = customTextTemplate ?? getDocumentTemplate(templateId);
   const documentLayout = layoutCache.current.get(documentTemplate, preferences.fontSize);
   const novelProgressStore = useMemo(() => new NovelProgressStore(), []);
+  const novelLibraryService = useMemo(() => new NovelLibraryService(), []);
   const novelDocument = useMemo(() => novelSource ? createNovelReaderDocument(
     novelSource.name,
     novelSource.text,
@@ -122,6 +129,20 @@ function App() {
       ),
     [],
   );
+
+  const refreshNovelLibrary = useCallback(async () => {
+    if (!isDesktopApp()) return;
+    try {
+      setNovelLibraryEntries(await novelLibraryService.list());
+      setNovelLibraryError("");
+    } catch (error) {
+      setNovelLibraryError(error instanceof Error ? error.message : "无法读取本地小说书架");
+    }
+  }, [novelLibraryService]);
+
+  useEffect(() => {
+    void refreshNovelLibrary();
+  }, [refreshNovelLibrary]);
 
   const updatePreferences = useCallback(
     (next: AppPreferences) => {
@@ -318,15 +339,64 @@ function App() {
     setActiveView("study");
   };
 
-  const selectNovel = (name: string, content: string, file: { size: number; lastModified: number }) => {
-    const fingerprint = createNovelFingerprint(name, file.size, file.lastModified);
+  const openNovel = useCallback((entry: NovelLibraryEntry, content: string) => {
+    const fingerprint = entry.fingerprint;
     const savedProgress = novelProgressStore.load(fingerprint);
-    setNovelSource({ name, text: content, fingerprint });
+    setNovelSource({ libraryId: entry.id, name: entry.name, text: content, fingerprint });
     setNovelOffset(0);
     setReaderHidden(false);
     setResumeProgress(savedProgress?.offset ? savedProgress : undefined);
     setStudyMode("novel");
     setActiveView("study");
+  }, [novelProgressStore]);
+
+  const importNovel = async (name: string, content: string, file: { size: number; lastModified: number }) => {
+    const fingerprint = createNovelFingerprint(name, file.size, file.lastModified);
+    const pendingId = `import:${fingerprint}`;
+    setBusyNovelId(pendingId);
+    setNovelLibraryError("");
+    try {
+      const entry = await novelLibraryService.save(name, content, fingerprint);
+      setNovelLibraryEntries((current) => [entry, ...current.filter((item) => item.id !== entry.id)]);
+      openNovel(entry, content);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      setNovelLibraryError(message);
+      throw new Error(message);
+    } finally {
+      setBusyNovelId(undefined);
+    }
+  };
+
+  const openStoredNovel = async (entry: NovelLibraryEntry) => {
+    setBusyNovelId(entry.id);
+    setNovelLibraryError("");
+    try {
+      const stored = await novelLibraryService.load(entry.id);
+      openNovel(stored.entry, stored.text);
+    } catch (error) {
+      setNovelLibraryError(error instanceof Error ? error.message : String(error));
+    } finally {
+      setBusyNovelId(undefined);
+    }
+  };
+
+  const deleteStoredNovel = async (entry: NovelLibraryEntry) => {
+    setBusyNovelId(entry.id);
+    setNovelLibraryError("");
+    try {
+      await novelLibraryService.delete(entry.id);
+      setNovelLibraryEntries((current) => current.filter((item) => item.id !== entry.id));
+      if (novelSource?.libraryId === entry.id) {
+        setNovelSource(undefined);
+        setStudyMode("words");
+        setResumeProgress(undefined);
+      }
+    } catch (error) {
+      setNovelLibraryError(error instanceof Error ? error.message : String(error));
+    } finally {
+      setBusyNovelId(undefined);
+    }
   };
 
   const selectDocumentTemplate = (nextTemplateId: string) => {
@@ -417,6 +487,8 @@ function App() {
             reader={readerActive && novelDocument ? {
               page: novelPageIndex + 1,
               totalPages: novelDocument.pages.length,
+              canPrevious: novelPageIndex > 0,
+              canNext: novelPageIndex < novelDocument.pages.length - 1,
               hidden: readerHidden,
               onPrevious: () => moveNovelPage(-1),
               onNext: () => moveNovelPage(1),
@@ -455,12 +527,19 @@ function App() {
       )}
       {activeView === "texts" && (
         <TextPanel
-          builtInTexts={builtInTexts}
-          selectedName={selectedTextName}
-          novelName={novelSource?.name.replace(/\.txt$/i, "")}
-          onSelect={selectText}
+          currentBackgroundName={selectedTextName || documentTemplate.name}
+          currentNovelFingerprint={novelSource?.fingerprint}
+          novels={novelLibraryEntries.map((entry) => ({
+            ...entry,
+            progress: novelProgressStore.load(entry.fingerprint),
+          }))}
+          libraryError={novelLibraryError}
+          busyNovelId={busyNovelId}
+          onSelectBackground={selectText}
           onSelectTemplate={selectImportedTemplate}
-          onSelectNovel={selectNovel}
+          onImportNovel={importNovel}
+          onOpenNovel={openStoredNovel}
+          onDeleteNovel={deleteStoredNovel}
         />
       )}
       {activeView === "statistics" && (

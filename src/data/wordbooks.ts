@@ -82,7 +82,7 @@ export const wordbookManifests: WordbookManifest[] = [
     shortName: "TOEIC",
     description: "个人整理的托业核心词汇",
     wordCount: 366,
-    file: "momo_toeic.jsonl",
+    file: "momo_toeic.json",
     sourceName: "个人词库",
     sourceUrl: "",
     license: "自有词库",
@@ -100,7 +100,7 @@ const bundledWordbooks: Record<string, () => Promise<string>> = {
   "../assets/wordbooks/ielts.json": () => import("../assets/wordbooks/ielts.json?raw").then((module) => module.default),
   "../assets/wordbooks/toefl.json": () => import("../assets/wordbooks/toefl.json?raw").then((module) => module.default),
   "../assets/wordbooks/pte.json": () => import("../assets/wordbooks/pte.json?raw").then((module) => module.default),
-  "../assets/wordbooks/momo_toeic.jsonl": () => import("../assets/wordbooks/momo_toeic.jsonl?raw").then((module) => module.default),
+  "../assets/wordbooks/momo_toeic.json": () => import("../assets/wordbooks/momo_toeic.json?raw").then((module) => module.default),
 };
 
 function isLearningWord(value: unknown): value is LearningWord {

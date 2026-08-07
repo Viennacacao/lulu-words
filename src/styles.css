@@ -318,7 +318,7 @@ input:focus-visible {
   z-index: 2;
   inset: auto;
   height: calc(var(--learning-row-height) * 6);
-  margin: calc(var(--document-line-height) * 1.2) 0;
+  margin: 0;
 }
 
 .learning-block {
@@ -764,6 +764,108 @@ input:focus-visible {
   border-radius: 5px;
   font-size: 12px;
 }
+
+.novel-shelf {
+  overflow: hidden;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.novel-shelf-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border-bottom: 1px solid #e6e9ed;
+  background: #fafbfc;
+}
+
+.novel-shelf-heading h2 {
+  margin: 3px 0 0;
+  font-size: 17px;
+}
+
+.novel-shelf-heading > span {
+  color: #7a8492;
+  font-size: 12px;
+}
+
+.novel-shelf-empty {
+  padding: 32px 20px;
+  color: #7a8492;
+  text-align: center;
+  font-size: 13px;
+}
+
+.novel-list {
+  display: grid;
+}
+
+.novel-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 86px;
+  padding: 14px 18px;
+  border-bottom: 1px solid #eceef1;
+}
+
+.novel-card:last-child { border-bottom: 0; }
+.novel-card.is-selected { background: #f5f8ff; }
+
+.novel-card-copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.novel-card-copy h3 {
+  margin: 0 0 4px;
+  overflow: hidden;
+  color: #29313d;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.novel-card-copy p,
+.novel-card-copy small {
+  margin: 0;
+  color: #7a8492;
+  font-size: 11px;
+}
+
+.novel-progress-track {
+  width: min(320px, 100%);
+  height: 3px;
+  margin: 7px 0 5px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #e8ebef;
+}
+
+.novel-progress-track i {
+  display: block;
+  height: 100%;
+  background: var(--blue);
+}
+
+.novel-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.text-danger-button {
+  height: 34px;
+  padding: 0 10px;
+  border: 0;
+  background: transparent;
+  color: #a54b4b;
+  cursor: pointer;
+}
+
+.text-danger-button:disabled { cursor: default; opacity: 0.55; }
 
 .import-guidance,
 .shortcut-card {

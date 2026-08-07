@@ -11,14 +11,10 @@ import {
 } from "../src/features/document/templates";
 
 describe("document layout", () => {
-  it("keeps six learning lines with a 1.2-line lower separation", () => {
+  it("keeps six learning lines without inserting extra blank lines", () => {
     expect(DOCUMENT_LAYOUT.learningRows).toBe(6);
     expect(DOCUMENT_LAYOUT.lineHeight * DOCUMENT_LAYOUT.learningRows).toBe(204);
-    expect(
-      DOCUMENT_LAYOUT.lowerContentTop -
-        (DOCUMENT_LAYOUT.learningTop +
-          DOCUMENT_LAYOUT.lineHeight * DOCUMENT_LAYOUT.learningRows),
-    ).toBeCloseTo(DOCUMENT_LAYOUT.lineHeight * 1.2, 0);
+    expect(DOCUMENT_LAYOUT.learningGapLines).toBe(0);
   });
 
   it("provides three distinct built-in read-only templates", () => {
