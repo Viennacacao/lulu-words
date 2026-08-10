@@ -18,10 +18,18 @@ export interface LearningStatistics {
   ratings: Record<Rating, number>;
 }
 
+export interface DueReviewWord {
+  word: LearningWord;
+  card: ReviewCardSnapshot;
+}
+
 export interface LearningRepository {
   initialize(words: LearningWord[]): Promise<void>;
   loadProgress(): Promise<HydratedProgress>;
   loadStatistics(now?: Date): Promise<LearningStatistics>;
+  loadDueReviewWords(now: Date): Promise<DueReviewWord[]>;
+  loadUnseenWords(words: LearningWord[], limit: number): Promise<LearningWord[]>;
+  loadReviewCountSince(since: Date): Promise<number>;
   getReviewCard(wordId: string): Promise<ReviewCardSnapshot | undefined>;
   saveReview(
     wordId: string,

@@ -81,4 +81,29 @@ export class FsrsReviewScheduler implements ReviewScheduler {
       log: serializeLog(result.log),
     };
   }
+
+  preview(
+    card: ReviewCardSnapshot | undefined,
+    now: Date,
+  ): Record<Rating, ScheduledReview> {
+    const sourceCard = card ? deserializeCard(card) : createEmptyCard(now);
+    const preview = this.scheduler.repeat(sourceCard, now);
+    const toScheduledReview = (rating: Rating): ScheduledReview => {
+      const result = preview[ratingMap[rating]];
+      return {
+        card: serializeCard(result.card),
+        log: serializeLog(result.log),
+      };
+    };
+
+    return {
+      again: toScheduledReview("again"),
+      hard: toScheduledReview("hard"),
+      good: toScheduledReview("good"),
+    };
+  }
+
+  retrievability(card: ReviewCardSnapshot, now: Date): number {
+    return this.scheduler.get_retrievability(deserializeCard(card), now, false);
+  }
 }

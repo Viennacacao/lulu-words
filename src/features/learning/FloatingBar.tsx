@@ -12,6 +12,7 @@ interface FloatingBarProps {
   showKeyboardHints?: boolean;
   aiConfigured: boolean;
   onAskAi: (prompt: string) => Promise<string>;
+  ratingIntervals?: Record<Rating, string>;
   onOpenReader?: () => void;
   reader?: {
     page: number;
@@ -39,6 +40,7 @@ export function FloatingBar({
   showKeyboardHints = true,
   aiConfigured,
   onAskAi,
+  ratingIntervals,
   onOpenReader,
   reader,
 }: FloatingBarProps) {
@@ -80,7 +82,7 @@ export function FloatingBar({
   };
 
   const grade = (rating: Rating) => dispatch({ type: "GRADE", rating });
-  const canGrade = state.phase === "revealed" && !state.hidden;
+  const canGrade = state.phase === "revealed" && !state.hidden && !state.studyPlan?.complete;
   const label = (text: string, shortcut: string) =>
     showKeyboardHints ? `${text} ${shortcut}` : text;
 
@@ -160,9 +162,18 @@ export function FloatingBar({
           <button onClick={() => dispatch({ type: "TOGGLE_ANSWER" })} disabled={state.hidden}>
             {state.phase === "recall" ? label("答案", "Space") : label("隐藏", "Space")}
           </button>
-          <button onClick={() => grade("again")} disabled={!canGrade}>{label("忘记", "1")}</button>
-          <button onClick={() => grade("hard")} disabled={!canGrade}>{label("模糊", "2")}</button>
-          <button onClick={() => grade("good")} disabled={!canGrade}>{label("认识", "3")}</button>
+          <button className="rating-action" onClick={() => grade("again")} disabled={!canGrade}>
+            <span>{label("忘记", "1")}</span>
+            {canGrade && ratingIntervals?.again && <small>{ratingIntervals.again}</small>}
+          </button>
+          <button className="rating-action" onClick={() => grade("hard")} disabled={!canGrade}>
+            <span>{label("模糊", "2")}</span>
+            {canGrade && ratingIntervals?.hard && <small>{ratingIntervals.hard}</small>}
+          </button>
+          <button className="rating-action" onClick={() => grade("good")} disabled={!canGrade}>
+            <span>{label("认识", "3")}</span>
+            {canGrade && ratingIntervals?.good && <small>{ratingIntervals.good}</small>}
+          </button>
           <button
             onClick={() => dispatch({ type: "START_MNEMONIC_EDIT" })}
             disabled={!canGrade}

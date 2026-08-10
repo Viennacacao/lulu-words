@@ -83,4 +83,76 @@ describe("LocalLearningRepository", () => {
 
     expect((await repository.loadProgress()).reviewedCount).toBe(3);
   });
+
+  it("builds a review-first daily plan and fills remaining capacity with new words", async () => {
+    const repository = new LocalLearningRepository(new MemoryStorage());
+    const service = new LearningProgressService(repository, new FsrsReviewScheduler());
+    await service.initialize(sampleWords);
+    await service.recordReview(
+      sampleWords[0].id,
+      "good",
+      new Date("2026-01-01T08:00:00.000Z"),
+    );
+
+    const plan = await service.createDailyPlan(
+      sampleWords,
+      2,
+      new Date("2026-08-10T08:00:00.000Z"),
+    );
+
+    expect(plan.reviewCount).toBe(1);
+    expect(plan.newCount).toBe(1);
+    expect(plan.items.map((item) => item.kind)).toEqual(["review", "new"]);
+    expect(plan.items[0].word.id).toBe(sampleWords[0].id);
+    expect(plan.items[1].word.id).not.toBe(sampleWords[0].id);
+  });
+
+  it("orders overdue reviews by predicted forgetting risk", async () => {
+    const repository = new LocalLearningRepository(new MemoryStorage());
+    const service = new LearningProgressService(repository, new FsrsReviewScheduler());
+    await service.initialize(sampleWords);
+    await service.recordReview(
+      sampleWords[0].id,
+      "good",
+      new Date("2026-01-01T08:00:00.000Z"),
+    );
+    await service.recordReview(
+      sampleWords[1].id,
+      "good",
+      new Date("2026-06-01T08:00:00.000Z"),
+    );
+
+    const plan = await service.createDailyPlan(
+      sampleWords,
+      2,
+      new Date("2026-08-10T08:00:00.000Z"),
+    );
+
+    expect(plan.items.slice(0, 2).map((item) => item.word.id)).toEqual([
+      sampleWords[0].id,
+      sampleWords[1].id,
+    ]);
+    expect(plan.items.slice(0, 2).every((item) => item.kind === "review")).toBe(true);
+  });
+
+  it("subtracts reviews already completed today before adding new words", async () => {
+    const repository = new LocalLearningRepository(new MemoryStorage());
+    const service = new LearningProgressService(repository, new FsrsReviewScheduler());
+    await service.initialize(sampleWords);
+    await service.recordReview(
+      sampleWords[0].id,
+      "good",
+      new Date("2026-08-10T08:00:00.000Z"),
+    );
+
+    const plan = await service.createDailyPlan(
+      sampleWords,
+      2,
+      new Date("2026-08-10T08:05:00.000Z"),
+    );
+
+    expect(plan.reviewedToday).toBe(1);
+    expect(plan.reviewCount).toBe(0);
+    expect(plan.newCount).toBe(1);
+  });
 });

@@ -448,6 +448,20 @@ input:focus-visible {
   cursor: pointer;
 }
 
+.floating-bar .rating-action {
+  display: grid;
+  align-content: center;
+  min-width: 62px;
+  height: 38px;
+  line-height: 1.05;
+}
+
+.floating-bar .rating-action small {
+  margin-top: 3px;
+  color: #78818d;
+  font-size: 9px;
+}
+
 .floating-bar button:hover:not(:disabled) {
   border-color: #8eb2ee;
   background: #f3f7ff;
@@ -476,6 +490,25 @@ input:focus-visible {
 
 .reader-page-jump { display: flex; align-items: center; gap: 4px; color: #667085; font-size: 11px; white-space: nowrap; }
 .reader-page-jump input { width: 48px; height: 30px; box-sizing: border-box; padding: 0 5px; border: 1px solid #d9dde3; border-radius: 5px; text-align: center; }
+
+.study-complete-banner {
+  position: fixed;
+  z-index: 38;
+  right: 24px;
+  bottom: 54px;
+  display: grid;
+  max-width: 390px;
+  gap: 4px;
+  padding: 13px 16px;
+  border: 1px solid #b9d7bd;
+  border-radius: 8px;
+  background: rgb(246 252 247 / 96%);
+  box-shadow: 0 8px 24px rgb(17 24 39 / 14%);
+  color: #315c39;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.study-complete-banner span { color: #607265; font-size: 12px; line-height: 1.5; }
 
 .floating-ai-form {
   display: flex;

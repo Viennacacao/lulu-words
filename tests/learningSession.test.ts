@@ -147,4 +147,55 @@ describe("learningSessionReducer", () => {
     expect(state.currentIndex).toBe(0);
     expect(state.phase).toBe("recall");
   });
+
+  it("runs a finite planned queue and places forgotten words later", () => {
+    let state = createLearningSession(words);
+    state = learningSessionReducer(state, {
+      type: "LOAD_STUDY_QUEUE",
+      items: words.map((word, index) => ({
+        word,
+        kind: index === 0 ? "review" : "new",
+      })),
+      plan: {
+        dateKey: "2026-08-10",
+        wordbookId: "cet4",
+        initialReviewCount: 1,
+        initialNewCount: 1,
+        completedCount: 0,
+      },
+    });
+    state = learningSessionReducer(state, { type: "TOGGLE_ANSWER" });
+    state = learningSessionReducer(state, { type: "GRADE", rating: "again" });
+
+    expect(state.words.map((word) => word.id)).toEqual(["one", "two", "one"]);
+    expect(state.queueKinds).toEqual(["review", "new", "relearning"]);
+    expect(state.currentIndex).toBe(1);
+    expect(state.studyPlan?.completedCount).toBe(1);
+    expect(state.studyPlan?.complete).toBe(false);
+
+    for (let index = 0; index < 2; index += 1) {
+      state = learningSessionReducer(state, { type: "TOGGLE_ANSWER" });
+      state = learningSessionReducer(state, { type: "GRADE", rating: "good" });
+    }
+    expect(state.studyPlan?.complete).toBe(true);
+    expect(state.studyPlan?.completedCount).toBe(3);
+  });
+
+  it("does not let arrow navigation skip items in a planned queue", () => {
+    let state = createLearningSession(words);
+    state = learningSessionReducer(state, {
+      type: "LOAD_STUDY_QUEUE",
+      items: words.map((word) => ({ word, kind: "new" })),
+      plan: {
+        dateKey: "2026-08-10",
+        wordbookId: "cet4",
+        initialReviewCount: 0,
+        initialNewCount: 2,
+        completedCount: 0,
+      },
+    });
+
+    expect(learningSessionReducer(state, { type: "NEXT" }).currentIndex).toBe(0);
+    expect(learningSessionReducer(state, { type: "PREVIOUS" }).currentIndex).toBe(0);
+  });
 });

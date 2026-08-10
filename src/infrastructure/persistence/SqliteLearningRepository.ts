@@ -1,5 +1,6 @@
 import Database from "@tauri-apps/plugin-sql";
 import type {
+  DueReviewWord,
   HydratedProgress,
   LearningStatistics,
   LearningRepository,
@@ -35,6 +36,20 @@ interface CardRow {
   lapses: number;
   state: number;
   last_review: string | null;
+}
+
+interface DueWordRow extends CardRow {
+  id: string;
+  word: string;
+  phonetic: string;
+  meaning: string;
+  default_mnemonic: string;
+  phrases: string;
+  example: string;
+}
+
+interface WordIdRow {
+  word_id: string;
 }
 
 export class SqliteLearningRepository implements LearningRepository {
@@ -125,6 +140,67 @@ export class SqliteLearningRepository implements LearningRepository {
       mnemonicCount: mnemonics[0]?.count ?? 0,
       ratings,
     };
+  }
+
+  async loadDueReviewWords(now: Date): Promise<DueReviewWord[]> {
+    const rows = await this.getDatabase().select<DueWordRow[]>(
+      `SELECT w.id, w.word, w.phonetic, w.meaning, w.default_mnemonic,
+              w.phrases, w.example, c.due, c.stability, c.difficulty,
+              c.elapsed_days, c.scheduled_days, c.learning_steps, c.reps,
+              c.lapses, c.state, c.last_review
+       FROM review_cards c
+       INNER JOIN words w ON w.id = c.word_id
+       WHERE c.due <= $1`,
+      [now.toISOString()],
+    );
+
+    return rows.map((row) => ({
+      word: {
+        id: row.id,
+        word: row.word,
+        phonetic: row.phonetic,
+        meaning: row.meaning,
+        mnemonic: row.default_mnemonic,
+        phrases: row.phrases,
+        example: row.example,
+      },
+      card: {
+        due: row.due,
+        stability: row.stability,
+        difficulty: row.difficulty,
+        elapsedDays: row.elapsed_days,
+        scheduledDays: row.scheduled_days,
+        learningSteps: row.learning_steps,
+        reps: row.reps,
+        lapses: row.lapses,
+        state: row.state,
+        lastReview: row.last_review ?? undefined,
+      },
+    }));
+  }
+
+  async loadUnseenWords(words: LearningWord[], limit: number): Promise<LearningWord[]> {
+    if (limit <= 0 || words.length === 0) return [];
+    const reviewedIds = new Set<string>();
+    const batchSize = 400;
+    for (let offset = 0; offset < words.length; offset += batchSize) {
+      const ids = words.slice(offset, offset + batchSize).map((word) => word.id);
+      const placeholders = ids.map((_, index) => `$${index + 1}`).join(", ");
+      const rows = await this.getDatabase().select<WordIdRow[]>(
+        `SELECT word_id FROM review_cards WHERE word_id IN (${placeholders})`,
+        ids,
+      );
+      for (const row of rows) reviewedIds.add(row.word_id);
+    }
+    return words.filter((word) => !reviewedIds.has(word.id)).slice(0, limit);
+  }
+
+  async loadReviewCountSince(since: Date): Promise<number> {
+    const rows = await this.getDatabase().select<CountRow[]>(
+      "SELECT COUNT(*) AS count FROM review_logs WHERE reviewed_at >= $1",
+      [since.toISOString()],
+    );
+    return rows[0]?.count ?? 0;
   }
 
   async getReviewCard(

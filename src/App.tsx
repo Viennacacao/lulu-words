@@ -39,10 +39,15 @@ import {
 import { FloatingBar } from "./features/learning/FloatingBar";
 import { LearningBlock } from "./features/learning/LearningBlock";
 import {
+  DailyStudySessionStore,
+  getLocalStudyDateKey,
+} from "./features/learning/DailyStudySessionStore";
+import {
   createLearningSession,
   getCurrentWord,
   learningSessionReducer,
   type LearningSessionAction,
+  type Rating,
 } from "./features/learning/session";
 import { ProfilePanel } from "./features/navigation/ProfilePanel";
 import { StatisticsPanel } from "./features/navigation/StatisticsPanel";
@@ -78,6 +83,18 @@ interface NovelSource {
   fingerprint: string;
 }
 
+function formatReviewInterval(due: string, now: Date) {
+  const milliseconds = Math.max(0, new Date(due).getTime() - now.getTime());
+  const minutes = Math.max(1, Math.round(milliseconds / 60_000));
+  if (minutes < 60) return `${minutes}分钟`;
+  const hours = Math.round(minutes / 60);
+  if (hours < 24) return `${hours}小时`;
+  const days = Math.round(hours / 24);
+  if (days < 30) return `${days}天`;
+  if (days < 365) return `${Math.round(days / 30)}个月`;
+  return `${(days / 365).toFixed(1)}年`;
+}
+
 function App() {
   const preferencesStore = useMemo(() => new AppPreferencesStore(), []);
   const [preferences, setPreferences] = useState(() => preferencesStore.load());
@@ -96,11 +113,14 @@ function App() {
   const [loadingWordbookId, setLoadingWordbookId] = useState<WordbookId>();
   const [wordbookError, setWordbookError] = useState("");
   const [statistics, setStatistics] = useState(emptyStatistics);
+  const [studyDateKey, setStudyDateKey] = useState(() => getLocalStudyDateKey());
+  const [ratingIntervals, setRatingIntervals] = useState<Record<Rating, string>>();
   const layoutCache = useRef(new DocumentLayoutCache());
   const documentTemplate = customTextTemplate ?? getDocumentTemplate(templateId);
   const documentLayout = layoutCache.current.get(documentTemplate, preferences.fontSize);
   const novelProgressStore = useMemo(() => new NovelProgressStore(), []);
   const novelLibraryService = useMemo(() => new NovelLibraryService(), []);
+  const dailyStudySessionStore = useMemo(() => new DailyStudySessionStore(), []);
   const novelDocument = useMemo(() => novelSource ? createNovelReaderDocument(
     novelSource.name,
     novelSource.text,
@@ -144,6 +164,13 @@ function App() {
     void refreshNovelLibrary();
   }, [refreshNovelLibrary]);
 
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setStudyDateKey(getLocalStudyDateKey());
+    }, 60_000);
+    return () => window.clearInterval(timer);
+  }, []);
+
   const updatePreferences = useCallback(
     (next: AppPreferences) => {
       setPreferences(next);
@@ -165,43 +192,109 @@ function App() {
     setLoadingWordbookId(wordbookId);
     setWordbookError("");
 
-    loadWordbook(wordbookId)
-      .then((words) => {
+    void (async () => {
+      try {
+        const words = await loadWordbook(wordbookId);
         if (cancelled) return;
-
-        // Reading the bundled file is enough to start studying. Persisting a
-        // large wordbook to SQLite can take longer on first launch, so keep it
-        // off the critical path for switching books.
         dispatch({ type: "LOAD_WORDS", words });
-        setLoadingWordbookId(undefined);
 
-        void progressService
-          .initialize(words)
-          .then((progress) => {
-            if (cancelled) return;
-            dispatch({ type: "HYDRATE_PROGRESS", ...progress });
-            refreshStatistics();
-          })
-          .catch((error: unknown) => {
-            if (cancelled) return;
-            console.error("Failed to initialize learning progress", error);
-            setWordbookError("词库已载入，但学习进度初始化失败");
-          });
-      })
-      .catch((error: unknown) => {
+        const progress = await progressService.initialize(words);
         if (cancelled) return;
-        console.error("Failed to load wordbook", error);
+        dispatch({ type: "HYDRATE_PROGRESS", ...progress });
+
+        const savedSession = dailyStudySessionStore.load(studyDateKey, wordbookId);
+        if (savedSession) {
+          dispatch({
+            type: "LOAD_STUDY_QUEUE",
+            items: savedSession.queue,
+            currentIndex: savedSession.currentIndex,
+            plan: {
+              dateKey: savedSession.dateKey,
+              wordbookId: savedSession.wordbookId,
+              initialReviewCount: savedSession.initialReviewCount,
+              initialNewCount: savedSession.initialNewCount,
+              completedCount: savedSession.completedCount,
+              complete: savedSession.complete,
+            },
+          });
+        } else {
+          const plan = await progressService.createDailyPlan(
+            words,
+            preferences.dailyGoal,
+          );
+          if (cancelled) return;
+          dispatch({
+            type: "LOAD_STUDY_QUEUE",
+            items: plan.items,
+            plan: {
+              dateKey: studyDateKey,
+              wordbookId,
+              initialReviewCount: plan.reviewCount,
+              initialNewCount: plan.newCount,
+              completedCount: 0,
+            },
+          });
+        }
         setLoadingWordbookId(undefined);
-        setWordbookError(error instanceof Error ? error.message : "词库载入失败");
-        progressService.initialize(sampleWords).then((progress) => {
-          if (!cancelled) dispatch({ type: "HYDRATE_PROGRESS", ...progress });
-        });
-      });
+        refreshStatistics();
+      } catch (error) {
+        if (cancelled) return;
+        console.error("Failed to prepare study plan", error);
+        setLoadingWordbookId(undefined);
+        setWordbookError(
+          error instanceof Error ? error.message : "无法生成今日学习计划",
+        );
+      }
+    })();
 
     return () => {
       cancelled = true;
     };
-  }, [preferences.selectedWordbookId, progressService, refreshStatistics]);
+  }, [dailyStudySessionStore, preferences.dailyGoal, preferences.selectedWordbookId, progressService, refreshStatistics, studyDateKey]);
+
+  useEffect(() => {
+    const plan = state.studyPlan;
+    if (!plan) return;
+    const queue = state.queueKinds.length === state.words.length
+      ? state.words.map((word, index) => ({ word, kind: state.queueKinds[index] }))
+      : [];
+    dailyStudySessionStore.save({
+      version: 1,
+      dateKey: plan.dateKey,
+      wordbookId: plan.wordbookId as WordbookId,
+      queue,
+      currentIndex: state.currentIndex,
+      completedCount: plan.completedCount,
+      initialReviewCount: plan.initialReviewCount,
+      initialNewCount: plan.initialNewCount,
+      complete: plan.complete,
+      updatedAt: new Date().toISOString(),
+    });
+  }, [dailyStudySessionStore, state.currentIndex, state.queueKinds, state.studyPlan, state.words]);
+
+  useEffect(() => {
+    if (loadingWordbookId || state.studyPlan?.complete || state.words.length === 0) {
+      setRatingIntervals(undefined);
+      return;
+    }
+    let cancelled = false;
+    const now = new Date();
+    void progressService.previewReview(getCurrentWord(state).id, now)
+      .then((preview) => {
+        if (cancelled) return;
+        setRatingIntervals({
+          again: formatReviewInterval(preview.again.card.due, now),
+          hard: formatReviewInterval(preview.hard.card.due, now),
+          good: formatReviewInterval(preview.good.card.due, now),
+        });
+      })
+      .catch(() => {
+        if (!cancelled) setRatingIntervals(undefined);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [loadingWordbookId, progressService, state.currentIndex, state.studyPlan?.complete, state.words]);
 
   const speak = useCallback(() => {
     if (state.hidden || !("speechSynthesis" in window)) return;
@@ -320,6 +413,7 @@ function App() {
   }, [activeView, handleAction, moveNovelPage, novelDocument, readerActive, speak, state.phase]);
 
   const selectWordbook = (wordbookId: WordbookId) => {
+    dailyStudySessionStore.clear();
     updatePreferences({ ...preferences, selectedWordbookId: wordbookId });
     setActiveView("study");
   };
@@ -432,6 +526,18 @@ function App() {
     } : word);
   }, [novelDocument, novelPage, preferences.deepseekApiKey, preferences.deepseekBaseUrl, preferences.deepseekModel, readerActive, state]);
 
+  const updateProfilePreferences = (next: AppPreferences) => {
+    if (next.dailyGoal !== preferences.dailyGoal) dailyStudySessionStore.clear();
+    updatePreferences(next);
+  };
+
+  const remainingStudyCount = state.studyPlan?.complete
+    ? 0
+    : Math.max(0, state.words.length - state.currentIndex);
+  const plannedActionCount = state.studyPlan
+    ? state.studyPlan.completedCount + remainingStudyCount
+    : state.words.length;
+
   const lineHeight = preferences.fontSize * 2;
   const documentStyle = {
     "--document-zoom": preferences.documentZoom,
@@ -474,7 +580,11 @@ function App() {
               ? `${novelDocument.name} · 阅读 ${novelPageIndex + 1}/${novelDocument.pages.length} · ${Math.round(((novelPageIndex + 1) / novelDocument.pages.length) * 100)}%`
               : loadingWordbookId === currentWordbook.id
               ? `${currentWordbook.shortName} · 正在载入词库…`
-              : `${currentWordbook.shortName} · 今日复习 ${statistics.todayReviewedCount} · 当前 ${state.currentIndex + 1}/${state.words.length}`}
+              : state.studyPlan?.complete
+              ? `${currentWordbook.shortName} · 今日计划已完成 · 共复习 ${statistics.todayReviewedCount} 次`
+              : state.studyPlan
+              ? `${currentWordbook.shortName} · 复习 ${state.studyPlan.initialReviewCount} · 新学 ${state.studyPlan.initialNewCount} · 进度 ${state.studyPlan.completedCount}/${plannedActionCount}`
+              : `${currentWordbook.shortName} · 当前 ${state.currentIndex + 1}/${state.words.length}`}
           </div>
           <FloatingBar
             state={state}
@@ -483,6 +593,7 @@ function App() {
             showKeyboardHints={preferences.showKeyboardHints}
             aiConfigured={Boolean(preferences.deepseekApiKey.trim())}
             onAskAi={askAi}
+            ratingIntervals={ratingIntervals}
             onOpenReader={novelDocument ? () => setStudyMode("novel") : undefined}
             reader={readerActive && novelDocument ? {
               page: novelPageIndex + 1,
@@ -497,6 +608,12 @@ function App() {
               onSwitchToWords: () => setStudyMode("words"),
             } : undefined}
           />
+          {!readerActive && state.studyPlan?.complete && (
+            <aside className="study-complete-banner" role="status">
+              <b>今日学习计划已完成</b>
+              <span>已完成 {state.studyPlan.completedCount} 次回忆判断，新的到期单词会在下次计划中优先出现。</span>
+            </aside>
+          )}
           {resumeProgress && novelDocument && (
             <aside className="resume-reading-prompt" role="status">
               <div>
@@ -550,7 +667,7 @@ function App() {
         />
       )}
       {activeView === "profile" && (
-        <ProfilePanel preferences={preferences} onChange={updatePreferences} />
+        <ProfilePanel preferences={preferences} onChange={updateProfilePreferences} />
       )}
     </OfficeShell>
   );

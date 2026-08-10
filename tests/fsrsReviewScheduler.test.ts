@@ -30,4 +30,17 @@ describe("FsrsReviewScheduler", () => {
       secondTime.getTime(),
     );
   });
+
+  it("previews all product ratings and estimates current retrievability", () => {
+    const scheduler = new FsrsReviewScheduler();
+    const learnedAt = new Date("2026-08-01T08:00:00.000Z");
+    const card = scheduler.grade(undefined, "good", learnedAt).card;
+    const reviewAt = new Date("2026-08-10T08:00:00.000Z");
+    const preview = scheduler.preview(card, reviewAt);
+
+    expect(Object.keys(preview)).toEqual(["again", "hard", "good"]);
+    expect(new Date(preview.good.card.due).getTime()).toBeGreaterThan(reviewAt.getTime());
+    expect(scheduler.retrievability(card, reviewAt)).toBeGreaterThanOrEqual(0);
+    expect(scheduler.retrievability(card, reviewAt)).toBeLessThanOrEqual(1);
+  });
 });

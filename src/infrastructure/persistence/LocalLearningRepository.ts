@@ -1,4 +1,5 @@
 import type {
+  DueReviewWord,
   HydratedProgress,
   LearningStatistics,
   LearningRepository,
@@ -16,14 +17,16 @@ interface LocalReviewLog {
 }
 
 interface LocalLearningData {
-  version: 1;
+  version: 2;
+  words: Record<string, LearningWord>;
   cards: Record<string, ReviewCardSnapshot>;
   mnemonics: Record<string, string>;
   logs: LocalReviewLog[];
 }
 
 const emptyData = (): LocalLearningData => ({
-  version: 1,
+  version: 2,
+  words: {},
   cards: {},
   mnemonics: {},
   logs: [],
@@ -34,8 +37,10 @@ export class LocalLearningRepository implements LearningRepository {
 
   constructor(private readonly storage: Storage = window.localStorage) {}
 
-  async initialize(_words: LearningWord[]): Promise<void> {
-    if (!this.storage.getItem(this.key)) this.write(emptyData());
+  async initialize(words: LearningWord[]): Promise<void> {
+    const data = this.read();
+    for (const word of words) data.words[word.id] = word;
+    this.write(data);
   }
 
   async loadProgress(): Promise<HydratedProgress> {
@@ -67,6 +72,28 @@ export class LocalLearningRepository implements LearningRepository {
     };
   }
 
+  async loadDueReviewWords(now: Date): Promise<DueReviewWord[]> {
+    const data = this.read();
+    return Object.entries(data.cards)
+      .filter(([, card]) => new Date(card.due).getTime() <= now.getTime())
+      .flatMap(([wordId, card]) => {
+        const word = data.words[wordId];
+        return word ? [{ word, card }] : [];
+      });
+  }
+
+  async loadUnseenWords(words: LearningWord[], limit: number): Promise<LearningWord[]> {
+    if (limit <= 0) return [];
+    const cards = this.read().cards;
+    return words.filter((word) => !cards[word.id]).slice(0, limit);
+  }
+
+  async loadReviewCountSince(since: Date): Promise<number> {
+    return this.read().logs.filter(
+      (log) => new Date(log.review.log.reviewedAt).getTime() >= since.getTime(),
+    ).length;
+  }
+
   async getReviewCard(
     wordId: string,
   ): Promise<ReviewCardSnapshot | undefined> {
@@ -95,8 +122,12 @@ export class LocalLearningRepository implements LearningRepository {
     if (!serialized) return emptyData();
 
     try {
-      const parsed = JSON.parse(serialized) as LocalLearningData;
-      return parsed.version === 1 ? parsed : emptyData();
+      const parsed = JSON.parse(serialized) as LocalLearningData | (Omit<LocalLearningData, "version" | "words"> & { version: 1 });
+      if (parsed.version === 2) return parsed;
+      if (parsed.version === 1) {
+        return { ...parsed, version: 2, words: {} };
+      }
+      return emptyData();
     } catch {
       return emptyData();
     }

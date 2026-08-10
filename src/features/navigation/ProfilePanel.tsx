@@ -23,7 +23,7 @@ export function ProfilePanel({ preferences, onChange }: ProfilePanelProps) {
 
       <div className="settings-list">
         <label>
-          <span><b>每日学习目标</b><small>用于统计页的今日进度</small></span>
+          <span><b>每日学习目标</b><small>先安排到期复习，剩余数量用于新词</small></span>
           <input
             type="number"
             min="5"

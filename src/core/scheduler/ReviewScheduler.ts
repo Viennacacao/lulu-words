@@ -37,4 +37,9 @@ export interface ReviewScheduler {
     rating: Rating,
     now: Date,
   ): ScheduledReview;
+  preview(
+    card: ReviewCardSnapshot | undefined,
+    now: Date,
+  ): Record<Rating, ScheduledReview>;
+  retrievability(card: ReviewCardSnapshot, now: Date): number;
 }
