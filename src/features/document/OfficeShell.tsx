@@ -49,7 +49,7 @@ export function OfficeShell({
           <div className="window-dots" aria-hidden="true">
             <span /><span /><span />
           </div>
-          <div className="app-mark">W</div>
+          <div className="app-mark">字</div>
           <div className="document-title">{documentTitle}</div>
           <div className="header-status">已保存到本地</div>
         </div>
