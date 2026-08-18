@@ -5,7 +5,7 @@ export const DOCUMENT_LAYOUT = Object.freeze({
   pageHeight: 1123,
   pageMarginX: 92,
   lineHeight: 34,
-  learningRows: 6,
+  defaultLearningRows: 6,
   learningTop: 386,
   learningGapLines: 0,
   lowerContentTop: 631,
@@ -72,12 +72,18 @@ function countDocumentCharacters(template: DocumentTemplate) {
   ].reduce((total, current) => total + current.text.length, 0);
 }
 
+export type LearningRowCount = 6 | 8;
+
 export class DocumentLayoutCache {
   private readonly layouts = new Map<string, DocumentLayoutResult>();
 
-  get(template: DocumentTemplate, fontSize = 17): DocumentLayoutResult {
+  get(
+    template: DocumentTemplate,
+    fontSize = 17,
+    learningRows: LearningRowCount = DOCUMENT_LAYOUT.defaultLearningRows as LearningRowCount,
+  ): DocumentLayoutResult {
     const normalizedFontSize = Math.min(20, Math.max(15, Math.round(fontSize)));
-    const cacheKey = `${template.id}:${template.revision}:font-${normalizedFontSize}`;
+    const cacheKey = `${template.id}:${template.revision}:font-${normalizedFontSize}:rows-${learningRows}`;
     const cached = this.layouts.get(cacheKey);
     if (cached) return cached;
 
@@ -89,7 +95,7 @@ export class DocumentLayoutCache {
       Math.floor((DOCUMENT_LAYOUT.learningTop - learningGap - 65) / lineHeight),
     );
     const lowerTop = DOCUMENT_LAYOUT.learningTop +
-      DOCUMENT_LAYOUT.learningRows * lineHeight + learningGap;
+      learningRows * lineHeight + learningGap;
     const lowerCapacity = Math.max(
       7,
       Math.floor((DOCUMENT_LAYOUT.pageHeight - 72 - lowerTop) / lineHeight),
@@ -114,7 +120,7 @@ export class DocumentLayoutCache {
     );
     const [camouflageLines, afterCamouflage] = takeCamouflageLines(
       afterUpper,
-      DOCUMENT_LAYOUT.learningRows,
+      learningRows,
       charactersPerLine,
     );
     const [lower, lowerOverflow] = takeBlocksWithinPage(

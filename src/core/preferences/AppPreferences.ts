@@ -9,6 +9,7 @@ export interface AppPreferences {
   documentZoom: number;
   voiceRate: number;
   showKeyboardHints: boolean;
+  learningRows: 6 | 8;
   deepseekApiKey: string;
   deepseekBaseUrl: string;
   deepseekModel: string;
@@ -21,6 +22,7 @@ export const defaultPreferences: AppPreferences = {
   documentZoom: 1,
   voiceRate: 0.85,
   showKeyboardHints: true,
+  learningRows: 6,
   deepseekApiKey: import.meta.env.VITE_DEEPSEEK_API_KEY ?? "",
   deepseekBaseUrl: import.meta.env.VITE_DEEPSEEK_BASE_URL ?? "https://api.deepseek.com",
   deepseekModel: import.meta.env.VITE_DEEPSEEK_MODEL ?? "deepseek-v4-flash",

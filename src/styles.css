@@ -317,14 +317,14 @@ input:focus-visible {
   position: relative;
   z-index: 2;
   inset: auto;
-  height: calc(var(--learning-row-height) * 6);
+  height: calc(var(--learning-row-height) * var(--learning-row-count, 6));
   margin: 0;
 }
 
 .learning-block {
   height: 100%;
   display: grid;
-  grid-template-rows: repeat(6, var(--learning-row-height));
+  grid-template-rows: repeat(var(--learning-row-count, 6), var(--learning-row-height));
   overflow: hidden;
   background: transparent;
   border: 0;
@@ -349,6 +349,16 @@ input:focus-visible {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/* 8 行模式：助记/例句行跨两行槽位，内容可换行，最多显示两行 */
+.learning-row.is-expanded {
+  grid-row: span 2;
+  height: auto;
+  max-height: calc(var(--learning-row-height) * 2);
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: clip;
 }
 
 .learning-block .novel-reader-row { padding-left: 0; text-indent: 0; text-overflow: clip; }

@@ -12,16 +12,17 @@ interface LearningBlockProps {
   novelLines?: NovelReaderLine[];
   camouflageLines: string[];
   readerHidden?: boolean;
+  rowCount?: 6 | 8;
 }
 
 function ConcealedRow() {
   return <span aria-hidden="true">&nbsp;</span>;
 }
 
-function CamouflageBlock({ lines, label }: { lines: string[]; label: string }) {
+function CamouflageBlock({ lines, label, rowCount }: { lines: string[]; label: string; rowCount: number }) {
   return (
     <section className="learning-block learning-block--hidden" aria-label={label}>
-      {Array.from({ length: 6 }, (_, index) => (
+      {Array.from({ length: rowCount }, (_, index) => (
         <div key={index}>{lines[index] || <ConcealedRow />}</div>
       ))}
     </section>
@@ -41,15 +42,15 @@ export function splitBilingualExample(example: string) {
   return { example: value, translation: "" };
 }
 
-export function LearningBlock({ state, dispatch, novelLines, camouflageLines, readerHidden = false }: LearningBlockProps) {
+export function LearningBlock({ state, dispatch, novelLines, camouflageLines, readerHidden = false, rowCount = 6 }: LearningBlockProps) {
   if (novelLines && readerHidden) {
-    return <CamouflageBlock lines={camouflageLines} label="小说阅读区已隐藏" />;
+    return <CamouflageBlock lines={camouflageLines} label="小说阅读区已隐藏" rowCount={rowCount} />;
   }
 
   if (novelLines) {
     return (
       <section className="learning-block learning-block--reader" aria-label="小说阅读区">
-        {Array.from({ length: 6 }, (_, index) => (
+        {Array.from({ length: rowCount }, (_, index) => (
           <div className={`learning-row novel-reader-row${novelLines[index]?.firstInParagraph ? " is-paragraph-start" : ""}${novelLines[index]?.heading ? " is-heading" : ""}`} key={index}>
             {novelLines[index]?.text || <ConcealedRow />}
           </div>
@@ -61,9 +62,11 @@ export function LearningBlock({ state, dispatch, novelLines, camouflageLines, re
   const word = getCurrentWord(state);
   const answerVisible = state.phase !== "recall";
   const bilingualExample = splitBilingualExample(word.example);
+  // 8 行模式：助记与例句各占两行槽位，显示更多内容
+  const expanded = rowCount === 8;
 
   if (state.hidden) {
-    return <CamouflageBlock lines={camouflageLines} label="学习区已隐藏" />;
+    return <CamouflageBlock lines={camouflageLines} label="学习区已隐藏" rowCount={rowCount} />;
   }
 
   return (
@@ -76,7 +79,7 @@ export function LearningBlock({ state, dispatch, novelLines, camouflageLines, re
       <div className="learning-row">
         {answerVisible ? (word.meaning.trim() || "暂无释义") : <ConcealedRow />}
       </div>
-      <div className="learning-row mnemonic-row">
+      <div className={`learning-row mnemonic-row${expanded ? " is-expanded" : ""}`}>
         {state.phase === "editingMnemonic" ? (
           <input
             autoFocus
@@ -96,7 +99,7 @@ export function LearningBlock({ state, dispatch, novelLines, camouflageLines, re
       <div className="learning-row">
         {answerVisible ? `短语：${word.phrases.trim() || "暂无短语"}` : <ConcealedRow />}
       </div>
-      <div className="learning-row">
+      <div className={`learning-row${expanded ? " is-expanded" : ""}`}>
         {answerVisible ? `例句：${bilingualExample.example || "暂无例句"}` : <ConcealedRow />}
       </div>
       <div className="learning-row">

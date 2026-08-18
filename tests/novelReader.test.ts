@@ -30,6 +30,16 @@ describe("novel reader", () => {
     expect(novel.pages.flatMap((page) => page.lines).every((line) => line.text.length <= 22)).toBe(true);
   });
 
+  it("creates pages with a configured line count (eight-row mode)", () => {
+    const novel = createNovelReaderDocument(
+      "八行小说.txt",
+      `${"第一段文字内容用于分页测试。".repeat(10)}\n${"第二段文字内容用于分页测试。".repeat(10)}`,
+      { lineWidthEm: 20, linesPerPage: 8 },
+    );
+    expect(novel.pages[0].lines).toHaveLength(8);
+    expect(novel.pages.every((page) => page.lines.length <= 8)).toBe(true);
+  });
+
   it("restores the same text position after a font-driven reflow", () => {
     const text = "这是一个自然段。".repeat(100);
     const compact = createNovelReaderDocument("book.txt", text, { lineWidthEm: 22 });

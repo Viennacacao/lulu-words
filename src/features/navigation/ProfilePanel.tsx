@@ -42,6 +42,16 @@ export function ProfilePanel({ preferences, onChange }: ProfilePanelProps) {
           </select>
         </label>
         <label>
+          <span><b>学习区行数</b><small>8 行时助记与例句各占两行，显示更多内容</small></span>
+          <select
+            value={preferences.learningRows}
+            onChange={(event) => patch({ learningRows: Number(event.target.value) as 6 | 8 })}
+          >
+            <option value="6">6 行</option>
+            <option value="8">8 行</option>
+          </select>
+        </label>
+        <label>
           <span><b>快捷键提示</b><small>在学习工具栏显示按键名称</small></span>
           <input
             type="checkbox"

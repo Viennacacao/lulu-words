@@ -11,9 +11,9 @@ import {
 } from "../src/features/document/templates";
 
 describe("document layout", () => {
-  it("keeps six learning lines without inserting extra blank lines", () => {
-    expect(DOCUMENT_LAYOUT.learningRows).toBe(6);
-    expect(DOCUMENT_LAYOUT.lineHeight * DOCUMENT_LAYOUT.learningRows).toBe(204);
+  it("keeps six default learning lines without inserting extra blank lines", () => {
+    expect(DOCUMENT_LAYOUT.defaultLearningRows).toBe(6);
+    expect(DOCUMENT_LAYOUT.lineHeight * DOCUMENT_LAYOUT.defaultLearningRows).toBe(204);
     expect(DOCUMENT_LAYOUT.learningGapLines).toBe(0);
   });
 
@@ -55,6 +55,22 @@ describe("document layout", () => {
     expect(cache.get(template).pageCount).toBe(first.pageCount);
     expect(first.camouflageLines).toHaveLength(6);
     expect(first.camouflageLines.join("").length).toBeGreaterThan(20);
+  });
+
+  it("builds an eight-row layout with its own cache key and camouflage", () => {
+    const cache = new DocumentLayoutCache();
+    const template = documentTemplates[0];
+    const six = cache.get(template);
+    const eight = cache.get(template, 17, 8);
+
+    expect(eight).not.toBe(six);
+    expect(eight.cacheKey).toContain("rows-8");
+    expect(six.cacheKey).toContain("rows-6");
+    expect(eight.camouflageLines).toHaveLength(8);
+    // 8 行学习区下移后第一页下部容量变小，正文分页应正确重排
+    expect(eight.pageCount).toBeGreaterThanOrEqual(six.pageCount);
+    // 同参数命中缓存
+    expect(cache.get(template, 17, 8)).toBe(eight);
   });
 
   it("reserves real document text for camouflage without duplication or loss", () => {

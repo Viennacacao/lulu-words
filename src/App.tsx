@@ -118,7 +118,11 @@ function App() {
   const [ratingIntervals, setRatingIntervals] = useState<Record<Rating, string>>();
   const layoutCache = useRef(new DocumentLayoutCache());
   const documentTemplate = customTextTemplate ?? getDocumentTemplate(templateId);
-  const documentLayout = layoutCache.current.get(documentTemplate, preferences.fontSize);
+  const documentLayout = layoutCache.current.get(
+    documentTemplate,
+    preferences.fontSize,
+    preferences.learningRows,
+  );
   const novelProgressStore = useMemo(() => new NovelProgressStore(), []);
   const novelLibraryService = useMemo(() => new NovelLibraryService(), []);
   const dailyStudySessionStore = useMemo(() => new DailyStudySessionStore(), []);
@@ -128,9 +132,9 @@ function App() {
     {
       fingerprint: novelSource.fingerprint,
       lineWidthEm: 610 / (preferences.fontSize * 1.04),
-      linesPerPage: 6,
+      linesPerPage: preferences.learningRows,
     },
-  ) : undefined, [novelSource, preferences.fontSize]);
+  ) : undefined, [novelSource, preferences.fontSize, preferences.learningRows]);
   const novelPageIndex = novelDocument
     ? findNovelPageIndex(novelDocument.pages, novelOffset)
     : 0;
@@ -542,6 +546,7 @@ function App() {
     "--document-font-size": `${preferences.fontSize}px`,
     "--document-line-height": `${lineHeight}px`,
     "--learning-row-height": `${lineHeight}px`,
+    "--learning-row-count": preferences.learningRows,
   } as CSSProperties;
 
   return (
@@ -570,6 +575,7 @@ function App() {
                 camouflageLines={documentLayout.camouflageLines}
                 novelLines={readerActive ? novelPage?.lines : undefined}
                 readerHidden={readerHidden}
+                rowCount={preferences.learningRows}
               />}
             />
           </div>
