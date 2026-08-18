@@ -162,17 +162,17 @@ export function FloatingBar({
           <button onClick={() => dispatch({ type: "TOGGLE_ANSWER" })} disabled={state.hidden}>
             {state.phase === "recall" ? label("答案", "Space") : label("隐藏", "Space")}
           </button>
-          <button className="rating-action" onClick={() => grade("again")} disabled={!canGrade}>
-            <span>{label("忘记", "1")}</span>
-            {canGrade && ratingIntervals?.again && <small>{ratingIntervals.again}</small>}
+          <button className="rating-action" onClick={() => grade("good")} disabled={!canGrade}>
+            <span>{label("认识", "1")}</span>
+            {canGrade && ratingIntervals?.good && <small>{ratingIntervals.good}</small>}
           </button>
           <button className="rating-action" onClick={() => grade("hard")} disabled={!canGrade}>
             <span>{label("模糊", "2")}</span>
             {canGrade && ratingIntervals?.hard && <small>{ratingIntervals.hard}</small>}
           </button>
-          <button className="rating-action" onClick={() => grade("good")} disabled={!canGrade}>
-            <span>{label("认识", "3")}</span>
-            {canGrade && ratingIntervals?.good && <small>{ratingIntervals.good}</small>}
+          <button className="rating-action" onClick={() => grade("again")} disabled={!canGrade}>
+            <span>{label("忘记", "3")}</span>
+            {canGrade && ratingIntervals?.again && <small>{ratingIntervals.again}</small>}
           </button>
           <button
             onClick={() => dispatch({ type: "START_MNEMONIC_EDIT" })}

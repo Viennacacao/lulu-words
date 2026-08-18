@@ -87,9 +87,9 @@ API Key 仅保存在当前电脑的应用偏好中。公开发布的安装包不
 | 按键 | 操作 |
 | --- | --- |
 | <kbd>Space</kbd> | 显示或隐藏答案 |
-| <kbd>1</kbd> | 忘记 |
+| <kbd>1</kbd> | 认识 |
 | <kbd>2</kbd> | 模糊 |
-| <kbd>3</kbd> | 认识 |
+| <kbd>3</kbd> | 忘记 |
 | <kbd>P</kbd> | 播放单词发音 |
 | <kbd>E</kbd> | 编辑助记 |
 | <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>Enter</kbd> | 保存助记 |

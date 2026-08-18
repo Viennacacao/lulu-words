@@ -49,6 +49,7 @@ import {
   type LearningSessionAction,
   type Rating,
 } from "./features/learning/session";
+import { ratingFromKey } from "./features/learning/ratingKeys";
 import { ProfilePanel } from "./features/navigation/ProfilePanel";
 import { StatisticsPanel } from "./features/navigation/StatisticsPanel";
 import { TextPanel } from "./features/navigation/TextPanel";
@@ -386,15 +387,12 @@ function App() {
         return;
       }
 
+      const rating = ratingFromKey(event.key);
       if (event.key === " ") {
         event.preventDefault();
         handleAction({ type: "TOGGLE_ANSWER" });
-      } else if (event.key === "1") {
-        handleAction({ type: "GRADE", rating: "again" });
-      } else if (event.key === "2") {
-        handleAction({ type: "GRADE", rating: "hard" });
-      } else if (event.key === "3") {
-        handleAction({ type: "GRADE", rating: "good" });
+      } else if (rating) {
+        handleAction({ type: "GRADE", rating });
       } else if (event.key.toLowerCase() === "p") {
         speak();
       } else if (event.key.toLowerCase() === "e") {
