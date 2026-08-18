@@ -62,7 +62,7 @@ export function LearningBlock({ state, dispatch, novelLines, camouflageLines, re
   const word = getCurrentWord(state);
   const answerVisible = state.phase !== "recall";
   const bilingualExample = splitBilingualExample(word.example);
-  // 8 行模式：助记与例句各占两行槽位，显示更多内容
+  // 8 行模式：助记与短语各占两行槽位，显示更多内容；例句与译文各一行
   const expanded = rowCount === 8;
 
   if (state.hidden) {
@@ -96,10 +96,10 @@ export function LearningBlock({ state, dispatch, novelLines, camouflageLines, re
           <ConcealedRow />
         )}
       </div>
-      <div className="learning-row">
+      <div className={`learning-row${expanded ? " is-expanded" : ""}`}>
         {answerVisible ? `短语：${word.phrases.trim() || "暂无短语"}` : <ConcealedRow />}
       </div>
-      <div className={`learning-row${expanded ? " is-expanded" : ""}`}>
+      <div className="learning-row">
         {answerVisible ? `例句：${bilingualExample.example || "暂无例句"}` : <ConcealedRow />}
       </div>
       <div className="learning-row">

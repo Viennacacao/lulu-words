@@ -42,7 +42,7 @@ export function ProfilePanel({ preferences, onChange }: ProfilePanelProps) {
           </select>
         </label>
         <label>
-          <span><b>学习区行数</b><small>8 行时助记与例句各占两行，显示更多内容</small></span>
+          <span><b>学习区行数</b><small>8 行时助记与短语各占两行，显示更多内容</small></span>
           <select
             value={preferences.learningRows}
             onChange={(event) => patch({ learningRows: Number(event.target.value) as 6 | 8 })}
