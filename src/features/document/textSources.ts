@@ -136,3 +136,23 @@ export function createImportedDocumentTemplate(
     continuation,
   };
 }
+
+/** 从模板按原始顺序还原文档块（upper + lower + continuation 顺序不改变） */
+export function templateToBlocks(template: DocumentTemplate): DocumentBlock[] {
+  return [
+    ...template.firstPage.upper,
+    ...template.firstPage.lower,
+    ...template.continuation,
+  ];
+}
+
+/** 基于名称与内容生成稳定的背景文档 id（同内容覆盖，避免重复堆积） */
+export function createBackgroundDocumentId(name: string, blocks: DocumentBlock[]): string {
+  const source = `${name}\u0000${blocks.map((block) => `${block.kind}:${block.text}`).join("\u0001")}`;
+  let hash = 2166136261 >>> 0;
+  for (let index = 0; index < source.length; index += 1) {
+    hash ^= source.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return `doc-${(hash >>> 0).toString(16).padStart(8, "0")}`;
+}

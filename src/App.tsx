@@ -30,7 +30,7 @@ import {
   clampDocumentZoom,
   DocumentLayoutCache,
 } from "./features/document/documentLayout";
-import { createTextDocumentTemplate } from "./features/document/textSources";
+import { createTextDocumentTemplate, createBackgroundDocumentId, createImportedDocumentTemplate, templateToBlocks } from "./features/document/textSources";
 import {
   documentTemplates,
   getDocumentTemplate,
@@ -67,6 +67,8 @@ import {
   type NovelLibraryEntry,
 } from "./features/reader/NovelLibraryService";
 import { createLearningRepository } from "./infrastructure/persistence/createLearningRepository";
+import { createBackgroundDocumentRepository } from "./infrastructure/persistence/createBackgroundDocumentRepository";
+import type { BackgroundDocumentRecord } from "./core/repository/BackgroundDocumentRepository";
 
 const emptyStatistics: LearningStatistics = {
   reviewedCount: 0,
@@ -103,6 +105,9 @@ function App() {
   const [templateId, setTemplateId] = useState("project-weekly");
   const [customTextTemplate, setCustomTextTemplate] = useState<DocumentTemplate>();
   const [selectedTextName, setSelectedTextName] = useState("");
+  const [savedDocuments, setSavedDocuments] = useState<BackgroundDocumentRecord[]>([]);
+  const [documentsError, setDocumentsError] = useState("");
+  const [activeDocumentId, setActiveDocumentId] = useState<string>();
   const [novelSource, setNovelSource] = useState<NovelSource>();
   const [novelLibraryEntries, setNovelLibraryEntries] = useState<NovelLibraryEntry[]>([]);
   const [novelLibraryError, setNovelLibraryError] = useState("");
@@ -125,6 +130,7 @@ function App() {
   );
   const novelProgressStore = useMemo(() => new NovelProgressStore(), []);
   const novelLibraryService = useMemo(() => new NovelLibraryService(), []);
+  const backgroundDocumentRepository = useMemo(() => createBackgroundDocumentRepository(), []);
   const dailyStudySessionStore = useMemo(() => new DailyStudySessionStore(), []);
   const novelDocument = useMemo(() => novelSource ? createNovelReaderDocument(
     novelSource.name,
@@ -168,6 +174,78 @@ function App() {
   useEffect(() => {
     void refreshNovelLibrary();
   }, [refreshNovelLibrary]);
+
+  const refreshSavedDocuments = useCallback(async () => {
+    if (!isDesktopApp()) {
+      setSavedDocuments([]);
+      return;
+    }
+    try {
+      setSavedDocuments(await backgroundDocumentRepository.list());
+      setDocumentsError("");
+    } catch (error) {
+      setDocumentsError(error instanceof Error ? error.message : "无法读取已保存的背景文档");
+    }
+  }, [backgroundDocumentRepository]);
+
+  useEffect(() => {
+    void refreshSavedDocuments();
+  }, [refreshSavedDocuments]);
+
+  const saveBackgroundDocument = useCallback(async (
+    name: string,
+    author: string,
+    kind: "txt" | "docx",
+    template: DocumentTemplate,
+  ) => {
+    if (!isDesktopApp()) return;
+    try {
+      const blocks = templateToBlocks(template);
+      const id = createBackgroundDocumentId(name, blocks);
+      await backgroundDocumentRepository.save({
+        id,
+        name,
+        author,
+        kind,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+        blocks,
+      });
+      setActiveDocumentId(id);
+      await refreshSavedDocuments();
+    } catch (error) {
+      setDocumentsError(error instanceof Error ? error.message : String(error));
+    }
+  }, [backgroundDocumentRepository, refreshSavedDocuments]);
+
+  const openSavedDocument = useCallback(async (id: string) => {
+    try {
+      const stored = await backgroundDocumentRepository.load(id);
+      if (!stored) return;
+      const template = createImportedDocumentTemplate(stored.name, stored.blocks, stored.author);
+      layoutCache.current.clear();
+      setCustomTextTemplate(template);
+      setSelectedTextName(stored.name);
+      setActiveDocumentId(id);
+      setActiveView("study");
+    } catch (error) {
+      setDocumentsError(error instanceof Error ? error.message : String(error));
+    }
+  }, [backgroundDocumentRepository]);
+
+  const deleteSavedDocument = useCallback(async (id: string) => {
+    try {
+      await backgroundDocumentRepository.delete(id);
+      setSavedDocuments((current) => current.filter((item) => item.id !== id));
+      if (activeDocumentId === id) {
+        setActiveDocumentId(undefined);
+        setCustomTextTemplate(undefined);
+        setSelectedTextName("");
+      }
+    } catch (error) {
+      setDocumentsError(error instanceof Error ? error.message : String(error));
+    }
+  }, [activeDocumentId, backgroundDocumentRepository]);
 
   useEffect(() => {
     const timer = window.setInterval(() => {
@@ -426,6 +504,12 @@ function App() {
     setCustomTextTemplate(template);
     setSelectedTextName(name);
     setActiveView("study");
+    void saveBackgroundDocument(
+      name,
+      author ?? "本地导入 · TXT 只读文本",
+      name.toLowerCase().endsWith(".docx") ? "docx" : "txt",
+      template,
+    );
   };
 
   const selectImportedTemplate = (template: DocumentTemplate) => {
@@ -433,6 +517,12 @@ function App() {
     setCustomTextTemplate(template);
     setSelectedTextName(template.name);
     setActiveView("study");
+    void saveBackgroundDocument(
+      template.name,
+      "本地导入 · DOCX 只读文档",
+      template.name.toLowerCase().endsWith(".docx") ? "docx" : "txt",
+      template,
+    );
   };
 
   const openNovel = useCallback((entry: NovelLibraryEntry, content: string) => {
@@ -656,8 +746,13 @@ function App() {
           }))}
           libraryError={novelLibraryError}
           busyNovelId={busyNovelId}
+          savedDocuments={savedDocuments}
+          documentsError={documentsError}
+          activeDocumentId={activeDocumentId}
           onSelectBackground={selectText}
           onSelectTemplate={selectImportedTemplate}
+          onOpenSavedDocument={openSavedDocument}
+          onDeleteSavedDocument={deleteSavedDocument}
           onImportNovel={importNovel}
           onOpenNovel={openStoredNovel}
           onDeleteNovel={deleteStoredNovel}

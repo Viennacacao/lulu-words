@@ -4,6 +4,7 @@ import { createImportedDocumentTemplate } from "../document/textSources";
 import type { DocumentTemplate } from "../document/templates";
 import type { NovelReadingProgress } from "../reader/novelReader";
 import type { NovelLibraryEntry } from "../reader/NovelLibraryService";
+import type { BackgroundDocumentRecord } from "../../core/repository/BackgroundDocumentRepository";
 
 export interface NovelShelfItem extends NovelLibraryEntry {
   progress?: NovelReadingProgress;
@@ -15,8 +16,13 @@ interface TextPanelProps {
   novels: NovelShelfItem[];
   libraryError?: string;
   busyNovelId?: string;
+  savedDocuments: BackgroundDocumentRecord[];
+  documentsError?: string;
+  activeDocumentId?: string;
   onSelectBackground: (name: string, content: string, author?: string) => void;
   onSelectTemplate: (template: DocumentTemplate) => void;
+  onOpenSavedDocument: (id: string) => void;
+  onDeleteSavedDocument: (id: string) => void;
   onImportNovel: (name: string, content: string, file: { size: number; lastModified: number }) => Promise<void>;
   onOpenNovel: (novel: NovelLibraryEntry) => Promise<void>;
   onDeleteNovel: (novel: NovelLibraryEntry) => Promise<void>;
@@ -34,8 +40,13 @@ export function TextPanel({
   novels,
   libraryError,
   busyNovelId,
+  savedDocuments,
+  documentsError,
+  activeDocumentId,
   onSelectBackground,
   onSelectTemplate,
+  onOpenSavedDocument,
+  onDeleteSavedDocument,
   onImportNovel,
   onOpenNovel,
   onDeleteNovel,
@@ -96,6 +107,13 @@ export function TextPanel({
     }
   };
 
+  const confirmDeleteSavedDocument = (document: BackgroundDocumentRecord) => {
+    const displayName = document.name.replace(/\.(txt|docx)$/i, "");
+    if (window.confirm(`删除已保存的背景文档《${displayName}》？`)) {
+      onDeleteSavedDocument(document.id);
+    }
+  };
+
   return (
     <section className="feature-panel" aria-labelledby="text-panel-title">
       <header className="feature-panel-header">
@@ -123,7 +141,37 @@ export function TextPanel({
           accept=".txt,text/plain" onChange={importNovel} />
       </header>
 
-      {(error || libraryError) && <div className="panel-error" role="alert">{error || libraryError}</div>}
+      {(error || libraryError || documentsError) && <div className="panel-error" role="alert">{error || libraryError || documentsError}</div>}
+
+      <section className="saved-documents" aria-labelledby="saved-documents-title">
+        <div className="novel-shelf-heading">
+          <div>
+            <span className="feature-eyebrow">SAVED DOCUMENTS</span>
+            <h2 id="saved-documents-title">已保存背景文档</h2>
+          </div>
+          <span>{savedDocuments.length} 篇</span>
+        </div>
+        {savedDocuments.length === 0 ? (
+          <div className="novel-shelf-empty">导入的 TXT / DOCX 背景文档会自动保存在这里，下次启动可直接使用，无需重新导入。</div>
+        ) : (
+          <div className="novel-list">
+            {savedDocuments.map((document) => (
+              <article className={`novel-card${activeDocumentId === document.id ? " is-selected" : ""}`} key={document.id}>
+                <span className="text-file-icon">{document.kind.toUpperCase()}</span>
+                <div className="novel-card-copy">
+                  <h3>{document.name.replace(/\.(txt|docx)$/i, "")}</h3>
+                  <p>{document.kind.toUpperCase()} · {document.author}</p>
+                  <small>保存于 {new Date(document.updatedAt).toLocaleString()}</small>
+                </div>
+                <div className="novel-card-actions">
+                  <button className="primary-button" onClick={() => onOpenSavedDocument(document.id)}>打开</button>
+                  <button className="text-danger-button" onClick={() => confirmDeleteSavedDocument(document)}>删除</button>
+                </div>
+              </article>
+            ))}
+          </div>
+        )}
+      </section>
 
       <section className="novel-shelf" aria-labelledby="novel-shelf-title">
         <div className="novel-shelf-heading">
